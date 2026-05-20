@@ -2,7 +2,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "skjPlacement": "bottom-aligned"
 }/*EDITMODE-END*/;
 
-const ROUTES = ['home', 'over', 'professionals', 'werkwijze', 'ervaringen', 'contact'];
+const ROUTES = ['home', 'over', 'professionals', 'werkwijze', 'ervaringen', 'contact', 'voorwaarden', 'privacy'];
 
 function readHashRoute() {
   const h = (window.location.hash || '').replace(/^#\/?/, '').toLowerCase();
@@ -52,8 +52,10 @@ function App() {
     werkwijze: <Werkwijze />,
     ervaringen: <Ervaringen setRoute={setRoute} />,
     contact: <Contact />,
+    voorwaarden: <AlgemeneVoorwaarden />,
+    privacy: <Privacy />,
   }[route];
-  const label = { home: '01 Home', over: '02 Over Marijke', professionals: '03 Training jeugdprofessionals', werkwijze: '04 Werkwijze en aanpak', ervaringen: '05 Ervaringen jeugdzorg', contact: '06 Contact' }[route];
+  const label = { home: '01 Home', over: '02 Over Marijke', professionals: '03 Training jeugdprofessionals', werkwijze: '04 Werkwijze en aanpak', ervaringen: '05 Ervaringen jeugdzorg', contact: '06 Contact', voorwaarden: '07 Algemene voorwaarden', privacy: '08 Privacybeleid' }[route];
 
   return (
     <div data-screen-label={label} style={{ minHeight: '100vh', background: 'var(--bg)' }}>
