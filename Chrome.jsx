@@ -206,6 +206,12 @@ function Footer({ setRoute }) {
           onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
         >Privacybeleid</a>
         <a
+          onClick={() => setRoute('klachtenregeling')}
+  style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
+  onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
+  onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
+>Klachtenregeling</a>
+        <a
           onClick={() => { setRoute('voorwaarden'); setTimeout(() => window.print(), 350); }}
           style={{ color: 'var(--fg3)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6, transition: 'color 200ms', cursor: 'pointer' }}
           onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; }}
