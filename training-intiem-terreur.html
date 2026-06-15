@@ -209,72 +209,137 @@
       padding: 4px 10px;
     }
 
-    /* ── CTA / formulier ── */
-    .cta-section {
-      background: var(--rood);
-      padding: 64px 32px;
-      text-align: center;
-    }
-    .cta-inner { max-width: 480px; margin: 0 auto; }
-    .cta-section h2 {
-      font-family: 'Lora', Georgia, serif;
-      font-size: clamp(20px, 3vw, 26px);
-      font-weight: 500;
-      color: var(--creme);
-      margin-bottom: 12px;
-    }
-    .cta-sub { font-size: 15px; color: #e0c8c6; margin-bottom: 36px; line-height: 1.75; }
- 
-    .form-iframe-wrap {
-      max-width: 480px;
-      margin: 0 auto;
-      border-radius: 6px;
-      overflow: hidden;
-      background: rgba(255,255,255,0.05);
-    }
-    .form-iframe-wrap iframe {
-      width: 100%;
-      height: 560px;
-      border: none;
-      display: block;
-    }
-    .form-disclaimer { font-size: 12px; color: #c8bab8; margin-top: 16px; line-height: 1.6; }
+    <!-- CTA + formulier -->
+  <section class="cta-section">
+    <div class="cta-inner" style="max-width: 600px;">
+      <h2>Intake aanvragen</h2>
+      <p class="cta-sub">
+        Na je aanmelding neemt Marijke binnen twee werkdagen contact op voor een korte intake.
+        Zij toetst dan of de training aansluit op jouw rol, mandaat en leerdoel.
+        Deelname is selectief.
+      </p>
 
-    /* ── Success state ── */
-    .form-success {
-      background: var(--olijf-licht);
-      border: 1px solid var(--olijf);
-      border-radius: 6px;
-      padding: 28px 24px;
-      max-width: 440px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .form-success-title {
-      font-family: 'Lora', Georgia, serif;
-      font-size: 18px; color: var(--donker); margin-bottom: 10px;
-    }
-    .form-success p { font-size: 14px; color: var(--mid); line-height: 1.7; }
+      <div id="form-area">
+        <div class="eigen-form">
+          <div class="form-rij">
+            <div class="form-veld">
+              <label>Naam <span class="req">*</span></label>
+              <input type="text" id="f-naam" placeholder="Volledige naam" autocomplete="name">
+            </div>
+            <div class="form-veld">
+              <label>E-mailadres <span class="req">*</span></label>
+              <input type="email" id="f-email" placeholder="naam@organisatie.nl" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-rij">
+            <div class="form-veld form-veld-tel">
+              <label>Telefoonnummer <span class="req">*</span></label>
+              <div class="tel-wrap">
+                <span class="tel-prefix">🇳🇱 +31</span>
+                <input type="tel" id="f-telefoon" placeholder="6 12 34 56 78" autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-veld form-veld-locatie">
+              <label>Voorkeur locatie <span class="req">*</span></label>
+              <select id="f-locatie">
+                <option value="">Kies een locatie</option>
+                <option value="Hoorn (3 sep + 1 okt 2026)">Hoorn — 3 sep &amp; 1 okt 2026</option>
+                <option value="Amsterdam (8 okt + 5 nov 2026)">Amsterdam — 8 okt &amp; 5 nov 2026</option>
+              </select>
+            </div>
+          </div>
+          <p id="form-error" class="form-error" style="display:none;"></p>
+          <button id="submit-btn" onclick="submitForm()">Intake aanvragen</button>
+          <p class="form-disclaimer">
+            Aanmelden is vrijblijvend. Na je aanmelding volgt een korte intake.
+            Deelname wordt pas bevestigd na afstemming.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    /* ── Footer ── */
-    footer {
-      background: var(--donker);
-      color: var(--zacht);
-      font-size: 12px;
-      padding: 28px 24px;
-      text-align: center;
-      line-height: 1.9;
-    }
-    footer a { color: var(--zacht); text-decoration: none; }
-    footer a:hover { color: var(--creme); }
+  <!-- Footer -->
+  <footer>
+    Praktijk van Marijk &middot;
+    <a href="mailto:marijke@praktijkvanmarijk.nl">marijke@praktijkvanmarijk.nl</a>
+    &middot; <a href="tel:+31627376003">06&nbsp;27&nbsp;37&nbsp;60&nbsp;03</a><br>
+    SKJ-registratie 110005309 &middot; geldig t/m 25-05-2028<br>
+    <a href="https://www.praktijkvanmarijk.nl">praktijkvanmarijk.nl</a>
+    &middot; <a href="https://www.praktijkvanmarijk.nl/#klachtenregeling">Klachtenregeling</a>
+  </footer>
 
-    /* ── Responsive ── */
-    @media (max-width: 600px) {
-      .topbar { padding: 0 16px; }
-      .prijs-box { flex-direction: column; gap: 12px; }
+  <script>
+    const WEBHOOK = 'https://app.stroomlijn.nu/api/webhooks/flow/3679/15441ab341b514251bd9cce9fa2ce9886f663788db063c822e4ac0a1c271b9f8';
+    const SHEET_ID = '1fsyDF6Y7UejMF_X7bLgQDlBass85kmNECyKiuEt_EAY';
+
+    async function submitForm() {
+      const naam     = document.getElementById('f-naam').value.trim();
+      const email    = document.getElementById('f-email').value.trim();
+      const tel      = document.getElementById('f-telefoon').value.trim();
+      const locatie  = document.getElementById('f-locatie').value;
+      const errEl    = document.getElementById('form-error');
+      const btn      = document.getElementById('submit-btn');
+
+      errEl.style.display = 'none';
+
+      if (!naam || !email || !tel || !locatie) {
+        errEl.textContent = 'Vul alle velden in.';
+        errEl.style.display = 'block';
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errEl.textContent = 'Vul een geldig e-mailadres in.';
+        errEl.style.display = 'block';
+        return;
+      }
+
+      const volledigTel = '+31' + tel.replace(/^0/, '').replace(/\s/g, '');
+
+      btn.disabled = true;
+      btn.textContent = 'Bezig…';
+
+      try {
+        await fetch(WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contactName:  naam,
+            contactEmail: email,
+            contactPhone: volledigTel,
+            data: {
+              Email:    email,
+              Naam:     naam,
+              Telefoon: volledigTel,
+              Locatie:  locatie,
+              Status:   'Interesse ingediend',
+              bron:     'Salespagina training intiem terreur',
+            }
+          })
+        });
+
+        document.getElementById('form-area').innerHTML =
+          '<div class="form-success">' +
+          '<div class="form-success-title">Aanmelding ontvangen</div>' +
+          '<p>Je hoort binnen twee werkdagen van Marijke voor een korte intake. ' +
+          'Zij kijkt dan samen met je of de training aansluit op jouw rol en leerdoel.</p>' +
+          '</div>';
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Intake aanvragen';
+        errEl.textContent = 'Er ging iets mis. Probeer het opnieuw of mail naar marijke@praktijkvanmarijk.nl';
+        errEl.style.display = 'block';
+      }
     }
-  </style>
-</head>
+
+    document.addEventListener('DOMContentLoaded', () => {
+      ['f-naam','f-email','f-telefoon'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('keydown', e => { if (e.key === 'Enter') submitForm(); });
+      });
+    });
+  </script>
+
 <body>
 
   <!-- Topbalk -->
