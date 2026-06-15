@@ -26,69 +26,21 @@
       --beige:       #e8dfd2;
     }
 
-    body {
-      font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
-      background: var(--creme);
-      color: var(--donker);
-      line-height: 1.7;
-    }
-
+    body { font-family: 'DM Sans', 'Helvetica Neue', sans-serif; background: var(--creme); color: var(--donker); line-height: 1.7; }
     .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
 
     /* ── Topbalk ── */
-    .topbar {
-      background: var(--creme);
-      border-bottom: 0.5px solid var(--lijn);
-      padding: 0 32px;
-      height: 54px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    .topbar { background: var(--creme); border-bottom: 0.5px solid var(--lijn); padding: 0 32px; height: 54px; display: flex; align-items: center; justify-content: space-between; }
     .topbar-logo { font-size: 15px; font-weight: 500; color: var(--donker); text-decoration: none; }
     .topbar-back { font-size: 13px; color: var(--zacht); text-decoration: none; letter-spacing: 0.01em; }
     .topbar-back:hover { color: var(--rood); }
 
     /* ── Hero ── */
-    .hero {
-      background: var(--donker);
-      color: var(--creme);
-      padding: 72px 24px 64px;
-      text-align: center;
-    }
-    .hero-tag {
-      display: inline-block;
-      background: rgba(207,135,45,0.18);
-      color: var(--okergoud);
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      padding: 4px 12px;
-      border-radius: 3px;
-      margin-bottom: 24px;
-    }
-    .hero h1 {
-      font-family: 'Lora', Georgia, serif;
-      font-size: clamp(22px, 4vw, 34px);
-      font-weight: 500;
-      line-height: 1.3;
-      color: var(--creme);
-      max-width: 640px;
-      margin: 0 auto 18px;
-    }
-    .hero-sub {
-      font-size: 16px;
-      color: #c9bfb5;
-      max-width: 520px;
-      margin: 0 auto 36px;
-      line-height: 1.75;
-    }
-    .hero-badges {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    .hero { background: var(--donker); color: var(--creme); padding: 72px 24px 64px; text-align: center; }
+    .hero-tag { display: inline-block; background: rgba(207,135,45,0.18); color: var(--okergoud); font-size: 12px; font-weight: 500; letter-spacing: 0.06em; padding: 4px 12px; border-radius: 3px; margin-bottom: 24px; }
+    .hero h1 { font-family: 'Lora', Georgia, serif; font-size: clamp(22px, 4vw, 34px); font-weight: 500; line-height: 1.3; color: var(--creme); max-width: 640px; margin: 0 auto 18px; }
+    .hero-sub { font-size: 16px; color: #c9bfb5; max-width: 520px; margin: 0 auto 36px; line-height: 1.75; }
+    .hero-badges { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
     .hero-badge { font-size: 13px; color: #b0a49a; display: flex; align-items: center; gap: 6px; }
     .hero-badge .check { color: var(--olijf); }
 
@@ -96,250 +48,83 @@
     .section       { padding: 56px 24px; }
     .section-beige { padding: 56px 24px; background: var(--beige); }
     .section-olijf { padding: 56px 24px; background: var(--olijf-licht); }
-
-    .section-label {
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--rood);
-      margin-bottom: 12px;
-      font-weight: 500;
-    }
-    h2 {
-      font-family: 'Lora', Georgia, serif;
-      font-size: clamp(20px, 3vw, 26px);
-      font-weight: 500;
-      color: var(--donker);
-      line-height: 1.35;
-      margin-bottom: 20px;
-      margin-top: 0;
-    }
+    .section-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rood); margin-bottom: 12px; font-weight: 500; }
+    h2 { font-family: 'Lora', Georgia, serif; font-size: clamp(20px, 3vw, 26px); font-weight: 500; color: var(--donker); line-height: 1.35; margin-bottom: 20px; margin-top: 0; }
     p { font-size: 15px; color: var(--mid); line-height: 1.8; margin-bottom: 16px; }
     p:last-child { margin-bottom: 0; }
 
     /* ── Genummerde lijst ── */
     .num-list { list-style: none; margin-top: 4px; }
-    .num-list li {
-      display: flex;
-      gap: 14px;
-      margin-bottom: 18px;
-      align-items: flex-start;
-    }
-    .num-bullet {
-      width: 22px; height: 22px; min-width: 22px;
-      border-radius: 50%;
-      background: var(--rood);
-      color: var(--creme);
-      font-size: 11px; font-weight: 600;
-      display: flex; align-items: center; justify-content: center;
-      margin-top: 2px;
-    }
+    .num-list li { display: flex; gap: 14px; margin-bottom: 18px; align-items: flex-start; }
+    .num-bullet { width: 22px; height: 22px; min-width: 22px; border-radius: 50%; background: var(--rood); color: var(--creme); font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
     .num-text { font-size: 15px; color: var(--mid); line-height: 1.7; }
 
     /* ── Dag-cards ── */
-    .dag-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 28px;
-    }
-    .dag-card {
-      background: var(--creme);
-      border: 1px solid var(--lijn);
-      border-radius: 6px;
-      padding: 24px 22px;
-    }
-    .dag-label {
-      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--okergoud); margin-bottom: 10px; font-weight: 600;
-    }
-    .dag-title {
-      font-family: 'Lora', Georgia, serif;
-      font-size: 17px; font-weight: 500;
-      color: var(--donker); margin-bottom: 12px;
-    }
+    .dag-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 28px; }
+    .dag-card { background: var(--creme); border: 1px solid var(--lijn); border-radius: 6px; padding: 24px 22px; }
+    .dag-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--okergoud); margin-bottom: 10px; font-weight: 600; }
+    .dag-title { font-family: 'Lora', Georgia, serif; font-size: 17px; font-weight: 500; color: var(--donker); margin-bottom: 12px; }
 
     /* ── Praktisch grid ── */
-    .praktisch-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px;
-      margin-top: 28px;
-    }
-    .praktisch-item {
-      background: var(--creme);
-      border: 1px solid var(--lijn);
-      border-radius: 6px;
-      padding: 16px 18px;
-    }
-    .praktisch-label {
-      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--zacht); margin-bottom: 6px; font-weight: 500;
-    }
+    .praktisch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-top: 28px; }
+    .praktisch-item { background: var(--creme); border: 1px solid var(--lijn); border-radius: 6px; padding: 16px 18px; }
+    .praktisch-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--zacht); margin-bottom: 6px; font-weight: 500; }
     .praktisch-value { font-size: 15px; color: var(--donker); font-weight: 500; line-height: 1.5; }
 
     /* ── Prijsbox ── */
-    .prijs-box {
-      background: var(--donker);
-      color: var(--creme);
-      border-radius: 6px;
-      padding: 36px 32px;
-      margin-top: 32px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .prijs-bedrag {
-      font-family: 'Lora', Georgia, serif;
-      font-size: 34px; font-weight: 500;
-      color: var(--okergoud); margin-bottom: 4px;
-    }
+    .prijs-box { background: var(--donker); color: var(--creme); border-radius: 6px; padding: 36px 32px; margin-top: 32px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; }
+    .prijs-bedrag { font-family: 'Lora', Georgia, serif; font-size: 34px; font-weight: 500; color: var(--okergoud); margin-bottom: 4px; }
     .prijs-sub { font-size: 13px; color: #b0a49a; }
     .prijs-toelichting { font-size: 14px; color: #c0b5ab; line-height: 1.7; max-width: 260px; }
 
     /* ── Tags ── */
     .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
-    .tag-pill {
-      background: var(--beige);
-      border: 1px solid var(--lijn);
-      border-radius: 3px;
-      font-size: 12px; color: var(--mid);
-      padding: 4px 10px;
+    .tag-pill { background: var(--beige); border: 1px solid var(--lijn); border-radius: 3px; font-size: 12px; color: var(--mid); padding: 4px 10px; }
+
+    /* ── CTA ── */
+    .cta-section { background: var(--rood); padding: 64px 32px; text-align: center; }
+    .cta-inner { max-width: 600px; margin: 0 auto; }
+    .cta-section h2 { font-family: 'Lora', Georgia, serif; font-size: clamp(20px, 3vw, 26px); font-weight: 500; color: var(--creme); margin-bottom: 12px; }
+    .cta-sub { font-size: 15px; color: #e0c8c6; margin-bottom: 36px; line-height: 1.75; }
+
+    /* ── Eigen formulier ── */
+    .eigen-form { text-align: left; }
+    .form-rij { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .form-veld { display: flex; flex-direction: column; gap: 6px; }
+    .form-veld label { font-size: 13px; color: rgba(250,248,244,0.75); font-weight: 500; }
+    .req { color: var(--okergoud); }
+    .form-veld input, .form-veld select { padding: 11px 13px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: var(--creme); font-size: 14px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 180ms; width: 100%; }
+    .form-veld input::placeholder { color: rgba(250,248,244,0.35); }
+    .form-veld input:focus, .form-veld select:focus { border-color: var(--okergoud); }
+    .form-veld select { cursor: pointer; }
+    .form-veld select option { background: var(--donker); color: var(--creme); }
+    .tel-wrap { display: flex; }
+    .tel-prefix { display: flex; align-items: center; padding: 11px 12px; border-radius: 4px 0 0 4px; border: 1.5px solid rgba(255,255,255,0.2); border-right: none; background: rgba(255,255,255,0.05); color: rgba(250,248,244,0.75); font-size: 13px; white-space: nowrap; }
+    .tel-wrap input { border-radius: 0 4px 4px 0; border-left: none; }
+    #submit-btn { width: 100%; margin-top: 6px; background: var(--okergoud); color: var(--donker); border: none; border-radius: 4px; padding: 13px 24px; font-size: 15px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: opacity 180ms; }
+    #submit-btn:hover { opacity: 0.88; }
+    #submit-btn:disabled { background: #8a7a68; cursor: not-allowed; opacity: 1; }
+    .form-error { color: #f5c5c2; font-size: 13px; margin: 0 0 4px; }
+    .form-disclaimer { font-size: 12px; color: rgba(250,248,244,0.45); margin-top: 12px; line-height: 1.6; }
+
+    /* ── Success state ── */
+    .form-success { background: var(--olijf-licht); border: 1px solid var(--olijf); border-radius: 6px; padding: 28px 24px; text-align: center; }
+    .form-success-title { font-family: 'Lora', Georgia, serif; font-size: 18px; color: var(--donker); margin-bottom: 10px; }
+    .form-success p { font-size: 14px; color: var(--mid); line-height: 1.7; margin-bottom: 0; }
+
+    /* ── Footer ── */
+    footer { background: var(--donker); color: var(--zacht); font-size: 12px; padding: 28px 24px; text-align: center; line-height: 1.9; }
+    footer a { color: var(--zacht); text-decoration: none; }
+    footer a:hover { color: var(--creme); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .topbar { padding: 0 16px; }
+      .prijs-box { flex-direction: column; gap: 12px; }
+      .form-rij { grid-template-columns: 1fr; }
     }
-
-    <!-- CTA + formulier -->
-  <section class="cta-section">
-    <div class="cta-inner" style="max-width: 600px;">
-      <h2>Intake aanvragen</h2>
-      <p class="cta-sub">
-        Na je aanmelding neemt Marijke binnen twee werkdagen contact op voor een korte intake.
-        Zij toetst dan of de training aansluit op jouw rol, mandaat en leerdoel.
-        Deelname is selectief.
-      </p>
-
-      <div id="form-area">
-        <div class="eigen-form">
-          <div class="form-rij">
-            <div class="form-veld">
-              <label>Naam <span class="req">*</span></label>
-              <input type="text" id="f-naam" placeholder="Volledige naam" autocomplete="name">
-            </div>
-            <div class="form-veld">
-              <label>E-mailadres <span class="req">*</span></label>
-              <input type="email" id="f-email" placeholder="naam@organisatie.nl" autocomplete="email">
-            </div>
-          </div>
-          <div class="form-rij">
-            <div class="form-veld form-veld-tel">
-              <label>Telefoonnummer <span class="req">*</span></label>
-              <div class="tel-wrap">
-                <span class="tel-prefix">🇳🇱 +31</span>
-                <input type="tel" id="f-telefoon" placeholder="6 12 34 56 78" autocomplete="tel">
-              </div>
-            </div>
-            <div class="form-veld form-veld-locatie">
-              <label>Voorkeur locatie <span class="req">*</span></label>
-              <select id="f-locatie">
-                <option value="">Kies een locatie</option>
-                <option value="Hoorn (3 sep + 1 okt 2026)">Hoorn — 3 sep &amp; 1 okt 2026</option>
-                <option value="Amsterdam (8 okt + 5 nov 2026)">Amsterdam — 8 okt &amp; 5 nov 2026</option>
-              </select>
-            </div>
-          </div>
-          <p id="form-error" class="form-error" style="display:none;"></p>
-          <button id="submit-btn" onclick="submitForm()">Intake aanvragen</button>
-          <p class="form-disclaimer">
-            Aanmelden is vrijblijvend. Na je aanmelding volgt een korte intake.
-            Deelname wordt pas bevestigd na afstemming.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    Praktijk van Marijk &middot;
-    <a href="mailto:marijke@praktijkvanmarijk.nl">marijke@praktijkvanmarijk.nl</a>
-    &middot; <a href="tel:+31627376003">06&nbsp;27&nbsp;37&nbsp;60&nbsp;03</a><br>
-    SKJ-registratie 110005309 &middot; geldig t/m 25-05-2028<br>
-    <a href="https://www.praktijkvanmarijk.nl">praktijkvanmarijk.nl</a>
-    &middot; <a href="https://www.praktijkvanmarijk.nl/#klachtenregeling">Klachtenregeling</a>
-  </footer>
-
-  <script>
-    const WEBHOOK = 'https://app.stroomlijn.nu/api/webhooks/flow/3679/15441ab341b514251bd9cce9fa2ce9886f663788db063c822e4ac0a1c271b9f8';
-    const SHEET_ID = '1fsyDF6Y7UejMF_X7bLgQDlBass85kmNECyKiuEt_EAY';
-
-    async function submitForm() {
-      const naam     = document.getElementById('f-naam').value.trim();
-      const email    = document.getElementById('f-email').value.trim();
-      const tel      = document.getElementById('f-telefoon').value.trim();
-      const locatie  = document.getElementById('f-locatie').value;
-      const errEl    = document.getElementById('form-error');
-      const btn      = document.getElementById('submit-btn');
-
-      errEl.style.display = 'none';
-
-      if (!naam || !email || !tel || !locatie) {
-        errEl.textContent = 'Vul alle velden in.';
-        errEl.style.display = 'block';
-        return;
-      }
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        errEl.textContent = 'Vul een geldig e-mailadres in.';
-        errEl.style.display = 'block';
-        return;
-      }
-
-      const volledigTel = '+31' + tel.replace(/^0/, '').replace(/\s/g, '');
-
-      btn.disabled = true;
-      btn.textContent = 'Bezig…';
-
-      try {
-        await fetch(WEBHOOK, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            contactName:  naam,
-            contactEmail: email,
-            contactPhone: volledigTel,
-            data: {
-              Email:    email,
-              Naam:     naam,
-              Telefoon: volledigTel,
-              Locatie:  locatie,
-              Status:   'Interesse ingediend',
-              bron:     'Salespagina training intiem terreur',
-            }
-          })
-        });
-
-        document.getElementById('form-area').innerHTML =
-          '<div class="form-success">' +
-          '<div class="form-success-title">Aanmelding ontvangen</div>' +
-          '<p>Je hoort binnen twee werkdagen van Marijke voor een korte intake. ' +
-          'Zij kijkt dan samen met je of de training aansluit op jouw rol en leerdoel.</p>' +
-          '</div>';
-      } catch {
-        btn.disabled = false;
-        btn.textContent = 'Intake aanvragen';
-        errEl.textContent = 'Er ging iets mis. Probeer het opnieuw of mail naar marijke@praktijkvanmarijk.nl';
-        errEl.style.display = 'block';
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      ['f-naam','f-email','f-telefoon'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.addEventListener('keydown', e => { if (e.key === 'Enter') submitForm(); });
-      });
-    });
-  </script>
-
+  </style>
+</head>
 <body>
 
   <!-- Topbalk -->
@@ -381,7 +166,6 @@
         jeugdbeschermers, gezinscoaches, wijkteamprofessionals, gedragswetenschappers,
         casusregisseurs en aandachtsfunctionarissen.
       </p>
-
       <div style="margin-top: 28px;">
         <div class="section-label">Goed om vooraf te weten</div>
         <p>
@@ -400,26 +184,11 @@
       <div class="section-label">Na afloop</div>
       <h2>Wat je concreet meeneemt</h2>
       <ul class="num-list">
-        <li>
-          <div class="num-bullet">1</div>
-          <div class="num-text">Belichaamd waarnemen wat er in het gesprek gebeurt, in jezelf, in de ander en in het systeem, en je benoemt dat professioneel.</div>
-        </li>
-        <li>
-          <div class="num-bullet">2</div>
-          <div class="num-text">Je herkent manipulatie, omkering en ondermijning en brengt het gesprek terug naar feiten, veiligheid en mandaat.</div>
-        </li>
-        <li>
-          <div class="num-bullet">3</div>
-          <div class="num-text">Je houdt regie onder druk, inclusief tempo, structuur en besluitvorming, zonder je professionele positie te verliezen.</div>
-        </li>
-        <li>
-          <div class="num-bullet">4</div>
-          <div class="num-text">Je doet begrensde interventies die juridisch en professioneel kloppen, zonder escalatie te voeden.</div>
-        </li>
-        <li>
-          <div class="num-bullet">5</div>
-          <div class="num-text">Je werkt met persoonlijke handelingsankers: korte, herhaalbare zinnen en acties die je in het moment terugbrengen naar jouw rol.</div>
-        </li>
+        <li><div class="num-bullet">1</div><div class="num-text">Belichaamd waarnemen wat er in het gesprek gebeurt, in jezelf, in de ander en in het systeem, en je benoemt dat professioneel.</div></li>
+        <li><div class="num-bullet">2</div><div class="num-text">Je herkent manipulatie, omkering en ondermijning en brengt het gesprek terug naar feiten, veiligheid en mandaat.</div></li>
+        <li><div class="num-bullet">3</div><div class="num-text">Je houdt regie onder druk, inclusief tempo, structuur en besluitvorming, zonder je professionele positie te verliezen.</div></li>
+        <li><div class="num-bullet">4</div><div class="num-text">Je doet begrensde interventies die juridisch en professioneel kloppen, zonder escalatie te voeden.</div></li>
+        <li><div class="num-bullet">5</div><div class="num-text">Je werkt met persoonlijke handelingsankers: korte, herhaalbare zinnen en acties die je in het moment terugbrengen naar jouw rol.</div></li>
       </ul>
     </div>
   </section>
@@ -433,21 +202,12 @@
         <div class="dag-card">
           <div class="dag-label">Dag 1</div>
           <div class="dag-title">Fundament, waarneming en taal</div>
-          <p>
-            Wat is intiem terreur en hoe verschilt het van een gewoon conflict.
-            Hoe neem je belichaamd waar. Hoe vertaal je een niet-pluis gevoel naar
-            observaties. Oefenen met korte scenario's en voorbereiding op de toetsing
-            de dag daarna.
-          </p>
+          <p>Wat is intiem terreur en hoe verschilt het van een gewoon conflict. Hoe neem je belichaamd waar. Hoe vertaal je een niet-pluis gevoel naar observaties. Oefenen met korte scenario's en voorbereiding op de toetsing de dag daarna.</p>
         </div>
         <div class="dag-card">
           <div class="dag-label">Dag 2</div>
           <div class="dag-title">Intensief oefenen en toetsmoment</div>
-          <p>
-            Simulaties met professionele acteurs onder toenemende druk. Directe feedback
-            op kerncriteria. Toetsmoment: je laat zien dat je regie houdt, manipulatie
-            herkent en begrensd intervenieert. Vertaling naar jouw eigen praktijk.
-          </p>
+          <p>Simulaties met professionele acteurs onder toenemende druk. Directe feedback op kerncriteria. Toetsmoment: je laat zien dat je regie houdt, manipulatie herkent en begrensd intervenieert. Vertaling naar jouw eigen praktijk.</p>
         </div>
       </div>
     </div>
@@ -459,32 +219,15 @@
       <div class="section-label">Praktisch</div>
       <h2>Wat je moet weten</h2>
       <div class="praktisch-grid">
-        <div class="praktisch-item">
-          <div class="praktisch-label">Duur</div>
-          <div class="praktisch-value">2 dagen</div>
-        </div>
-        <div class="praktisch-item">
-          <div class="praktisch-label">Tijden</div>
-          <div class="praktisch-value">09:30 tot 16:30</div>
-        </div>
-        <div class="praktisch-item">
-          <div class="praktisch-label">Groepsgrootte</div>
-          <div class="praktisch-value">Max. 8 deelnemers</div>
-        </div>
-        <div class="praktisch-item">
-          <div class="praktisch-label">Locaties</div>
-          <div class="praktisch-value">Hoorn &amp; Amsterdam</div>
-        </div>
-        <div class="praktisch-item">
-          <div class="praktisch-label">Eerstvolgende start</div>
-          <div class="praktisch-value">3 september 2026</div>
-        </div>
-        <div class="praktisch-item">
-          <div class="praktisch-label">Incompany</div>
-          <div class="praktisch-value">Mogelijk, vraag naar de opties</div>
-        </div>
+        <div class="praktisch-item"><div class="praktisch-label">Duur</div><div class="praktisch-value">2 dagen</div></div>
+        <div class="praktisch-item"><div class="praktisch-label">Tijden</div><div class="praktisch-value">09:30 tot 16:30</div></div>
+        <div class="praktisch-item"><div class="praktisch-label">Groepsgrootte</div><div class="praktisch-value">Max. 8 deelnemers</div></div>
+        <div class="praktisch-item"><div class="praktisch-label">Locaties</div><div class="praktisch-value">Hoorn &amp; Amsterdam</div></div>
+        <div class="praktisch-item"><div class="praktisch-label">Eerstvolgende start</div><div class="praktisch-value">3 september 2026</div></div>
+        <div class="praktisch-item"><div class="praktisch-label">Incompany</div><div class="praktisch-value">Mogelijk, vraag naar de opties</div></div>
       </div>
-<div class="dag-grid" style="margin-top: 28px;">
+
+      <div class="dag-grid" style="margin-top: 28px;">
         <div class="dag-card">
           <div class="dag-label">Hoorn</div>
           <div class="dag-title">Regio Noord-Holland Noord</div>
@@ -503,6 +246,7 @@
         De training gaat door bij voldoende deelnemers. Uiterlijk 14 dagen voor aanvang ontvang je de definitieve bevestiging.
         Bij onvoldoende aanmeldingen behoudt Marijke zich het recht voor de training te verplaatsen of te annuleren. Je ontvangt dan restitutie.
       </p>
+
       <div class="prijs-box">
         <div>
           <div class="prijs-bedrag">€ 1.500</div>
@@ -522,10 +266,10 @@
       <div class="section-label">Wie geeft de training</div>
       <h2>Marijke Koomen</h2>
       <p>
-        Marijke werkt twintig jaar in de jeugdbescherming. Ze was jeugd- en
-        gezinsbeschermer bij De Jeugd- en Gezinsbeschermers Noord-Holland, medewerker
-        bij Veilig Thuis Noord-Holland Noord en schreef rapportages richting de
-        kinderrechter en de Raad voor de Kinderbescherming.
+        Marijke werkt twintig jaar in de jeugdbescherming. Ze was jeugd- en gezinsbeschermer
+        bij De Jeugd- en Gezinsbeschermers Noord-Holland, medewerker bij Veilig Thuis
+        Noord-Holland Noord en schreef rapportages richting de kinderrechter en de Raad
+        voor de Kinderbescherming.
       </p>
       <p>
         Ze is SKJ-geregistreerd jeugd- en gezinsprofessional (nr. 110005309).
@@ -543,7 +287,7 @@
     </div>
   </section>
 
-   <!-- CTA + formulier -->
+  <!-- CTA + formulier -->
   <section class="cta-section">
     <div class="cta-inner">
       <h2>Intake aanvragen</h2>
@@ -552,19 +296,43 @@
         Zij toetst dan of de training aansluit op jouw rol, mandaat en leerdoel.
         Deelname is selectief.
       </p>
- 
-      <div class="form-iframe-wrap">
-        <iframe
-          src="https://app.stroomlijn.nu/forms/iah7aod7?primaryColor=%23cf872d&borderRadius=4&fontFamily=DM+Sans"
-          title="Intake aanvragen tweedaagse training"
-          loading="lazy"
-          id="intake-iframe"
-        ></iframe>
+      <div id="form-area">
+        <div class="eigen-form">
+          <div class="form-rij">
+            <div class="form-veld">
+              <label>Naam <span class="req">*</span></label>
+              <input type="text" id="f-naam" placeholder="Volledige naam" autocomplete="name">
+            </div>
+            <div class="form-veld">
+              <label>E-mailadres <span class="req">*</span></label>
+              <input type="email" id="f-email" placeholder="naam@organisatie.nl" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-rij">
+            <div class="form-veld">
+              <label>Telefoonnummer <span class="req">*</span></label>
+              <div class="tel-wrap">
+                <span class="tel-prefix">🇳🇱 +31</span>
+                <input type="tel" id="f-telefoon" placeholder="6 12 34 56 78" autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-veld">
+              <label>Voorkeur locatie <span class="req">*</span></label>
+              <select id="f-locatie">
+                <option value="">Kies een locatie</option>
+                <option value="Hoorn (3 sep + 1 okt 2026)">Hoorn &mdash; 3 sep &amp; 1 okt 2026</option>
+                <option value="Amsterdam (8 okt + 5 nov 2026)">Amsterdam &mdash; 8 okt &amp; 5 nov 2026</option>
+              </select>
+            </div>
+          </div>
+          <p id="form-error" class="form-error" style="display:none;"></p>
+          <button id="submit-btn" onclick="submitForm()">Intake aanvragen</button>
+          <p class="form-disclaimer">
+            Aanmelden is vrijblijvend. Na je aanmelding volgt een korte intake.
+            Deelname wordt pas bevestigd na afstemming.
+          </p>
+        </div>
       </div>
-      <p class="form-disclaimer">
-        Aanmelden is vrijblijvend. Na je aanmelding volgt een korte intake.
-        Deelname wordt pas bevestigd na afstemming.
-      </p>
     </div>
   </section>
 
@@ -573,17 +341,78 @@
     Praktijk van Marijk &middot;
     <a href="mailto:marijke@praktijkvanmarijk.nl">marijke@praktijkvanmarijk.nl</a>
     &middot; <a href="tel:+31627376003">06&nbsp;27&nbsp;37&nbsp;60&nbsp;03</a><br>
-    SKJ-registratie 110005309 &middot <a href="https://www.praktijkvanmarijk.nl">praktijkvanmarijk.nl</a><br>
+    SKJ-registratie 110005309 &middot; geldig t/m 25-05-2028<br>
+    <a href="https://www.praktijkvanmarijk.nl">praktijkvanmarijk.nl</a>
     &middot; <a href="https://www.praktijkvanmarijk.nl/#klachtenregeling">Klachtenregeling</a>
   </footer>
 
- <script>
-    // Pas iframe-hoogte aan op basis van inhoud (Stroomlijn stuurt resize-berichten)
-    window.addEventListener('message', function(e) {
-      if (e.data && e.data.type === 'resize' && e.data.height) {
-        const iframe = document.getElementById('intake-iframe');
-        if (iframe) iframe.style.minHeight = (e.data.height + 40) + 'px';
+  <script>
+    const WEBHOOK = 'https://app.stroomlijn.nu/api/webhooks/flow/3679/15441ab341b514251bd9cce9fa2ce9886f663788db063c822e4ac0a1c271b9f8';
+
+    async function submitForm() {
+      const naam    = document.getElementById('f-naam').value.trim();
+      const email   = document.getElementById('f-email').value.trim();
+      const tel     = document.getElementById('f-telefoon').value.trim();
+      const locatie = document.getElementById('f-locatie').value;
+      const errEl   = document.getElementById('form-error');
+      const btn     = document.getElementById('submit-btn');
+
+      errEl.style.display = 'none';
+
+      if (!naam || !email || !tel || !locatie) {
+        errEl.textContent = 'Vul alle velden in.';
+        errEl.style.display = 'block';
+        return;
       }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errEl.textContent = 'Vul een geldig e-mailadres in.';
+        errEl.style.display = 'block';
+        return;
+      }
+
+      const volledigTel = '+31' + tel.replace(/^0/, '').replace(/\s/g, '');
+
+      btn.disabled = true;
+      btn.textContent = 'Bezig\u2026';
+
+      try {
+        await fetch(WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contactName:  naam,
+            contactEmail: email,
+            contactPhone: volledigTel,
+            data: {
+              Email:    email,
+              Naam:     naam,
+              Telefoon: volledigTel,
+              Locatie:  locatie,
+              Status:   'Interesse ingediend',
+              bron:     'Salespagina training intiem terreur'
+            }
+          })
+        });
+
+        document.getElementById('form-area').innerHTML =
+          '<div class="form-success">' +
+          '<div class="form-success-title">Aanmelding ontvangen</div>' +
+          '<p>Je hoort binnen twee werkdagen van Marijke voor een korte intake. ' +
+          'Zij kijkt dan samen met je of de training aansluit op jouw rol en leerdoel.</p>' +
+          '</div>';
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Intake aanvragen';
+        errEl.textContent = 'Er ging iets mis. Probeer het opnieuw of mail naar marijke@praktijkvanmarijk.nl';
+        errEl.style.display = 'block';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      ['f-naam', 'f-email', 'f-telefoon'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('keydown', e => { if (e.key === 'Enter') submitForm(); });
+      });
     });
   </script>
 
