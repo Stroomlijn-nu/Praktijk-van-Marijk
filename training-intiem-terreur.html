@@ -225,37 +225,20 @@
     }
     .cta-sub { font-size: 15px; color: #e0c8c6; margin-bottom: 36px; line-height: 1.75; }
 
-    .intake-form { display: flex; flex-direction: column; gap: 14px; }
-    .intake-form input {
+    .form-iframe-wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      border-radius: 6px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.05);
+    }
+    .form-iframe-wrap iframe {
       width: 100%;
-      padding: 12px 14px;
-      border-radius: 4px;
-      border: 1.5px solid rgba(255,255,255,0.25);
-      background: rgba(255,255,255,0.10);
-      color: var(--creme);
-      font-size: 15px;
-      font-family: 'DM Sans', sans-serif;
-      outline: none;
-      transition: border-color 200ms;
-    }
-    .intake-form input::placeholder { color: rgba(250,248,244,0.5); }
-    .intake-form input:focus { border-color: var(--okergoud); }
-    .intake-form button {
-      background: var(--okergoud);
-      color: var(--donker);
+      min-height: 320px;
       border: none;
-      border-radius: 4px;
-      padding: 13px 24px;
-      font-size: 15px; font-weight: 600;
-      font-family: 'DM Sans', sans-serif;
-      cursor: pointer;
-      letter-spacing: 0.02em;
-      transition: opacity 200ms;
+      display: block;
     }
-    .intake-form button:hover { opacity: 0.88; }
-    .intake-form button:disabled { background: #8a7a68; cursor: not-allowed; opacity: 1; }
-    .form-disclaimer { font-size: 12px; color: #c8bab8; margin-top: 4px; line-height: 1.6; }
-    .form-error { color: #f5c5c2; font-size: 13px; margin: 0; }
+    .form-disclaimer { font-size: 12px; color: #c8bab8; margin-top: 16px; line-height: 1.6; }
 
     /* ── Success state ── */
     .form-success {
@@ -477,7 +460,7 @@
     </div>
   </section>
 
-  <!-- CTA + formulier -->
+   <!-- CTA + formulier -->
   <section class="cta-section">
     <div class="cta-inner">
       <h2>Intake aanvragen</h2>
@@ -486,20 +469,19 @@
         Zij toetst dan of de training aansluit op jouw rol, mandaat en leerdoel.
         Deelname is selectief.
       </p>
-
-      <div id="form-area">
-        <div class="intake-form">
-          <input type="text"   id="f-naam"     placeholder="Naam"          autocomplete="name">
-          <input type="email"  id="f-email"    placeholder="E-mailadres"   autocomplete="email">
-          <input type="tel"    id="f-telefoon" placeholder="Telefoonnummer" autocomplete="tel">
-          <p id="form-error" class="form-error" style="display:none;"></p>
-          <button id="submit-btn" onclick="submitForm()">Intake aanvragen</button>
-          <p class="form-disclaimer">
-            Aanmelden is vrijblijvend. Na je aanmelding volgt een korte intake.
-            Deelname wordt pas bevestigd na afstemming.
-          </p>
-        </div>
+ 
+      <div class="form-iframe-wrap">
+        <iframe
+          src="https://app.stroomlijn.nu/forms/fwu6eq18?darkMode=false&primaryColor=%23cf872d&backgroundColor=%2389221d&textColor=%23faf8f4&borderRadius=4&fontFamily=DM+Sans"
+          title="Intake aanvragen tweedaagse training"
+          loading="lazy"
+          id="intake-iframe"
+        ></iframe>
       </div>
+      <p class="form-disclaimer">
+        Aanmelden is vrijblijvend. Na je aanmelding volgt een korte intake.
+        Deelname wordt pas bevestigd na afstemming.
+      </p>
     </div>
   </section>
 
@@ -512,67 +494,13 @@
     &middot; <a href="https://www.praktijkvanmarijk.nl/#klachtenregeling">Klachtenregeling</a>
   </footer>
 
-  <script>
-    const WEBHOOK_URL = 'https://app.stroomlijn.nu/api/webhooks/flow/3679/15441ab341b514251bd9cce9fa2ce9886f663788db063c822e4ac0a1c271b9f8';
-
-    async function submitForm() {
-      const naam     = document.getElementById('f-naam').value.trim();
-      const email    = document.getElementById('f-email').value.trim();
-      const telefoon = document.getElementById('f-telefoon').value.trim();
-      const errEl    = document.getElementById('form-error');
-      const btn      = document.getElementById('submit-btn');
-
-      errEl.style.display = 'none';
-
-      if (!naam || !email || !telefoon) {
-        errEl.textContent = 'Vul alle velden in.';
-        errEl.style.display = 'block';
-        return;
+ <script>
+    // Pas iframe-hoogte aan op basis van inhoud (Stroomlijn stuurt resize-berichten)
+    window.addEventListener('message', function(e) {
+      if (e.data && e.data.type === 'resize' && e.data.height) {
+        const iframe = document.getElementById('intake-iframe');
+        if (iframe) iframe.style.minHeight = (e.data.height + 40) + 'px';
       }
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        errEl.textContent = 'Vul een geldig e-mailadres in.';
-        errEl.style.display = 'block';
-        return;
-      }
-
-      btn.disabled = true;
-      btn.textContent = 'Bezig…';
-
-      try {
-        await fetch(WEBHOOK_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            contactName:  naam,
-            contactEmail: email,
-            contactPhone: telefoon,
-            data: {
-              bron:    'Salespagina training intiem terreur',
-              traject: 'Tweedaagse vaardigheidstraining',
-            }
-          })
-        });
-
-        document.getElementById('form-area').innerHTML = `
-          <div class="form-success">
-            <div class="form-success-title">Aanmelding ontvangen</div>
-            <p>Je hoort binnen twee werkdagen van Marijke voor een korte intake.
-               Zij kijkt dan samen met je of de training aansluit op jouw rol en leerdoel.</p>
-          </div>`;
-      } catch {
-        btn.disabled = false;
-        btn.textContent = 'Intake aanvragen';
-        errEl.textContent = 'Er ging iets mis. Probeer het opnieuw of mail naar marijke@praktijkvanmarijk.nl';
-        errEl.style.display = 'block';
-      }
-    }
-
-    // Enter-toets werkt op alle invoervelden
-    document.addEventListener('DOMContentLoaded', () => {
-      ['f-naam','f-email','f-telefoon'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.addEventListener('keydown', e => { if (e.key === 'Enter') submitForm(); });
-      });
     });
   </script>
 
