@@ -379,18 +379,13 @@
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            contactName:  naam,
-            contactEmail: email,
-            contactPhone: volledigTel,
-            data: {
-              Email:    email,
-              Naam:     naam,
-              Telefoon: volledigTel,
-              Locatie:  locatie,
-              Status:   'Interesse ingediend',
-              bron:     'Salespagina training intiem terreur'
-            }
-          })
+  contactName:  naam,
+  contactEmail: email,
+  contactPhone: volledigTel,
+  data: {
+    Locatie: locatie
+  }
+})
         });
 
         document.getElementById('form-area').innerHTML =
