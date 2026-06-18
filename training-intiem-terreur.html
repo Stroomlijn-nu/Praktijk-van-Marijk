@@ -290,11 +290,12 @@
   <!-- CTA + formulier -->
   <section class="cta-section">
     <div class="cta-inner">
-      <h2>Intake aanvragen</h2>
+      <h2>Interesse in deelname</h2>
       <p class="cta-sub">
-        Na je aanmelding neemt Marijke binnen twee werkdagen contact op voor een korte intake.
-        Zij toetst dan of de training aansluit op jouw rol, mandaat en leerdoel.
-        Deelname is selectief.
+        Vul je gegevens in en je plek is voorlopig gereserveerd. 
+        Marijke bundelt alle intakes in de week van 25 tot 27 augustus. 
+        Je ontvangt binnen twee werkdagen een bericht om een tijdslot te kiezen. 
+        Deelname wordt bevestigd na de intake en de sluitingsdatum.
       </p>
       <div id="form-area">
         <div class="eigen-form">
@@ -326,7 +327,7 @@
             </div>
           </div>
           <p id="form-error" class="form-error" style="display:none;"></p>
-          <button id="submit-btn" onclick="submitForm()">Intake aanvragen</button>
+          <button id="submit-btn" onclick="submitForm()">Aanmelden</button>
           <p class="form-disclaimer">
             Aanmelden is vrijblijvend. Na je aanmelding volgt een korte intake.
             Deelname wordt pas bevestigd na afstemming.
@@ -394,8 +395,9 @@
         document.getElementById('form-area').innerHTML =
           '<div class="form-success">' +
           '<div class="form-success-title">Aanmelding ontvangen</div>' +
-          '<p>Je hoort binnen twee werkdagen van Marijke voor een korte intake. ' +
-          'Zij kijkt dan samen met je of de training aansluit op jouw rol en leerdoel.</p>' +
+          '<p>Je plek is voorlopig gereserveerd. Die wordt definitief na de sluitingsdatum en een korte intake. ' +
+          'Je ontvangt binnen twee werkdagen een bericht met informatie over het inplannen van jouw tijdslot ' +
+        'in de week van 25 tot 27 augustus. </p>'
           '</div>';
       } catch {
         btn.disabled = false;
