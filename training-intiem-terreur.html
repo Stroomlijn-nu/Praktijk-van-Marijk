@@ -348,7 +348,7 @@
   </footer>
 
   <script>
-    const WEBHOOK = 'https://app.stroomlijn.nu/api/webhooks/flow/3679/15441ab341b514251bd9cce9fa2ce9886f663788db063c822e4ac0a1c271b9f8';
+    const WEBHOOK = 'https://app.stroomlijn.nu/api/webhooks/flow/1r50zkfw/15441ab341b514251bd9cce9fa2ce9886f663788db063c822e4ac0a1c271b9f8';
 
     async function submitForm() {
       const naam    = document.getElementById('f-naam').value.trim();
@@ -384,10 +384,9 @@
             contactName:  naam,
             contactEmail: email,
             contactPhone: volledigTel,
-            locatie:      locatie,
-            datum:        new Date().toISOString().slice(0, 10),
             data: {
-              locatie: locatie
+              locatie: locatie,
+              datum:   new Date().toISOString().slice(0, 10)
             }
           })
         });
@@ -397,11 +396,11 @@
           '<div class="form-success-title">Aanmelding ontvangen</div>' +
           '<p>Je plek is voorlopig gereserveerd. Die wordt definitief na de sluitingsdatum en een korte intake. ' +
           'Je ontvangt binnen twee werkdagen een bericht met informatie over het inplannen van jouw tijdslot ' +
-        'in de week van 25 tot 27 augustus. </p>'
+          'in de week van 25 tot 27 augustus.</p>' +
           '</div>';
       } catch {
         btn.disabled = false;
-        btn.textContent = 'Intake aanvragen';
+        btn.textContent = 'Aanmelden';
         errEl.textContent = 'Er ging iets mis. Probeer het opnieuw of mail naar marijke@praktijkvanmarijk.nl';
         errEl.style.display = 'block';
       }
