@@ -25,6 +25,12 @@ function Home({ setRoute }) {
           <div>
             <Button href="https://calendly.com/praktijkvanmarijk/25min" target="_blank">Neem contact op&nbsp;→</Button>
           </div>
+          <section>
+  <h2>Training voor jeugdprofessionals</h2>
+  <p>Intiem terreur herkennen en regie houden onder druk. 
+     Tweedaagse vaardigheidstraining voor ervaren professionals.</p>
+  <a href="/#/training">Meer over de training</a>
+</section>
         </div>
         <figure style={{ margin: 0 }}>
           <div style={{ background: 'var(--beige)', borderRadius: 6, aspectRatio: '3/2', position: 'relative', overflow: 'hidden' }}>
