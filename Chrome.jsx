@@ -2,12 +2,13 @@ function Topbar({ route, setRoute }) {
   const items = [
     ['home', 'Home', 'Praktijk van Marijk — specialist intiem terreur voor jeugdprofessionals'],
     ['over', 'Over Marijke', 'Over Marijke Koomen, SKJ-geregistreerd jeugdprofessional'],
-    ['professionals', 'Training jeugdprofessionals', 'Training en coaching voor jeugdprofessionals'],
+    ['professionals', 'Professionals', 'Training en coaching voor jeugdprofessionals'],
     ['werkwijze', 'Werkwijze en aanpak', 'Werkwijze en aanpak van Praktijk van Marijk'],
     ['ervaringen', 'Ervaringen jeugdzorg', 'Ervaringen uit jeugdzorg en jeugdbescherming'],
     ['contact', 'Contact', 'Neem contact op met Marijke Koomen'],
   ];
-
+  
+const TRAINING_URL = '/training-intiem-terreur.html';
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
   // Close drawer on Esc, and lock body scroll when open.
@@ -65,20 +66,28 @@ function Topbar({ route, setRoute }) {
       </a>
 
       {/* Desktop nav */}
-      <nav className="pvm-topbar__nav" aria-label="Hoofdnavigatie">
-        <ul style={{ display: 'flex', gap: 22, listStyle: 'none', margin: 0, padding: 0 }}>
-          {items.map(([key, label, title]) => (
-            <li key={key}>
-              <a
-                onClick={() => setRoute(key)}
-                title={title}
-                aria-label={title}
-                className={`pvm-topbar__link${route === key ? ' is-active' : ''}`}
-              >{label}</a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+<nav className="pvm-topbar__nav" aria-label="Hoofdnavigatie">
+  <ul style={{ display: 'flex', gap: 22, listStyle: 'none', margin: 0, padding: 0 }}>
+    {items.map(([key, label, title]) => (
+      <li key={key}>
+        
+          onClick={() => setRoute(key)}
+          title={title}
+          aria-label={title}
+          className={`pvm-topbar__link${route === key ? ' is-active' : ''}`}
+        >{label}</a>
+      </li>
+    ))}
+    <li>
+      
+        href={TRAINING_URL}
+        title="Training intiem terreur voor jeugdprofessionals"
+        aria-label="Training intiem terreur"
+        className="pvm-topbar__link"
+      >Trainingen</a>
+    </li>
+  </ul>
+</nav>
 
       {/* Mobile hamburger */}
       <button
@@ -112,17 +121,25 @@ function Topbar({ route, setRoute }) {
               </svg>
             </button>
             <ul>
-              {items.map(([key, label, title]) => (
-                <li key={key}>
-                  <a
-                    onClick={() => go(key)}
-                    title={title}
-                    aria-label={title}
-                    className={`pvm-mobile-nav__link${route === key ? ' is-active' : ''}`}
-                  >{label}</a>
-                </li>
-              ))}
-            </ul>
+  {items.map(([key, label, title]) => (
+    <li key={key}>
+      
+        onClick={() => go(key)}
+        title={title}
+        aria-label={title}
+        className={`pvm-mobile-nav__link${route === key ? ' is-active' : ''}`}
+      >{label}</a>
+    </li>
+  ))}
+  <li>
+    
+      href={TRAINING_URL}
+      title="Training intiem terreur voor jeugdprofessionals"
+      aria-label="Training intiem terreur"
+      className="pvm-mobile-nav__link"
+    >Trainingen</a>
+  </li>
+</ul>
           </nav>
         </React.Fragment>
       )}
