@@ -2,7 +2,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "skjPlacement": "bottom-aligned"
 }/*EDITMODE-END*/;
 
-const ROUTES = ['home', 'over', 'professionals', 'werkwijze', 'ervaringen', 'contact', 'voorwaarden', 'privacy', 'klachtenregeling'];
+const ROUTES = ['home', 'over', 'professionals', 'trainingen', 'werkwijze', 'ervaringen', 'contact', 'voorwaarden', 'privacy', 'klachtenregeling'];
 
 function readHashRoute() {
   const h = (window.location.hash || '').replace(/^#\/?/, '').toLowerCase();
@@ -48,6 +48,7 @@ function App() {
     home: <Home setRoute={setRoute} />,
     over: <Over />,
     professionals: <Professionals skjPlacement={t.skjPlacement} />,
+    trainingen: <Trainingen />,
     werkwijze: <Werkwijze />,
     ervaringen: <Ervaringen setRoute={setRoute} />,
     contact: <Contact />,
@@ -56,7 +57,7 @@ function App() {
     klachtenregeling: <Klachtenregeling />,
   }[route];
 
-  const label = { home: '01 Home', over: '02 Over Marijke', professionals: '03 Professionals', werkwijze: '04 Werkwijze en aanpak', ervaringen: '05 Ervaringen jeugdzorg', contact: '06 Contact', voorwaarden: '07 Algemene voorwaarden', privacy: '08 Privacybeleid', klachtenregeling: '09 Klachtenregeling', }[route];
+  const label = { home: '01 Home', over: '02 Over Marijke', professionals: '03 Professionals', trainingen: '04 Trainingen', werkwijze: '05 Werkwijze en aanpak', ervaringen: '06 Ervaringen jeugdzorg', contact: '07 Contact', voorwaarden: '08 Algemene voorwaarden', privacy: '09 Privacybeleid', klachtenregeling: '10 Klachtenregeling', }[route];
 
   return (
     <div data-screen-label={label} style={{ minHeight: '100vh', background: 'var(--bg)' }}>
