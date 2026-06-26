@@ -75,7 +75,7 @@ const TRAINING_URL = '/training-intiem-terreur.html';
           title={title}
           aria-label={title}
           className={`pvm-topbar__link${route === key ? ' is-active' : ''}`}
-        >{label}</a>
+        <a>{label}</a>
       </li>
     ))}
     <li>
@@ -128,7 +128,7 @@ const TRAINING_URL = '/training-intiem-terreur.html';
         title={title}
         aria-label={title}
         className={`pvm-mobile-nav__link${route === key ? ' is-active' : ''}`}
-      >{label}</a>
+      <a>{label}</a>
     </li>
   ))}
   <li>
@@ -137,7 +137,7 @@ const TRAINING_URL = '/training-intiem-terreur.html';
       title="Training intiem terreur voor jeugdprofessionals"
       aria-label="Training intiem terreur"
       className="pvm-mobile-nav__link"
-    >Trainingen</a>
+    <a>Trainingen</a>
   </li>
 </ul>
           </nav>
