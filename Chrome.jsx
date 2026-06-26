@@ -7,11 +7,10 @@ function Topbar({ route, setRoute }) {
     ['ervaringen', 'Ervaringen jeugdzorg', 'Ervaringen uit jeugdzorg en jeugdbescherming'],
     ['contact', 'Contact', 'Neem contact op met Marijke Koomen'],
   ];
-  
-const TRAINING_URL = '/training-intiem-terreur.html';
+
+  const TRAINING_URL = '/training-intiem-terreur.html';
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
-  // Close drawer on Esc, and lock body scroll when open.
   React.useEffect(() => {
     if (!drawerOpen) return;
     const prev = document.body.style.overflow;
@@ -34,15 +33,18 @@ const TRAINING_URL = '/training-intiem-terreur.html';
       justifyContent: 'space-between',
       position: 'sticky', top: 0, zIndex: 10,
     }}>
-      <a onClick={() => setRoute('home')} style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 16,
-        cursor: 'pointer',
-        textDecoration: 'none',
-        whiteSpace: 'nowrap',
-        minWidth: 0,
-      }}>
+      <a
+        onClick={() => setRoute('home')}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 16,
+          cursor: 'pointer',
+          textDecoration: 'none',
+          whiteSpace: 'nowrap',
+          minWidth: 0,
+        }}
+      >
         <img
           src={(window.__resources && window.__resources.logoPraktijk) || "assets/logo-praktijk-van-marijk.png"}
           alt="Praktijk van Marijk"
@@ -66,28 +68,28 @@ const TRAINING_URL = '/training-intiem-terreur.html';
       </a>
 
       {/* Desktop nav */}
-<nav className="pvm-topbar__nav" aria-label="Hoofdnavigatie">
-  <ul style={{ display: 'flex', gap: 22, listStyle: 'none', margin: 0, padding: 0 }}>
-    {items.map(([key, label, title]) => (
-      <li key={key}>
-        
-          onClick={() => setRoute(key)}
-          title={title}
-          aria-label={title}
-          className={`pvm-topbar__link${route === key ? ' is-active' : ''}`}
-        <a>{label}</a>
-      </li>
-    ))}
-    <li>
-      
-        href={TRAINING_URL}
-        title="Training intiem terreur voor jeugdprofessionals"
-        aria-label="Training intiem terreur"
-        className="pvm-topbar__link"
-      >Trainingen</a>
-    </li>
-  </ul>
-</nav>
+      <nav className="pvm-topbar__nav" aria-label="Hoofdnavigatie">
+        <ul style={{ display: 'flex', gap: 22, listStyle: 'none', margin: 0, padding: 0 }}>
+          {items.map(([key, label, title]) => (
+            <li key={key}>
+              <a
+                onClick={() => setRoute(key)}
+                title={title}
+                aria-label={title}
+                className={`pvm-topbar__link${route === key ? ' is-active' : ''}`}
+              >{label}</a>
+            </li>
+          ))}
+          <li>
+            <a
+              href={TRAINING_URL}
+              title="Training intiem terreur voor jeugdprofessionals"
+              aria-label="Training intiem terreur"
+              className="pvm-topbar__link"
+            >Trainingen</a>
+          </li>
+        </ul>
+      </nav>
 
       {/* Mobile hamburger */}
       <button
@@ -107,8 +109,17 @@ const TRAINING_URL = '/training-intiem-terreur.html';
       {/* Mobile drawer + backdrop */}
       {drawerOpen && (
         <React.Fragment>
-          <div className={`pvm-mobile-overlay${drawerOpen ? ' is-open' : ''}`} onClick={() => setDrawerOpen(false)} aria-hidden="true" />
-<nav className={`pvm-mobile-nav${drawerOpen ? ' is-open' : ''}`} aria-label="Hoofdmenu" role="dialog" aria-modal="true">
+          <div
+            className={`pvm-mobile-overlay${drawerOpen ? ' is-open' : ''}`}
+            onClick={() => setDrawerOpen(false)}
+            aria-hidden="true"
+          />
+          <nav
+            className={`pvm-mobile-nav${drawerOpen ? ' is-open' : ''}`}
+            aria-label="Hoofdmenu"
+            role="dialog"
+            aria-modal="true"
+          >
             <button
               type="button"
               className="pvm-mobile-nav__close"
@@ -121,25 +132,25 @@ const TRAINING_URL = '/training-intiem-terreur.html';
               </svg>
             </button>
             <ul>
-  {items.map(([key, label, title]) => (
-    <li key={key}>
-      
-        onClick={() => go(key)}
-        title={title}
-        aria-label={title}
-        className={`pvm-mobile-nav__link${route === key ? ' is-active' : ''}`}
-      <a>{label}</a>
-    </li>
-  ))}
-  <li>
-    
-      href={TRAINING_URL}
-      title="Training intiem terreur voor jeugdprofessionals"
-      aria-label="Training intiem terreur"
-      className="pvm-mobile-nav__link"
-    <a>Trainingen</a>
-  </li>
-</ul>
+              {items.map(([key, label, title]) => (
+                <li key={key}>
+                  <a
+                    onClick={() => go(key)}
+                    title={title}
+                    aria-label={title}
+                    className={`pvm-mobile-nav__link${route === key ? ' is-active' : ''}`}
+                  >{label}</a>
+                </li>
+              ))}
+              <li>
+                <a
+                  href={TRAINING_URL}
+                  title="Training intiem terreur voor jeugdprofessionals"
+                  aria-label="Training intiem terreur"
+                  className="pvm-mobile-nav__link"
+                >Trainingen</a>
+              </li>
+            </ul>
           </nav>
         </React.Fragment>
       )}
@@ -150,101 +161,115 @@ const TRAINING_URL = '/training-intiem-terreur.html';
 function Footer({ setRoute }) {
   return (
     <div className="pvm-footer-root" style={{ borderTop: '0.5px solid var(--line)' }}>
-    <div className="pvm-footer" style={{
-      padding: '40px 48px 32px',
-      display: 'grid',
-      gridTemplateColumns: '1.6fr 1fr 1.2fr 1fr',
-      gap: 32,
-      fontFamily: 'DM Sans, sans-serif',
-      fontSize: 13,
-      color: 'var(--fg2)',
-      lineHeight: 1.8,
-    }}>
-      <div>
-        <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 15, fontWeight: 500, color: 'var(--fg1)', marginBottom: 10 }}>Praktijk van Marijk</div>
-        <div style={{ color: 'var(--fg2)', lineHeight: 1.7 }}>SKJ-geregistreerd jeugd- en gezinsprofessional</div>
-        <div style={{ color: 'var(--fg3)', fontSize: 12, marginTop: 12, lineHeight: 1.7, fontVariantNumeric: 'tabular-nums', display: 'flex', alignItems: 'baseline', gap: 14, flexWrap: 'wrap' }}>
-          <span style={{ letterSpacing: '0.12em', textTransform: 'uppercase' }}>SKJ-registratie</span>
-          <span style={{ color: 'var(--fg1)', fontWeight: 600, letterSpacing: '0.02em' }}>110005309</span>
+      <div className="pvm-footer" style={{
+        padding: '40px 48px 32px',
+        display: 'grid',
+        gridTemplateColumns: '1.6fr 1fr 1.2fr 1fr',
+        gap: 32,
+        fontFamily: 'DM Sans, sans-serif',
+        fontSize: 13,
+        color: 'var(--fg2)',
+        lineHeight: 1.8,
+      }}>
+        <div>
+          <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 15, fontWeight: 500, color: 'var(--fg1)', marginBottom: 10 }}>Praktijk van Marijk</div>
+          <div style={{ color: 'var(--fg2)', lineHeight: 1.7 }}>SKJ-geregistreerd jeugd- en gezinsprofessional</div>
+          <div style={{ color: 'var(--fg3)', fontSize: 12, marginTop: 12, lineHeight: 1.7, fontVariantNumeric: 'tabular-nums', display: 'flex', alignItems: 'baseline', gap: 14, flexWrap: 'wrap' }}>
+            <span style={{ letterSpacing: '0.12em', textTransform: 'uppercase' }}>SKJ-registratie</span>
+            <span style={{ color: 'var(--fg1)', fontWeight: 600, letterSpacing: '0.02em' }}>110005309</span>
+          </div>
+        </div>
+        <div>
+          <div style={{ fontSize: 11, letterSpacing: '0.10em', textTransform: 'uppercase', color: 'var(--fg3)', fontWeight: 500, marginBottom: 8 }}>Site</div>
+          <a onClick={() => setRoute('werkwijze')} style={{ display: 'block', color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer' }}>Werkwijze en aanpak</a>
+          <a onClick={() => setRoute('professionals')} style={{ display: 'block', color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer' }}>Training jeugdprofessionals</a>
+          <a onClick={() => setRoute('ervaringen')} style={{ display: 'block', color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer' }}>Ervaringen jeugdzorg</a>
+        </div>
+        <div>
+          <div style={{ fontSize: 11, letterSpacing: '0.10em', textTransform: 'uppercase', color: 'var(--fg3)', fontWeight: 500, marginBottom: 8 }}>Contact</div>
+          <div><a href="mailto:marijke@praktijkvanmarijk.nl" style={{ color: 'var(--fg2)', textDecoration: 'none', wordBreak: 'break-word' }}>marijke@praktijkvanmarijk.nl</a></div>
+          <div style={{ fontVariantNumeric: 'tabular-nums' }}><a href="tel:+31627376003" style={{ color: 'var(--fg2)', textDecoration: 'none' }}>06 - 27 37 60 03</a></div>
+          <a
+            href="https://calendly.com/praktijkvanmarijk/25min"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: 'inline-block', marginTop: 8, color: 'var(--accent)', cursor: 'pointer', textDecoration: 'none' }}
+          >Plan een kennismaking →</a>
+        </div>
+        <div>
+          <div style={{ fontSize: 11, letterSpacing: '0.10em', textTransform: 'uppercase', color: 'var(--fg3)', fontWeight: 500, marginBottom: 8 }}>Volg mij</div>
+          <div style={{ color: 'var(--fg2)', lineHeight: 1.6, marginBottom: 12 }}>Volg me op LinkedIn voor reflecties uit de praktijk.</div>
+          <a
+            href="https://www.linkedin.com/in/marijke-koomen-365096b1/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 10, color: 'var(--fg2)', textDecoration: 'none', transition: 'color 200ms' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; const c = e.currentTarget.firstChild; if (c) c.style.borderColor = 'var(--accent)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; const c = e.currentTarget.firstChild; if (c) c.style.borderColor = 'var(--line-strong)'; }}
+          >
+            <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 32, height: 32, borderRadius: '50%', border: '0.5px solid var(--line-strong)', transition: 'border-color 200ms' }}>
+              <SocialIcon name="linkedin" size={15} strokeWidth={1.5} />
+            </span>
+            <span>LinkedIn</span>
+          </a>
         </div>
       </div>
-      <div>
-        <div style={{ fontSize: 11, letterSpacing: '0.10em', textTransform: 'uppercase', color: 'var(--fg3)', fontWeight: 500, marginBottom: 8 }}>Site</div>
-        <a onClick={() => setRoute('werkwijze')} style={{ display: 'block', color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer' }}>Werkwijze en aanpak</a>
-        <a onClick={() => setRoute('professionals')} style={{ display: 'block', color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer' }}>Training jeugdprofessionals</a>
-        <a onClick={() => setRoute('ervaringen')} style={{ display: 'block', color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer' }}>Ervaringen jeugdzorg</a>
-      </div>
-      <div>
-        <div style={{ fontSize: 11, letterSpacing: '0.10em', textTransform: 'uppercase', color: 'var(--fg3)', fontWeight: 500, marginBottom: 8 }}>Contact</div>
-        <div><a href="mailto:marijke@praktijkvanmarijk.nl" style={{ color: 'var(--fg2)', textDecoration: 'none', wordBreak: 'break-word' }}>marijke@praktijkvanmarijk.nl</a></div>
-        <div style={{ fontVariantNumeric: 'tabular-nums' }}><a href="tel:+31627376003" style={{ color: 'var(--fg2)', textDecoration: 'none' }}>06 - 27 37 60 03</a></div>
-        <a href="https://calendly.com/praktijkvanmarijk/25min" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: 8, color: 'var(--accent)', cursor: 'pointer', textDecoration: 'none' }}>Plan een kennismaking →</a>
-      </div>
-      <div>
-        <div style={{ fontSize: 11, letterSpacing: '0.10em', textTransform: 'uppercase', color: 'var(--fg3)', fontWeight: 500, marginBottom: 8 }}>Volg mij</div>
-        <div style={{ color: 'var(--fg2)', lineHeight: 1.6, marginBottom: 12 }}>Volg me op LinkedIn voor reflecties uit de praktijk.</div>
-        <a href="https://www.linkedin.com/in/marijke-koomen-365096b1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, color: 'var(--fg2)', textDecoration: 'none', transition: 'color 200ms' }} onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; const c = e.currentTarget.firstChild; if (c) c.style.borderColor = 'var(--accent)'; }} onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; const c = e.currentTarget.firstChild; if (c) c.style.borderColor = 'var(--line-strong)'; }}>
-          <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 32, height: 32, borderRadius: '50%', border: '0.5px solid var(--line-strong)', transition: 'border-color 200ms' }}>
-            <SocialIcon name="linkedin" size={15} strokeWidth={1.5} />
-          </span>
-          <span>LinkedIn</span>
-        </a>
-      </div>
-    </div>
 
-    {/* Fine print / legal row */}
-    <div className="pvm-footer-fineprint" style={{
-      borderTop: '0.5px solid var(--line)',
-      padding: '18px 48px 28px',
-      display: 'flex',
-      flexWrap: 'wrap',
-      alignItems: 'baseline',
-      justifyContent: 'space-between',
-      gap: 16,
-      fontFamily: 'DM Sans, sans-serif',
-      fontSize: 12,
-      color: 'var(--fg3)',
-      lineHeight: 1.6,
-    }}>
-      <div style={{ letterSpacing: '0.01em' }}>
-        © {new Date().getFullYear()} Praktijk van Marijk · Marijke Koomen
+      {/* Fine print / legal row */}
+      <div className="pvm-footer-fineprint" style={{
+        borderTop: '0.5px solid var(--line)',
+        padding: '18px 48px 28px',
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'baseline',
+        justifyContent: 'space-between',
+        gap: 16,
+        fontFamily: 'DM Sans, sans-serif',
+        fontSize: 12,
+        color: 'var(--fg3)',
+        lineHeight: 1.6,
+      }}>
+        <div style={{ letterSpacing: '0.01em' }}>
+          © {new Date().getFullYear()} Praktijk van Marijk · Marijke Koomen
+        </div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: 18 }}>
+          <a
+            onClick={() => setRoute('voorwaarden')}
+            style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
+          >Algemene voorwaarden</a>
+          <a
+            onClick={() => setRoute('privacy')}
+            style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
+          >Privacybeleid</a>
+          <a
+            onClick={() => setRoute('klachtenregeling')}
+            style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
+          >Klachtenregeling</a>
+          <a
+            onClick={() => { setRoute('voorwaarden'); setTimeout(() => window.print(), 350); }}
+            style={{ color: 'var(--fg3)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6, transition: 'color 200ms', cursor: 'pointer' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg3)'; }}
+            aria-label="Download algemene voorwaarden als PDF"
+            title="Download als PDF"
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            PDF
+          </a>
+        </div>
       </div>
-      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: 18 }}>
-        <a
-          onClick={() => setRoute('voorwaarden')}
-          style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
-          onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
-          onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
-        >Algemene voorwaarden</a>
-        <a
-          onClick={() => setRoute('privacy')}
-          style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
-          onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
-          onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
-        >Privacybeleid</a>
-        <a
-          onClick={() => setRoute('klachtenregeling')}
-  style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
-  onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
-  onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
->Klachtenregeling</a>
-        <a
-          onClick={() => { setRoute('voorwaarden'); setTimeout(() => window.print(), 350); }}
-          style={{ color: 'var(--fg3)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6, transition: 'color 200ms', cursor: 'pointer' }}
-          onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; }}
-          onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg3)'; }}
-          aria-label="Download algemene voorwaarden als PDF"
-          title="Download als PDF"
-        >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <polyline points="7 10 12 15 17 10" />
-            <line x1="12" y1="15" x2="12" y2="3" />
-          </svg>
-          PDF
-        </a>
-      </div>
-    </div>
     </div>
   );
 }
