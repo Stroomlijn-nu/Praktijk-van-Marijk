@@ -33,12 +33,15 @@ function Home({ setRoute }) {
           </div>
         </figure>
       </div>
+
+      {/* Training-banner */}
       <div style={{ padding: '24px 48px 40px', background: 'var(--surface-alt)' }}>
         <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)', margin: '0 0 8px' }}>Nieuw aanbod</p>
         <h2 style={{ fontFamily: 'Lora, serif', fontSize: 20, fontWeight: 500, color: 'var(--fg1)', margin: '0 0 8px', lineHeight: 1.35 }}>Training voor jeugdprofessionals</h2>
         <p style={{ fontSize: 14, color: 'var(--fg2)', lineHeight: 1.65, margin: '0 0 16px', maxWidth: 560 }}>Intiem terreur herkennen en regie houden onder druk. Tweedaagse vaardigheidstraining voor ervaren professionals.</p>
         <a href="/training-intiem-terreur.html" style={{ color: 'var(--accent)', fontFamily: 'DM Sans, sans-serif', fontSize: 13, fontWeight: 500, textDecoration: 'none' }}>Meer over de training →</a>
       </div>
+
       <SectionDivider />
 
       {/* Herkenning */}
