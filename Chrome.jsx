@@ -75,7 +75,7 @@ const itemsNaTraining = [
         <ul style={{ display: 'flex', gap: 22, listStyle: 'none', margin: 0, padding: 0 }}>
   {items.map(([key, label, title]) => (
     <li key={key}>
-      
+      <a
         onClick={() => setRoute(key)}
         title={title}
         aria-label={title}
@@ -84,7 +84,7 @@ const itemsNaTraining = [
     </li>
   ))}
   <li>
-    
+    <a
       href={TRAINING_URL}
       title="Training intiem terreur voor jeugdprofessionals"
       aria-label="Training intiem terreur"
@@ -93,7 +93,7 @@ const itemsNaTraining = [
   </li>
   {itemsNaTraining.map(([key, label, title]) => (
     <li key={key}>
-      
+      <a
         onClick={() => setRoute(key)}
         title={title}
         aria-label={title}
@@ -147,7 +147,7 @@ const itemsNaTraining = [
             <ul>
   {items.map(([key, label, title]) => (
     <li key={key}>
-      
+      <a
         onClick={() => go(key)}
         title={title}
         aria-label={title}
@@ -156,7 +156,7 @@ const itemsNaTraining = [
     </li>
   ))}
   <li>
-    
+    <a
       href={TRAINING_URL}
       title="Training intiem terreur voor jeugdprofessionals"
       aria-label="Training intiem terreur"
@@ -165,7 +165,7 @@ const itemsNaTraining = [
   </li>
   {itemsNaTraining.map(([key, label, title]) => (
     <li key={key}>
-      
+      <a
         onClick={() => go(key)}
         title={title}
         aria-label={title}
