@@ -1,107 +1,215 @@
-// Privacybeleid — Praktijk van Marijk
-// Korte juridische pagina; gespiegeld aan AlgemeneVoorwaarden, maar luchtiger
-// omdat de inhoud aanzienlijk korter is. Toon: "je" (site-default), kalm-feitelijk.
+// Privacyverklaring — Praktijk van Marijk
+// Versie juli 2026
+// Zelfde leespagina-opzet als de Algemene Voorwaarden: TOC links, genummerde artikelen rechts.
+// Brand: bordeaux primair, oker voor cijfers, Lora voor titels, DM Sans voor body.
 
-function Privacy() {
+function Privacyverklaring() {
   const articles = [
     {
       nr: '01',
-      slug: 'contactgegevens',
-      title: 'Contactgegevens',
+      slug: 'verantwoordelijke',
+      title: 'Wie is verantwoordelijk voor uw gegevens?',
       render: () => (
         <React.Fragment>
-          <p style={pPr.body}>
-            Praktijk van Marijk wordt gerund door Marijke Koomen. Voor vragen over dit beleid kun je contact opnemen via het contactformulier op de website.
-          </p>
-          <div style={pPr.bedrijfsgegevens}>
-            <div className="pvm-pr__bg-grid" style={pPr.bgGrid}>
-              <div data-bg="label" style={pPr.bgLabel}>Praktijk</div>
-              <div style={pPr.bgValue}>Praktijk van Marijk</div>
-              <div data-bg="label" style={pPr.bgLabel}>Verantwoordelijke</div>
-              <div style={pPr.bgValue}>Marijke Koomen</div>
-              <div data-bg="label" style={pPr.bgLabel}>Website</div>
-              <div style={pPr.bgValue}><a style={pPr.bgLink} href="https://www.praktijkvanmarijk.nl">www.praktijkvanmarijk.nl</a></div>
+          <p style={pPv.body}>De verwerkingsverantwoordelijke voor de in deze verklaring beschreven verwerkingen is:</p>
+          <div style={pPv.bedrijfsgegevens}>
+            <div style={pPv.bgGrid}>
+              <div style={pPv.bgLabel}>Praktijk</div>
+              <div style={pPv.bgValue}>Praktijk van Marijk (eenmanszaak van Marijke Koomen)</div>
+              <div style={pPv.bgLabel}>Adres</div>
+              <div style={pPv.bgValue}>Breitnerhof 150, 1628 XN Hoorn</div>
+              <div style={pPv.bgLabel}>E-mail</div>
+              <div style={pPv.bgValue}><a style={pPv.bgLink} href="mailto:marijke@praktijkvanmarijk.nl">marijke@praktijkvanmarijk.nl</a></div>
+              <div style={pPv.bgLabel}>Telefoon</div>
+              <div style={pPv.bgValue}><a style={pPv.bgLink} href="tel:+31627376003">06 - 27 37 60 03</a></div>
+              <div style={pPv.bgLabel}>KvK</div>
+              <div style={pPv.bgValueMono}>72258209</div>
             </div>
           </div>
+          <p style={pPv.body}>Praktijk van Marijk heeft geen wettelijke verplichting om een functionaris voor gegevensbescherming aan te stellen. Voor vragen over privacy kunt u rechtstreeks contact opnemen via bovenstaande gegevens.</p>
         </React.Fragment>
       ),
     },
     {
       nr: '02',
-      slug: 'welke-gegevens',
-      title: 'Welke gegevens worden verzameld',
+      slug: 'wanneer-geldt-verklaring',
+      title: 'Wanneer geldt deze privacyverklaring?',
       render: () => (
         <React.Fragment>
-          <p style={pPr.body}>
-            Via het contactformulier op deze website worden <em>naam</em>, <em>e&#8209;mailadres</em> en je <em>bericht</em> verwerkt. Deze gegevens worden uitsluitend gebruikt om je vraag te beantwoorden. Ze worden niet gedeeld met derden en niet gebruikt voor commerciële doeleinden.
-          </p>
-          <p style={pPr.body}>
-            De website maakt gebruik van cookies via de Complianz&#8209;plugin. Bij je eerste bezoek word je gevraagd om toestemming. Functionele cookies zijn noodzakelijk voor de werking van de site en worden altijd geplaatst. Analytische cookies worden alleen geplaatst na toestemming.
-          </p>
-          <div style={pPr.cookieTable}>
-            <div className="pvm-pr__ct-row" style={pPr.ctRow}>
-              <div style={pPr.ctLabel}>Functioneel</div>
-              <div style={pPr.ctValue}>Noodzakelijk voor de werking van de site. Altijd geplaatst.</div>
-            </div>
-            <div style={{ height: 1, background: 'var(--line)' }} />
-            <div className="pvm-pr__ct-row" style={pPr.ctRow}>
-              <div style={pPr.ctLabel}>Analytisch</div>
-              <div style={pPr.ctValue}>Alleen geplaatst na expliciete toestemming via Complianz.</div>
-            </div>
-          </div>
+          <p style={pPv.body}>Deze verklaring geldt voor het verwerken van persoonsgegevens door Praktijk van Marijk als verwerkingsverantwoordelijke, waaronder in de volgende situaties:</p>
+          <ul style={pPv.list}>
+            <li>het bezoeken van en contact opnemen via onze website www.praktijkvanmarijk.nl</li>
+            <li>aanmelding en inschrijving voor open trainingen, intervisie en overige diensten</li>
+            <li>de intake voorafgaand aan deelname</li>
+            <li>de uitvoering van trainingen, intervisie, casuïstiekbegeleiding en advies</li>
+            <li>de terugkoppeling van deelname en behaalde punten aan Stichting Kwaliteitsregister Jeugd (SKJ)</li>
+            <li>financiële administratie en facturatie</li>
+            <li>het versturen van een nieuwsbrief, indien u zich daarvoor heeft aangemeld</li>
+          </ul>
+          <p style={pPv.body}>Wanneer Praktijk van Marijk in opdracht van een organisatie persoonsgegevens verwerkt volgens de instructies van die organisatie, bijvoorbeeld bij het werken met cliënt- of dossiergegevens, treedt Praktijk van Marijk op als verwerker. In dat geval gelden de afspraken uit de verwerkersovereenkomst met die organisatie en is die organisatie verwerkingsverantwoordelijke.</p>
         </React.Fragment>
       ),
     },
     {
       nr: '03',
-      slug: 'bewaartermijn',
-      title: 'Hoe lang worden gegevens bewaard',
+      slug: 'welke-gegevens',
+      title: 'Welke persoonsgegevens verwerken wij?',
       render: () => (
         <React.Fragment>
-          <p style={pPr.body}>
-            Berichten via het contactformulier worden bewaard zolang dat nodig is voor de afhandeling van je vraag, en daarna verwijderd.
-          </p>
+          <p style={pPv.body}>Afhankelijk van de dienst verwerken wij de volgende categorieën persoonsgegevens:</p>
+          <DataTable
+            headers={['Categorie', 'Voorbeelden']}
+            rows={[
+              ['Contact- en identificatiegegevens', 'naam, functie, organisatie, e-mailadres, telefoonnummer'],
+              ['Aanmeld- en intakegegevens', 'gegevens die u bij aanmelding of intake verstrekt, zoals leerdoelen, werkervaring en de reden van deelname'],
+              ['Registratiegegevens', 'SKJ-registratienummer, beroepsregistratie, aanwezigheid en behaalde accreditatiepunten'],
+              ['Financiële gegevens', 'factuuradres, bankrekeningnummer, betaalgegevens'],
+              ['Correspondentie', 'de inhoud van uw berichten aan ons'],
+            ]}
+          />
+          <p style={pPv.body}>De website gebruikt Google Tag voor bezoekersanalyse. Daarom verwerken wij ook websitegegevens zoals IP-adres, apparaat- en browsergegevens en surfgedrag. Zie artikel 11 voor de cookies die hiervoor worden geplaatst.</p>
+          <p style={pPv.body}><strong>Bijzondere persoonsgegevens.</strong> Wij streven ernaar geen bijzondere categorieën van persoonsgegevens (zoals gezondheidsgegevens) te verwerken. Als de intake of casuïstiek onverhoopt gevoelige informatie kan bevatten, vragen wij u die tot het noodzakelijke te beperken. Casuïstiek bespreken wij zoveel mogelijk geanonimiseerd.</p>
         </React.Fragment>
       ),
     },
     {
       nr: '04',
-      slug: 'je-rechten',
-      title: 'Je rechten',
+      slug: 'doeleinden-grondslagen',
+      title: 'Doeleinden en grondslagen',
       render: () => (
         <React.Fragment>
-          <p style={pPr.body}>
-            Je hebt het recht om je gegevens in te zien, te corrigeren of te laten verwijderen. Stuur daarvoor een bericht via het contactformulier. Er wordt binnen twee weken gereageerd.
-          </p>
-          <p style={pPr.body}>
-            Heb je een klacht over de verwerking van je gegevens, dan kun je die indienen bij de Autoriteit Persoonsgegevens via{' '}
-            <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer" style={pPr.bgLink}>www.autoriteitpersoonsgegevens.nl</a>.
-          </p>
+          <p style={pPv.body}>Wij verwerken uw persoonsgegevens alleen voor welbepaalde doeleinden en uitsluitend op een van de grondslagen van artikel 6 AVG:</p>
+          <DataTable
+            headers={['Doel', 'Grondslag (art. 6 AVG)']}
+            rows={[
+              ['Uitvoeren van de overeenkomst: aanmelding, intake, deelname, communicatie', 'noodzakelijk voor de uitvoering van de overeenkomst (art. 6 lid 1 sub b)'],
+              ['Facturatie en financiële administratie', 'wettelijke verplichting (art. 6 lid 1 sub c) en uitvoering overeenkomst (sub b)'],
+              ['Terugkoppeling deelname en punten aan SKJ', 'gerechtvaardigd belang en uitvoering overeenkomst (art. 6 lid 1 sub f en b)'],
+              ['Bewaren van administratie voor de wettelijke termijn', 'wettelijke verplichting (art. 6 lid 1 sub c)'],
+              ['Verbeteren en beveiligen van dienstverlening en website', 'gerechtvaardigd belang (art. 6 lid 1 sub f)'],
+              ['Versturen van een nieuwsbrief', 'toestemming (art. 6 lid 1 sub a)'],
+            ]}
+          />
+          <p style={pPv.body}>Belangrijk, het aangaan van een overeenkomst is op zichzelf geen toestemming voor gegevensverwerking. Wij baseren onze verwerking daarom niet op toestemming, behalve waar dat expliciet is aangegeven, zoals de nieuwsbrief. Een gegeven toestemming kan altijd worden ingetrokken.</p>
         </React.Fragment>
       ),
     },
     {
       nr: '05',
-      slug: 'beveiliging',
-      title: 'Beveiliging',
+      slug: 'ontvangers-verwerkers',
+      title: 'Ontvangers en verwerkers',
       render: () => (
         <React.Fragment>
-          <p style={pPr.body}>
-            Er worden passende technische en organisatorische maatregelen genomen om persoonsgegevens te beschermen tegen verlies of onbevoegde toegang.
-          </p>
+          <p style={pPv.body}>Wij delen uw persoonsgegevens niet met derden voor commerciële doeleinden. Wij schakelen wel dienstverleners in die namens ons gegevens verwerken (verwerkers) of aan wie wij op grond van onze werkwijze of een wettelijke verplichting gegevens verstrekken.</p>
+          <div style={pPv.flag}>
+            <span style={pPv.flagLabel}>Aan te passen</span>
+            <p style={pPv.flagText}>Vul hier de daadwerkelijke leveranciers in. Voorbeelden:</p>
+            <ul style={pPv.flagList}>
+              <li>Stichting Kwaliteitsregister Jeugd (SKJ), voor de terugkoppeling van deelname en accreditatiepunten</li>
+              <li>e-mail- en kantoorsoftware (bijvoorbeeld Microsoft of Google)</li>
+              <li>boekhouder of boekhoudsoftware (naam invullen)</li>
+              <li>websitehosting en eventuele nieuwsbriefsoftware (naam invullen)</li>
+              <li>bevoegde instanties, wanneer daartoe een wettelijke verplichting bestaat</li>
+            </ul>
+          </div>
+          <p style={pPv.body}>Met verwerkers die in onze opdracht persoonsgegevens verwerken, sluiten wij een verwerkersovereenkomst waarin afspraken over beveiliging en vertrouwelijkheid zijn vastgelegd.</p>
         </React.Fragment>
       ),
     },
     {
       nr: '06',
+      slug: 'doorgifte-buiten-eer',
+      title: 'Doorgifte buiten de Europese Economische Ruimte',
+      render: () => (
+        <React.Fragment>
+          <p style={pPv.body}>Wij verwerken uw gegevens in beginsel binnen de Europese Economische Ruimte (EER). Voor de website-analyse gebruiken wij Google Tag. Google kan gegevens verwerken op servers buiten de EER, onder meer in de Verenigde Staten. Voor deze doorgifte gelden de door de Europese Commissie vastgestelde modelcontractbepalingen (standard contractual clauses) tussen Praktijk van Marijk en Google.</p>
+          <div style={pPv.flag}>
+            <span style={pPv.flagLabel}>Nog te verifiëren</span>
+            <p style={pPv.flagText}>Controleer bij Google of de huidige verwerkersovereenkomst (Data Processing Terms) is geaccepteerd in het Google-account, en of IP-anonimisering aanstaat. Voor andere leveranciers die mogelijk buiten de EER verwerken, geldt dezelfde controle.</p>
+          </div>
+        </React.Fragment>
+      ),
+    },
+    {
+      nr: '07',
+      slug: 'bewaartermijnen',
+      title: 'Hoe lang bewaren wij uw gegevens?',
+      render: () => (
+        <React.Fragment>
+          <p style={pPv.body}>Wij bewaren persoonsgegevens niet langer dan noodzakelijk voor de doeleinden waarvoor zij zijn verzameld, of zolang een wettelijke bewaarplicht dit voorschrijft.</p>
+          <DataTable
+            headers={['Gegevens', 'Bewaartermijn']}
+            rows={[
+              ['Financiële en fiscale administratie (facturen)', '7 jaar (wettelijke fiscale bewaarplicht, art. 52 AWR)'],
+              ['Aanmeld-, intake- en deelnamegegevens', '2 jaar na afronding van de dienst'],
+              ['SKJ-registratiegegevens (aanwezigheid en punten)', 'conform de eisen van SKJ en de accreditatie'],
+              ['Contactgegevens voor de nieuwsbrief', 'tot afmelding'],
+              ['Overige correspondentie', '1 tot 2 jaar'],
+            ]}
+          />
+          <div style={pPv.flag}>
+            <span style={pPv.flagLabel}>Nog te verifiëren</span>
+            <p style={pPv.flagText}>De termijn voor SKJ-registratiegegevens is niet met zekerheid vast te stellen zonder navraag bij SKJ zelf. Verifieer bij SKJ hoeveel jaar terug bewijs van aanwezigheid en behaalde punten aantoonbaar moet blijven bij een audit.</p>
+          </div>
+        </React.Fragment>
+      ),
+    },
+    {
+      nr: '08',
+      slug: 'beveiliging',
+      title: 'Beveiliging',
+      render: () => (
+        <p style={pPv.body}>Wij nemen passende technische en organisatorische maatregelen om uw persoonsgegevens te beschermen tegen verlies of onrechtmatige verwerking. Denk aan beveiligde apparatuur en accounts, sterke wachtwoorden, het beperken van toegang tot gegevens en het zoveel mogelijk anonimiseren van casuïstiek. Bij een datalek met risico voor uw rechten en vrijheden melden wij dit conform de AVG bij de Autoriteit Persoonsgegevens en, waar vereist, bij u.</p>
+      ),
+    },
+    {
+      nr: '09',
+      slug: 'uw-rechten',
+      title: 'Uw rechten',
+      render: () => (
+        <React.Fragment>
+          <p style={pPv.body}>U heeft op grond van de AVG de volgende rechten met betrekking tot uw persoonsgegevens:</p>
+          <ul style={pPv.list}>
+            <li>recht op inzage in de gegevens die wij van u verwerken</li>
+            <li>recht op rectificatie van onjuiste of onvolledige gegevens</li>
+            <li>recht op verwijdering (het recht om vergeten te worden), voor zover wij niet wettelijk verplicht zijn de gegevens te bewaren</li>
+            <li>recht op beperking van de verwerking</li>
+            <li>recht van bezwaar tegen verwerking op grond van gerechtvaardigd belang</li>
+            <li>recht op overdraagbaarheid van gegevens (dataportabiliteit)</li>
+            <li>recht om een gegeven toestemming op elk moment in te trekken, zonder dat dit afbreuk doet aan de rechtmatigheid van de verwerking voor de intrekking</li>
+          </ul>
+          <p style={pPv.body}>U kunt een verzoek indienen via <a href="mailto:marijke@praktijkvanmarijk.nl" style={pPv.bgLink}>marijke@praktijkvanmarijk.nl</a>. Wij reageren binnen een maand. Om zeker te weten dat het verzoek van u afkomstig is, kunnen wij u vragen zich te identificeren op een wijze die niet meer gegevens vraagt dan nodig.</p>
+        </React.Fragment>
+      ),
+    },
+    {
+      nr: '10',
+      slug: 'klacht-ap',
+      title: 'Klacht bij de Autoriteit Persoonsgegevens',
+      render: () => (
+        <p style={pPv.body}>Bent u van mening dat wij niet zorgvuldig met uw persoonsgegevens omgaan, dan gaan wij hierover graag met u in gesprek. U heeft daarnaast het recht een klacht in te dienen bij de Autoriteit Persoonsgegevens via <a href="https://www.autoriteitpersoonsgegevens.nl" style={pPv.bgLink}>www.autoriteitpersoonsgegevens.nl</a>.</p>
+      ),
+    },
+    {
+      nr: '11',
+      slug: 'cookies',
+      title: 'Cookies',
+      render: () => (
+        <React.Fragment>
+          <p style={pPv.body}>De website gebruikt functionele cookies die nodig zijn om de website goed te laten werken. Daarnaast staat Google Tag actief voor bezoekersanalyse, vermoedelijk Google Analytics (GA4). Dit zijn niet-functionele cookies. Voor het plaatsen hiervan wordt vooraf toestemming gevraagd via een cookiemelding. Zonder toestemming worden deze cookies niet geplaatst.</p>
+          <div style={pPv.flag}>
+            <span style={pPv.flagLabel}>Nog te verifiëren</span>
+            <p style={pPv.flagText}>Bevestig welke Google-dienst precies actief staat, GA4 analytics, Google Ads-conversietracking, of beide. Controleer ook of de cookiebanner daadwerkelijk vooraf toestemming vraagt (opt-in), en niet pas na plaatsing van de cookies.</p>
+          </div>
+        </React.Fragment>
+      ),
+    },
+    {
+      nr: '12',
       slug: 'wijzigingen',
       title: 'Wijzigingen',
       render: () => (
-        <React.Fragment>
-          <p style={pPr.body}>
-            Dit privacybeleid kan worden aangepast. De meest recente versie staat altijd op deze pagina.
-          </p>
-        </React.Fragment>
+        <p style={pPv.body}>Wij kunnen deze privacyverklaring van tijd tot tijd aanpassen. De actuele versie staat altijd op onze website. Deze versie is vastgesteld in juli 2026.</p>
       ),
     },
   ];
@@ -112,9 +220,9 @@ function Privacy() {
   };
 
   return (
-    <div className="pvm-av pvm-pr" data-screen-label="08 Privacybeleid">
+    <div className="pvm-pv" data-screen-label="08 Privacyverklaring">
       {/* ============ HERO ============ */}
-      <div className="pvm-section pvm-av__hero" style={{ padding: '64px 48px 40px', maxWidth: 900 }}>
+      <div className="pvm-section pvm-pv__hero" style={{ padding: '64px 48px 40px', maxWidth: 900 }}>
         <Eyebrow>Juridisch</Eyebrow>
         <h1 className="pvm-h1" style={{
           fontFamily: 'Lora, serif',
@@ -125,7 +233,7 @@ function Privacy() {
           margin: '0 0 20px',
           textWrap: 'balance',
         }}>
-          Privacybeleid.
+          Privacyverklaring.
         </h1>
         <p style={{
           fontFamily: 'DM Sans, sans-serif',
@@ -135,10 +243,10 @@ function Privacy() {
           margin: '0 0 28px',
           maxWidth: '60ch',
         }}>
-          Praktijk van Marijk verwerkt uitsluitend de gegevens die nodig zijn om je vraag via het contactformulier te beantwoorden. Geen blog, geen registraties, geen webshop, geen commercieel gebruik.
+          Hierin staat welke persoonsgegevens Praktijk van Marijk verwerkt, met welk doel, op welke grondslag en hoe lang deze worden bewaard. Ook de rechten die u heeft, zijn hier terug te vinden. Deze verklaring geldt voor de website, aanmeldingen, intake, deelname aan trainingen en overige dienstverlening.
         </p>
 
-        <div className="pvm-av__meta" style={{
+        <div className="pvm-pv__meta" style={{
           display: 'flex',
           flexWrap: 'wrap',
           alignItems: 'center',
@@ -150,7 +258,7 @@ function Privacy() {
           </Button>
           <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 13, color: 'var(--fg3)', whiteSpace: 'nowrap' }}>
             <span style={{ letterSpacing: '0.12em', textTransform: 'uppercase', marginRight: 10 }}>Versie</span>
-            <span style={{ color: 'var(--fg1)', fontWeight: 500 }}>Mei 2026</span>
+            <span style={{ color: 'var(--fg1)', fontWeight: 500 }}>Juli 2026</span>
           </div>
         </div>
       </div>
@@ -158,7 +266,7 @@ function Privacy() {
       <SectionDivider />
 
       {/* ============ BODY: TOC + ARTIKELEN ============ */}
-      <div className="pvm-av__body" style={{
+      <div className="pvm-pv__body" style={{
         display: 'grid',
         gridTemplateColumns: 'minmax(0, 220px) minmax(0, 1fr)',
         gap: 72,
@@ -166,7 +274,7 @@ function Privacy() {
         alignItems: 'start',
       }}>
         {/* TOC */}
-        <nav className="pvm-av__toc" aria-label="Inhoudsopgave">
+        <nav className="pvm-pv__toc" aria-label="Inhoudsopgave">
           <div style={{
             fontFamily: 'DM Sans, sans-serif',
             fontSize: 11,
@@ -210,9 +318,9 @@ function Privacy() {
         </nav>
 
         {/* Artikelen */}
-        <div className="pvm-av__articles" style={{ maxWidth: 720 }}>
+        <div className="pvm-pv__articles" style={{ maxWidth: 720 }}>
           {articles.map((a, i) => (
-            <article key={a.slug} id={a.slug} className="pvm-av__article" style={{
+            <article key={a.slug} id={a.slug} className="pvm-pv__article" style={{
               padding: i === 0 ? '0 0 48px' : '48px 0',
               borderTop: i === 0 ? 'none' : '0.5px solid var(--line)',
               scrollMarginTop: 100,
@@ -227,7 +335,7 @@ function Privacy() {
                   letterSpacing: '0.02em',
                   lineHeight: 1,
                 }}>{a.nr}</div>
-                <div className="pvm-av__article-rule" style={{
+                <div className="pvm-pv__article-rule" style={{
                   height: 1,
                   flex: '0 0 32px',
                   background: 'var(--accent-3)',
@@ -241,7 +349,7 @@ function Privacy() {
                   textTransform: 'uppercase',
                   color: 'var(--fg3)',
                   whiteSpace: 'nowrap',
-                }}>Onderdeel {parseInt(a.nr, 10)}</div>
+                }}>Artikel {parseInt(a.nr, 10)}</div>
               </div>
               <h2 style={{
                 fontFamily: 'Lora, serif',
@@ -257,7 +365,7 @@ function Privacy() {
           ))}
 
           {/* Contact-box */}
-          <div className="pvm-av__contact" style={{
+          <div className="pvm-pv__contact" style={{
             marginTop: 56,
             padding: '32px 32px',
             background: 'var(--surface-dark)',
@@ -273,7 +381,7 @@ function Privacy() {
               color: 'var(--accent-3)',
               fontWeight: 500,
               marginBottom: 12,
-            }}>Vraag of klacht?</div>
+            }}>Vragen?</div>
             <h3 style={{
               fontFamily: 'Lora, serif',
               fontSize: 20,
@@ -281,7 +389,7 @@ function Privacy() {
               color: 'var(--fg-on-dark)',
               lineHeight: 1.4,
               margin: '0 0 14px',
-            }}>Inzage, correctie of verwijdering van je gegevens?</h3>
+            }}>Heeft u vragen over deze privacyverklaring?</h3>
             <p style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: 15,
@@ -290,11 +398,10 @@ function Privacy() {
               margin: 0,
               opacity: 0.85,
             }}>
-              Stuur een bericht via het{' '}
-              <a href="mailto:marijke@praktijkvanmarijk.nl" style={{ color: 'var(--accent-3)', textDecoration: 'none', borderBottom: '0.5px solid var(--accent-3)' }}>contactformulier</a>
-              {' '}of mail rechtstreeks naar{' '}
-              <a href="mailto:marijke@praktijkvanmarijk.nl" style={{ color: 'var(--accent-3)', textDecoration: 'none', borderBottom: '0.5px solid var(--accent-3)' }}>marijke@praktijkvanmarijk.nl</a>.
-              Er wordt binnen twee weken gereageerd.
+              Neem gerust contact op via{' '}
+              <a href="mailto:marijke@praktijkvanmarijk.nl" style={{ color: 'var(--accent-3)', textDecoration: 'none', borderBottom: '0.5px solid var(--accent-3)' }}>marijke@praktijkvanmarijk.nl</a>
+              {' '}of{' '}
+              <a href="tel:+31627376003" style={{ color: 'var(--accent-3)', textDecoration: 'none', borderBottom: '0.5px solid var(--accent-3)', fontVariantNumeric: 'tabular-nums' }}>06 - 27 37 60 03</a>.
             </p>
           </div>
         </div>
@@ -303,8 +410,26 @@ function Privacy() {
   );
 }
 
+// ---- Herbruikbare tabelcomponent voor gegevenscategorieën, doeleinden en bewaartermijnen ----
+function DataTable({ headers, rows, flagged }) {
+  return (
+    <div style={pPv.tableWrap}>
+      <div style={{ ...pPv.tableRow, ...pPv.tableHeaderRow }}>
+        <div style={pPv.tableHeaderCell}>{headers[0]}</div>
+        <div style={pPv.tableHeaderCell}>{headers[1]}</div>
+      </div>
+      {rows.map((row, i) => (
+        <div key={i} style={{ ...pPv.tableRow, borderTop: '0.5px solid var(--line)' }}>
+          <div style={pPv.tableCellLabel}>{row[0]}</div>
+          <div style={flagged ? pPv.tableCellFlagged : pPv.tableCellValue}>{row[1]}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 // ---- styles object (uniquely named to avoid global collisions) ----
-const pPr = {
+const pPv = {
   body: {
     fontFamily: 'DM Sans, sans-serif',
     fontSize: 15,
@@ -312,16 +437,24 @@ const pPr = {
     lineHeight: 1.75,
     margin: '0 0 14px',
   },
+  list: {
+    margin: '0 0 14px',
+    padding: '0 0 0 20px',
+    fontFamily: 'DM Sans, sans-serif',
+    fontSize: 15,
+    color: 'var(--fg2)',
+    lineHeight: 1.75,
+  },
   bedrijfsgegevens: {
     background: 'var(--bg-sunken)',
     borderRadius: 6,
     padding: '24px 24px',
-    margin: '8px 0 4px',
+    margin: '8px 0 16px',
     border: '0.5px solid var(--line)',
   },
   bgGrid: {
     display: 'grid',
-    gridTemplateColumns: '140px 1fr',
+    gridTemplateColumns: '110px 1fr',
     rowGap: 8,
     columnGap: 16,
     fontFamily: 'DM Sans, sans-serif',
@@ -339,37 +472,104 @@ const pPr = {
     color: 'var(--fg1)',
     lineHeight: 1.55,
   },
+  bgValueMono: {
+    color: 'var(--fg1)',
+    fontVariantNumeric: 'tabular-nums',
+    letterSpacing: '0.02em',
+  },
   bgLink: {
     color: 'var(--fg1)',
     textDecoration: 'none',
     borderBottom: '0.5px solid var(--line-strong)',
   },
-  cookieTable: {
-    marginTop: 18,
+  // ── Tabel (categorieën, doeleinden, bewaartermijnen) ──
+  tableWrap: {
     border: '0.5px solid var(--line)',
     borderRadius: 6,
     overflow: 'hidden',
+    margin: '8px 0 18px',
   },
-  ctRow: {
+  tableRow: {
     display: 'grid',
-    gridTemplateColumns: '140px 1fr',
-    gap: 16,
-    padding: '14px 20px',
-    fontFamily: 'DM Sans, sans-serif',
-    fontSize: 14,
-    alignItems: 'baseline',
+    gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.4fr)',
+    columnGap: 20,
   },
-  ctLabel: {
+  tableHeaderRow: {
+    background: 'var(--bg-sunken)',
+  },
+  tableHeaderCell: {
+    fontFamily: 'DM Sans, sans-serif',
     fontSize: 11,
-    letterSpacing: '0.12em',
+    letterSpacing: '0.1em',
     textTransform: 'uppercase',
     color: 'var(--fg3)',
     fontWeight: 500,
+    padding: '12px 18px',
   },
-  ctValue: {
+  tableCellLabel: {
+    fontFamily: 'DM Sans, sans-serif',
+    fontSize: 14,
+    fontWeight: 600,
     color: 'var(--fg1)',
-    lineHeight: 1.55,
+    lineHeight: 1.6,
+    padding: '14px 18px',
+  },
+  tableCellValue: {
+    fontFamily: 'DM Sans, sans-serif',
+    fontSize: 14,
+    color: 'var(--fg2)',
+    lineHeight: 1.6,
+    padding: '14px 18px',
+  },
+  tableCellFlagged: {
+    fontFamily: 'DM Sans, sans-serif',
+    fontSize: 14,
+    color: 'var(--accent-3)',
+    lineHeight: 1.6,
+    padding: '14px 18px',
+  },
+  // ── Aan-te-passen blok ──
+  flag: {
+    background: 'rgba(207,135,45,0.08)',
+    border: '0.5px solid var(--accent-3)',
+    borderLeft: '3px solid var(--accent-3)',
+    borderRadius: 6,
+    padding: '16px 20px',
+    margin: '4px 0 18px',
+  },
+  flagLabel: {
+    display: 'inline-block',
+    fontFamily: 'DM Sans, sans-serif',
+    fontSize: 11,
+    letterSpacing: '0.1em',
+    textTransform: 'uppercase',
+    color: 'var(--accent-3)',
+    fontWeight: 600,
+    marginBottom: 8,
+  },
+  flagText: {
+    fontFamily: 'DM Sans, sans-serif',
+    fontSize: 14,
+    color: 'var(--fg2)',
+    lineHeight: 1.7,
+    margin: 0,
+  },
+  flagList: {
+    margin: '8px 0 0',
+    padding: '0 0 0 18px',
+    fontFamily: 'DM Sans, sans-serif',
+    fontSize: 14,
+    color: 'var(--fg2)',
+    lineHeight: 1.7,
+  },
+  flagInline: {
+    fontFamily: 'DM Sans, sans-serif',
+    fontSize: 13,
+    color: 'var(--accent-3)',
+    lineHeight: 1.7,
+    margin: '-8px 0 14px',
+    fontStyle: 'italic',
   },
 };
 
-Object.assign(window, { Privacy });
+Object.assign(window, { Privacyverklaring });
