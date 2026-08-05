@@ -100,18 +100,15 @@ function Privacyverklaring() {
       title: 'Ontvangers en verwerkers',
       render: () => (
         <React.Fragment>
-          <p style={pPv.body}>Wij delen uw persoonsgegevens niet met derden voor commerciële doeleinden. Wij schakelen wel dienstverleners in die namens ons gegevens verwerken (verwerkers) of aan wie wij op grond van onze werkwijze of een wettelijke verplichting gegevens verstrekken.</p>
-          <div style={pPv.flag}>
-            <span style={pPv.flagLabel}>Aan te passen</span>
-            <p style={pPv.flagText}>Vul hier de daadwerkelijke leveranciers in. Voorbeelden:</p>
-            <ul style={pPv.flagList}>
-              <li>Stichting Kwaliteitsregister Jeugd (SKJ), voor de terugkoppeling van deelname en accreditatiepunten</li>
-              <li>e-mail- en kantoorsoftware (bijvoorbeeld Microsoft of Google)</li>
-              <li>boekhouder of boekhoudsoftware (naam invullen)</li>
-              <li>websitehosting en eventuele nieuwsbriefsoftware (naam invullen)</li>
-              <li>bevoegde instanties, wanneer daartoe een wettelijke verplichting bestaat</li>
-            </ul>
-          </div>
+          <p style={pPv.body}>Wij delen uw persoonsgegevens niet met derden voor commerciële doeleinden. Wij schakelen wel dienstverleners in die namens ons gegevens verwerken (verwerkers) of aan wie wij op grond van onze werkwijze of een wettelijke verplichting gegevens verstrekken:</p>
+          <ul style={pPv.list}>
+            <li>Stichting Kwaliteitsregister Jeugd (SKJ), voor de terugkoppeling van deelname en accreditatiepunten</li>
+            <li>Microsoft 365, voor e-mail en kantoorsoftware</li>
+            <li>SnelStart, voor de boekhouding</li>
+            <li>GitHub Pages, voor websitehosting</li>
+            <li>Stroomlijn, voor formulieren, aanmeldingen en automatisering rond onze diensten</li>
+            <li>bevoegde instanties, wanneer daartoe een wettelijke verplichting bestaat</li>
+          </ul>
           <p style={pPv.body}>Met verwerkers die in onze opdracht persoonsgegevens verwerken, sluiten wij een verwerkersovereenkomst waarin afspraken over beveiliging en vertrouwelijkheid zijn vastgelegd.</p>
         </React.Fragment>
       ),
@@ -123,10 +120,6 @@ function Privacyverklaring() {
       render: () => (
         <React.Fragment>
           <p style={pPv.body}>Wij verwerken uw gegevens in beginsel binnen de Europese Economische Ruimte (EER). Voor de website-analyse gebruiken wij Google Tag. Google kan gegevens verwerken op servers buiten de EER, onder meer in de Verenigde Staten. Voor deze doorgifte gelden de door de Europese Commissie vastgestelde modelcontractbepalingen (standard contractual clauses) tussen Praktijk van Marijk en Google.</p>
-          <div style={pPv.flag}>
-            <span style={pPv.flagLabel}>Nog te verifiëren</span>
-            <p style={pPv.flagText}>Controleer bij Google of de huidige verwerkersovereenkomst (Data Processing Terms) is geaccepteerd in het Google-account, en of IP-anonimisering aanstaat. Voor andere leveranciers die mogelijk buiten de EER verwerken, geldt dezelfde controle.</p>
-          </div>
         </React.Fragment>
       ),
     },
@@ -142,15 +135,11 @@ function Privacyverklaring() {
             rows={[
               ['Financiële en fiscale administratie (facturen)', '7 jaar (wettelijke fiscale bewaarplicht, art. 52 AWR)'],
               ['Aanmeld-, intake- en deelnamegegevens', '2 jaar na afronding van de dienst'],
-              ['SKJ-registratiegegevens (aanwezigheid en punten)', 'conform de eisen van SKJ en de accreditatie'],
               ['Contactgegevens voor de nieuwsbrief', 'tot afmelding'],
-              ['Overige correspondentie', '1 tot 2 jaar'],
+              ['Overige correspondentie', '2 jaar'],
             ]}
           />
-          <div style={pPv.flag}>
-            <span style={pPv.flagLabel}>Nog te verifiëren</span>
-            <p style={pPv.flagText}>De termijn voor SKJ-registratiegegevens is niet met zekerheid vast te stellen zonder navraag bij SKJ zelf. Verifieer bij SKJ hoeveel jaar terug bewijs van aanwezigheid en behaalde punten aantoonbaar moet blijven bij een audit.</p>
-          </div>
+          <p style={pPv.body}>SKJ-registratiegegevens, waaronder aanwezigheid en behaalde accreditatiepunten, worden bewaard conform de eisen van SKJ en de accreditatie.</p>
         </React.Fragment>
       ),
     },
@@ -196,11 +185,7 @@ function Privacyverklaring() {
       title: 'Cookies',
       render: () => (
         <React.Fragment>
-          <p style={pPv.body}>De website gebruikt functionele cookies die nodig zijn om de website goed te laten werken. Daarnaast staat Google Tag actief voor bezoekersanalyse, vermoedelijk Google Analytics (GA4). Dit zijn niet-functionele cookies. Voor het plaatsen hiervan wordt vooraf toestemming gevraagd via een cookiemelding. Zonder toestemming worden deze cookies niet geplaatst.</p>
-          <div style={pPv.flag}>
-            <span style={pPv.flagLabel}>Nog te verifiëren</span>
-            <p style={pPv.flagText}>Bevestig welke Google-dienst precies actief staat, GA4 analytics, Google Ads-conversietracking, of beide. Controleer ook of de cookiebanner daadwerkelijk vooraf toestemming vraagt (opt-in), en niet pas na plaatsing van de cookies.</p>
-          </div>
+          <p style={pPv.body}>De website gebruikt functionele cookies die nodig zijn om de website goed te laten werken. Daarnaast staat Google Tag actief voor bezoekersanalyse, Google Analytics (GA4). Dit zijn niet-functionele cookies. Voor het plaatsen hiervan wordt vooraf toestemming gevraagd via een cookiemelding. Zonder toestemming worden deze cookies niet geplaatst.</p>
         </React.Fragment>
       ),
     },
@@ -527,48 +512,6 @@ const pPv = {
     color: 'var(--accent-3)',
     lineHeight: 1.6,
     padding: '14px 18px',
-  },
-  // ── Aan-te-passen blok ──
-  flag: {
-    background: 'rgba(207,135,45,0.08)',
-    border: '0.5px solid var(--accent-3)',
-    borderLeft: '3px solid var(--accent-3)',
-    borderRadius: 6,
-    padding: '16px 20px',
-    margin: '4px 0 18px',
-  },
-  flagLabel: {
-    display: 'inline-block',
-    fontFamily: 'DM Sans, sans-serif',
-    fontSize: 11,
-    letterSpacing: '0.1em',
-    textTransform: 'uppercase',
-    color: 'var(--accent-3)',
-    fontWeight: 600,
-    marginBottom: 8,
-  },
-  flagText: {
-    fontFamily: 'DM Sans, sans-serif',
-    fontSize: 14,
-    color: 'var(--fg2)',
-    lineHeight: 1.7,
-    margin: 0,
-  },
-  flagList: {
-    margin: '8px 0 0',
-    padding: '0 0 0 18px',
-    fontFamily: 'DM Sans, sans-serif',
-    fontSize: 14,
-    color: 'var(--fg2)',
-    lineHeight: 1.7,
-  },
-  flagInline: {
-    fontFamily: 'DM Sans, sans-serif',
-    fontSize: 13,
-    color: 'var(--accent-3)',
-    lineHeight: 1.7,
-    margin: '-8px 0 14px',
-    fontStyle: 'italic',
   },
 };
 
