@@ -572,4 +572,5 @@ const pPv = {
   },
 };
 
-Object.assign(window, { Privacyverklaring });
+const Privacy = Privacyverklaring;
+Object.assign(window, { Privacyverklaring, Privacy });
