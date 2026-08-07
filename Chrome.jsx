@@ -1,18 +1,28 @@
 function Topbar({ route, setRoute }) {
- const items = [
-  ['home', 'Home', 'Praktijk van Marijk — specialist intiem terreur voor jeugdprofessionals'],
-  ['over', 'Over Marijke', 'Over Marijke Koomen, SKJ-geregistreerd jeugdprofessional'],
-  ['professionals', 'Professionals', 'Training en coaching voor jeugdprofessionals'],
-];
+  const items = [
+    ['home', 'Home', 'Praktijk van Marijk — specialist intiem terreur voor jeugdprofessionals'],
+    ['over', 'Over Marijke', 'Over Marijke Koomen, SKJ-geregistreerd jeugdprofessional'],
+    ['professionals', 'Professionals', 'Training en coaching voor jeugdprofessionals'],
+  ];
 
-const itemsNaTraining = [
-  ['werkwijze', 'Werkwijze en aanpak', 'Werkwijze en aanpak van Praktijk van Marijk'],
-  ['ervaringen', 'Ervaringen jeugdzorg', 'Ervaringen uit jeugdzorg en jeugdbescherming'],
-  ['contact', 'Contact', 'Neem contact op met Marijke Koomen'],
-];
+  const itemsNaTraining = [
+    ['werkwijze', 'Werkwijze en aanpak', 'Werkwijze en aanpak van Praktijk van Marijk'],
+    ['ervaringen', 'Ervaringen jeugdzorg', 'Ervaringen uit jeugdzorg en jeugdbescherming'],
+    ['contact', 'Contact', 'Neem contact op met Marijke Koomen'],
+  ];
 
+  const TRAININGEN_OVERZICHT_URL = '/Trainingen.html';
   const TRAINING_URL = '/training-intiem-terreur.html';
+  const CASUISTIEK_URL = '/Casuistiekcoaching.html';
+
+  const trainingenSubmenu = [
+    [TRAINING_URL, 'Training intiem terreur', 'Tweedaagse training intiem terreur voor jeugdprofessionals'],
+    [CASUISTIEK_URL, 'Casuïstiekcoaching', 'Individuele casuïstiekcoaching voor jeugdprofessionals'],
+  ];
+
   const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const [desktopDropOpen, setDesktopDropOpen] = React.useState(false);
+  const [mobileTrainOpen, setMobileTrainOpen] = React.useState(false);
 
   React.useEffect(() => {
     if (!drawerOpen) return;
@@ -73,35 +83,83 @@ const itemsNaTraining = [
       {/* Desktop nav */}
       <nav className="pvm-topbar__nav" aria-label="Hoofdnavigatie">
         <ul style={{ display: 'flex', gap: 22, listStyle: 'none', margin: 0, padding: 0 }}>
-  {items.map(([key, label, title]) => (
-    <li key={key}>
-      <a
-        onClick={() => setRoute(key)}
-        title={title}
-        aria-label={title}
-        className={`pvm-topbar__link${route === key ? ' is-active' : ''}`}
-      >{label}</a>
-    </li>
-  ))}
-  <li>
-    <a
-      href={TRAINING_URL}
-      title="Training intiem terreur voor jeugdprofessionals"
-      aria-label="Training intiem terreur"
-      className="pvm-topbar__link"
-    >Trainingen</a>
-  </li>
-  {itemsNaTraining.map(([key, label, title]) => (
-    <li key={key}>
-      <a
-        onClick={() => setRoute(key)}
-        title={title}
-        aria-label={title}
-        className={`pvm-topbar__link${route === key ? ' is-active' : ''}`}
-      >{label}</a>
-    </li>
-  ))}
-</ul>
+          {items.map(([key, label, title]) => (
+            <li key={key}>
+              <a
+                onClick={() => setRoute(key)}
+                title={title}
+                aria-label={title}
+                className={`pvm-topbar__link${route === key ? ' is-active' : ''}`}
+              >{label}</a>
+            </li>
+          ))}
+
+          <li
+            style={{ position: 'relative' }}
+            onMouseEnter={() => setDesktopDropOpen(true)}
+            onMouseLeave={() => setDesktopDropOpen(false)}
+          >
+            <a
+              href={TRAININGEN_OVERZICHT_URL}
+              title="Trainingen en coaching voor jeugdprofessionals"
+              aria-label="Trainingen"
+              aria-haspopup="true"
+              aria-expanded={desktopDropOpen}
+              className="pvm-topbar__link"
+            >Trainingen</a>
+
+            {desktopDropOpen && (
+              <ul
+                className="pvm-topbar__submenu"
+                style={{
+                  position: 'absolute',
+                  top: '100%',
+                  left: 0,
+                  minWidth: 240,
+                  listStyle: 'none',
+                  margin: 0,
+                  padding: '8px 0',
+                  background: 'var(--bg)',
+                  border: '0.5px solid var(--line)',
+                  borderRadius: 6,
+                  boxShadow: '0 8px 24px rgba(0,0,0,0.08)',
+                }}
+              >
+                {trainingenSubmenu.map(([url, label, title]) => (
+                  <li key={url}>
+                    <a
+                      href={url}
+                      title={title}
+                      aria-label={title}
+                      className="pvm-topbar__sublink"
+                      style={{
+                        display: 'block',
+                        padding: '9px 18px',
+                        fontSize: 14,
+                        color: 'var(--fg2)',
+                        textDecoration: 'none',
+                        whiteSpace: 'nowrap',
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; }}
+                    >{label}</a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+
+          {itemsNaTraining.map(([key, label, title]) => (
+            <li key={key}>
+              <a
+                onClick={() => setRoute(key)}
+                title={title}
+                aria-label={title}
+                className={`pvm-topbar__link${route === key ? ' is-active' : ''}`}
+              >{label}</a>
+            </li>
+          ))}
+        </ul>
       </nav>
 
       {/* Mobile hamburger */}
@@ -144,36 +202,71 @@ const itemsNaTraining = [
                 <line x1="18" y1="6" x2="6" y2="18"></line>
               </svg>
             </button>
+
             <ul>
-  {items.map(([key, label, title]) => (
-    <li key={key}>
-      <a
-        onClick={() => go(key)}
-        title={title}
-        aria-label={title}
-        className={`pvm-mobile-nav__link${route === key ? ' is-active' : ''}`}
-      >{label}</a>
-    </li>
-  ))}
-  <li>
-    <a
-      href={TRAINING_URL}
-      title="Training intiem terreur voor jeugdprofessionals"
-      aria-label="Training intiem terreur"
-      className="pvm-mobile-nav__link"
-    >Trainingen</a>
-  </li>
-  {itemsNaTraining.map(([key, label, title]) => (
-    <li key={key}>
-      <a
-        onClick={() => go(key)}
-        title={title}
-        aria-label={title}
-        className={`pvm-mobile-nav__link${route === key ? ' is-active' : ''}`}
-      >{label}</a>
-    </li>
-  ))}
-</ul>
+              {items.map(([key, label, title]) => (
+                <li key={key}>
+                  <a
+                    onClick={() => go(key)}
+                    title={title}
+                    aria-label={title}
+                    className={`pvm-mobile-nav__link${route === key ? ' is-active' : ''}`}
+                  >{label}</a>
+                </li>
+              ))}
+
+              <li>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <a
+                    href={TRAININGEN_OVERZICHT_URL}
+                    title="Trainingen en coaching voor jeugdprofessionals"
+                    aria-label="Trainingen"
+                    className="pvm-mobile-nav__link"
+                    style={{ flexGrow: 1 }}
+                  >Trainingen</a>
+                  <button
+                    type="button"
+                    aria-label={mobileTrainOpen ? 'Submenu Trainingen inklappen' : 'Submenu Trainingen uitklappen'}
+                    aria-expanded={mobileTrainOpen}
+                    onClick={() => setMobileTrainOpen((o) => !o)}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      padding: '0 8px',
+                      fontSize: 18,
+                      lineHeight: 1,
+                      color: 'var(--fg2)',
+                      cursor: 'pointer',
+                    }}
+                  >{mobileTrainOpen ? '−' : '+'}</button>
+                </div>
+                {mobileTrainOpen && (
+                  <ul style={{ listStyle: 'none', margin: 0, padding: '0 0 4px 18px' }}>
+                    {trainingenSubmenu.map(([url, label, title]) => (
+                      <li key={url}>
+                        <a
+                          href={url}
+                          title={title}
+                          aria-label={title}
+                          className="pvm-mobile-nav__link"
+                        >{label}</a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+
+              {itemsNaTraining.map(([key, label, title]) => (
+                <li key={key}>
+                  <a
+                    onClick={() => go(key)}
+                    title={title}
+                    aria-label={title}
+                    className={`pvm-mobile-nav__link${route === key ? ' is-active' : ''}`}
+                  >{label}</a>
+                </li>
+              ))}
+            </ul>
           </nav>
         </React.Fragment>
       )}
@@ -202,12 +295,14 @@ function Footer({ setRoute }) {
             <span style={{ color: 'var(--fg1)', fontWeight: 600, letterSpacing: '0.02em' }}>110005309</span>
           </div>
         </div>
+
         <div>
           <div style={{ fontSize: 11, letterSpacing: '0.10em', textTransform: 'uppercase', color: 'var(--fg3)', fontWeight: 500, marginBottom: 8 }}>Site</div>
           <a onClick={() => setRoute('werkwijze')} style={{ display: 'block', color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer' }}>Werkwijze en aanpak</a>
           <a onClick={() => setRoute('professionals')} style={{ display: 'block', color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer' }}>Training jeugdprofessionals</a>
           <a onClick={() => setRoute('ervaringen')} style={{ display: 'block', color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer' }}>Ervaringen jeugdzorg</a>
         </div>
+
         <div>
           <div style={{ fontSize: 11, letterSpacing: '0.10em', textTransform: 'uppercase', color: 'var(--fg3)', fontWeight: 500, marginBottom: 8 }}>Contact</div>
           <div><a href="mailto:marijke@praktijkvanmarijk.nl" style={{ color: 'var(--fg2)', textDecoration: 'none', wordBreak: 'break-word' }}>marijke@praktijkvanmarijk.nl</a></div>
@@ -219,6 +314,7 @@ function Footer({ setRoute }) {
             style={{ display: 'inline-block', marginTop: 8, color: 'var(--accent)', cursor: 'pointer', textDecoration: 'none' }}
           >Plan een kennismaking →</a>
         </div>
+
         <div>
           <div style={{ fontSize: 11, letterSpacing: '0.10em', textTransform: 'uppercase', color: 'var(--fg3)', fontWeight: 500, marginBottom: 8 }}>Volg mij</div>
           <div style={{ color: 'var(--fg2)', lineHeight: 1.6, marginBottom: 12 }}>Volg me op LinkedIn voor reflecties uit de praktijk.</div>
