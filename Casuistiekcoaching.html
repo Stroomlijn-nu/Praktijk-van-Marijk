@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casuïstiekcoaching voor jeugd- en gezinsprofessionals | Praktijk van Marijk</title>
+  <meta name="description" content="Individuele casuïstiekcoaching voor SKJ-geregistreerde jeugdprofessionals. 75 minuten online, gericht op regie, rolzuiverheid, veiligheidstaxatie en besluitlogica. SKJ-accreditatie aangevraagd.">
+  <link rel="canonical" href="https://praktijkvanmarijk.nl/casuistiekcoaching.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Lora:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --rood:        #89221d;
+      --okergoud:    #cf872d;
+      --olijf:       #a6ac3e;
+      --olijf-licht: #f0f2e4;
+      --creme:       #faf8f4;
+      --donker:      #2e1f0e;
+      --mid:         #5a4a38;
+      --zacht:       #8a7a68;
+      --lijn:        #e0d8cc;
+      --beige:       #e8dfd2;
+    }
+
+    body { font-family: 'DM Sans', 'Helvetica Neue', sans-serif; background: var(--creme); color: var(--donker); line-height: 1.7; }
+    .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+    /* Topbalk */
+    .topbar { background: var(--creme); border-bottom: 0.5px solid var(--lijn); padding: 0 32px; height: 54px; display: flex; align-items: center; justify-content: space-between; }
+    .topbar-logo { font-size: 15px; font-weight: 500; color: var(--donker); text-decoration: none; }
+    .topbar-back { font-size: 13px; color: var(--zacht); text-decoration: none; letter-spacing: 0.01em; }
+    .topbar-back:hover { color: var(--rood); }
+
+    /* Hero */
+    .hero { background: var(--donker); color: var(--creme); padding: 72px 24px 60px; text-align: center; }
+    .hero-tag { display: inline-block; background: rgba(207,135,45,0.18); color: var(--okergoud); font-size: 12px; font-weight: 500; letter-spacing: 0.06em; padding: 4px 12px; border-radius: 3px; margin-bottom: 24px; }
+    .hero h1 { font-family: 'Lora', Georgia, serif; font-size: clamp(22px, 4vw, 34px); font-weight: 500; line-height: 1.3; color: var(--creme); max-width: 640px; margin: 0 auto 18px; }
+    .hero-sub { font-size: 16px; color: #c9bfb5; max-width: 540px; margin: 0 auto 30px; line-height: 1.75; }
+    .hero-cta { display: inline-block; background: var(--rood); color: var(--creme); text-decoration: none; font-size: 15px; font-weight: 500; padding: 14px 30px; border-radius: 4px; }
+    .hero-cta:hover { background: #6f1b17; }
+    .hero-note { font-size: 13px; color: #b0a49a; margin-top: 16px; line-height: 1.7; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .hero-badges { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+    .hero-badge { font-size: 13px; color: #b0a49a; display: flex; align-items: center; gap: 6px; }
+    .hero-badge .check { color: var(--olijf); }
+
+    /* Secties */
+    .section       { padding: 56px 24px; }
+    .section-beige { padding: 56px 24px; background: var(--beige); }
+    .section-olijf { padding: 56px 24px; background: var(--olijf-licht); }
+    .section-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rood); margin-bottom: 12px; font-weight: 500; }
+    h2 { font-family: 'Lora', Georgia, serif; font-size: clamp(20px, 3vw, 26px); font-weight: 500; color: var(--donker); line-height: 1.35; margin-bottom: 20px; margin-top: 0; }
+    h3 { font-family: 'Lora', Georgia, serif; font-size: 17px; font-weight: 500; color: var(--donker); margin-bottom: 10px; }
+    p { font-size: 15px; color: var(--mid); line-height: 1.8; margin-bottom: 16px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* Check-lijst */
+    .check-list { list-style: none; margin-top: 8px; }
+    .check-list li { display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start; font-size: 15px; color: var(--mid); line-height: 1.7; }
+    .check-list .mark { color: var(--olijf); font-size: 14px; margin-top: 3px; }
+
+    /* Genummerde lijst */
+    .num-list { list-style: none; margin-top: 8px; }
+    .num-list li { display: flex; gap: 14px; margin-bottom: 18px; align-items: flex-start; }
+    .num-bullet { width: 22px; height: 22px; min-width: 22px; border-radius: 50%; background: var(--rood); color: var(--creme); font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+    .num-text { font-size: 15px; color: var(--mid); line-height: 1.7; }
+
+    /* Twee kolommen */
+    .split { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 24px; }
+    .split-card { background: var(--creme); border: 1px solid var(--lijn); border-radius: 6px; padding: 24px 22px; }
+    .split-card.wel { border-left: 4px solid var(--olijf); }
+    .split-card.niet { border-left: 4px solid var(--zacht); }
+    .split-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--okergoud); margin-bottom: 10px; font-weight: 600; }
+    .split-card ul { list-style: none; }
+    .split-card li { font-size: 14px; color: var(--mid); line-height: 1.7; padding-left: 14px; position: relative; margin-bottom: 8px; }
+    .split-card li::before { content: "-"; position: absolute; left: 0; color: var(--zacht); }
+
+    /* Tarieven */
+    .tarief-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 26px; }
+    @media (max-width: 680px) { .tarief-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 420px) { .tarief-grid { grid-template-columns: 1fr; } }
+    .tarief-card { background: var(--creme); border: 1px solid var(--lijn); border-left: 4px solid var(--zacht); border-radius: 6px; padding: 20px 16px; }
+    .tarief-card.olijf     { border-left-color: var(--olijf); }
+    .tarief-card.okergoud  { border-left-color: var(--okergoud); }
+    .tarief-card.rood      { border-left-color: var(--rood); }
+    .tarief-naam { font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--zacht); font-weight: 600; margin-bottom: 10px; }
+    .tarief-bedrag { font-family: 'Lora', Georgia, serif; font-size: 22px; color: var(--rood); line-height: 1.2; margin-bottom: 4px; }
+    .tarief-sub { font-size: 12.5px; color: var(--zacht); line-height: 1.55; }
+
+    /* Praktisch grid */
+    .praktisch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-top: 26px; }
+    .praktisch-item { background: var(--creme); border: 1px solid var(--lijn); border-radius: 6px; padding: 16px 18px; }
+    .praktisch-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--zacht); margin-bottom: 6px; font-weight: 500; }
+    .praktisch-value { font-size: 15px; color: var(--donker); font-weight: 500; line-height: 1.5; }
+
+    /* Accreditatieblok */
+    .info-card { background: var(--creme); border: 1px solid var(--okergoud); border-left: 4px solid var(--okergoud); border-radius: 6px; padding: 24px 22px; margin-top: 26px; }
+    .info-badge { display: inline-block; background: rgba(207,135,45,0.15); color: var(--okergoud); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; padding: 4px 10px; border-radius: 3px; margin-bottom: 14px; }
+
+    /* Tags */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .tag-pill { font-size: 12px; color: var(--mid); background: var(--olijf-licht); border: 1px solid var(--lijn); border-radius: 20px; padding: 5px 12px; }
+
+    /* CTA */
+    .cta-section { background: var(--donker); color: var(--creme); padding: 64px 24px; text-align: center; }
+    .cta-inner { max-width: 560px; margin: 0 auto; }
+    .cta-section h2 { color: var(--creme); }
+    .cta-sub { font-size: 15px; color: #c9bfb5; margin-bottom: 28px; line-height: 1.75; }
+    .cta-knop { display: inline-block; background: var(--okergoud); color: var(--donker); text-decoration: none; font-size: 15px; font-weight: 600; padding: 14px 30px; border-radius: 4px; }
+    .cta-knop:hover { background: #b87522; }
+    .cta-contact { font-size: 14px; color: #b0a49a; margin-top: 22px; line-height: 1.8; }
+    .cta-contact a { color: var(--okergoud); text-decoration: none; }
+
+    footer { background: var(--creme); border-top: 0.5px solid var(--lijn); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--zacht); line-height: 1.9; }
+    footer a { color: var(--zacht); text-decoration: none; }
+    footer a:hover { color: var(--rood); }
+
+    .download-knop { display: inline-block; border: 1px solid var(--rood); color: var(--rood); text-decoration: none; font-size: 14px; font-weight: 500; padding: 11px 22px; border-radius: 4px; }
+    .download-knop:hover { background: var(--rood); color: var(--creme); }
+
+    .fijn { font-size: 13px; color: var(--zacht); line-height: 1.75; margin-top: 18px; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a class="topbar-logo" href="https://www.praktijkvanmarijk.nl">Praktijk van Marijk</a>
+    <a class="topbar-back" href="https://www.praktijkvanmarijk.nl">Terug naar de site</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <span class="hero-tag">Individuele casuïstiekcoaching</span>
+    <h1>Casuïstiekcoaching voor jeugd- en gezinsprofessionals</h1>
+    <p class="hero-sub">
+      Regie, rolzuiverheid en veiligheid. Methodisch en toetsbaar, in 75 minuten helder.
+    </p>
+    <a class="hero-cta" href="https://app.stroomlijn.nu/forms/ccm50zm5">Plan je sessie</a>
+    <p class="hero-note">
+      Geen therapie, geen overname van verantwoordelijkheid. Wel helderheid en een volgende stap.
+    </p>
+    <div class="hero-badges">
+      <span class="hero-badge"><span class="check">✔</span> 75 minuten online, 1 op 1</span>
+      <span class="hero-badge"><span class="check">✔</span> SKJ-accreditatie aangevraagd</span>
+      <span class="hero-badge"><span class="check">✔</span> Werkgeversbrief beschikbaar</span>
+    </div>
+  </section>
+
+  <!-- Herkenning -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Herkenning</div>
+      <h2>Je zit in een casus waar iedereen iets van je wil</h2>
+      <p>
+        Je voelt dat je langzaam verantwoordelijk wordt gemaakt voor iets wat niet van jou is.
+        Je twijfelt over veiligheid, over escalatie of over je onderbouwing.
+        Je gesprekken met ouders of ketenpartners lopen vast.
+      </p>
+      <p>
+        Je wilt professioneel blijven zonder hard te worden.
+        Je wilt weer weten wat nu de juiste stap is en hoe je die onderbouwt.
+      </p>
+    </div>
+  </section>
+
+  <!-- Wat je krijgt -->
+  <section class="section-beige">
+    <div class="container">
+      <div class="section-label">Wat je krijgt</div>
+      <h2>Eén sessie, één besluit dat je kunt verantwoorden</h2>
+      <ul class="check-list">
+        <li><span class="mark">✔</span> 75 minuten online, 1 op 1</li>
+        <li><span class="mark">✔</span> Een in te vullen voorbereidingsformat zodat we meteen de kern raken</li>
+        <li><span class="mark">✔</span> Coaching op besluitlogica, veiligheidstaxatie, regie en rolzuiverheid</li>
+        <li><span class="mark">✔</span> Een korte vertrouwelijke samenvatting zonder herleidbare cliëntgegevens</li>
+        <li><span class="mark">✔</span> Optioneel een werkgeversbrief voor vergoeding</li>
+      </ul>
+
+      <div class="info-card">
+        <span class="info-badge">SKJ-accreditatie aangevraagd</span>
+        <p style="margin-bottom: 0;">
+          De accreditatie voor deze casuïstiekcoaching is bij SKJ aangevraagd en op dit moment in behandeling.
+          Zodra het aantal registerpunten bekend is, wordt dat hier vermeld.
+          Deelnemers die eerder starten, ontvangen bericht zodra de toekenning rond is.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voor wie -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Voor wie</div>
+      <h2>Voor wie dit werkt en voor wie niet?</h2>
+      <div class="split">
+        <div class="split-card wel">
+          <div class="split-label">Wel voor</div>
+          <ul>
+            <li>SKJ-geregistreerde jeugdprofessionals</li>
+            <li>Aangrenzende rollen die regie dragen in complexe casuïstiek</li>
+            <li>Professionals die willen werken aan onderbouwing en rolzuiverheid</li>
+          </ul>
+        </div>
+        <div class="split-card niet">
+          <div class="split-label">Niet voor</div>
+          <ul>
+            <li>Crisissituaties</li>
+            <li>Therapie</li>
+            <li>Dossierbehandeling</li>
+            <li>Situaties waarin je wilt dat ik de casus overneem</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Werkwijze -->
+  <section class="section-olijf">
+    <div class="container">
+      <div class="section-label">Werkwijze</div>
+      <h2>Vier stappen</h2>
+      <ul class="num-list">
+        <li><span class="num-bullet">1</span><span class="num-text">Je boekt je sessie en betaalt vooraf.</span></li>
+        <li><span class="num-bullet">2</span><span class="num-text">Je vult het voorbereidingsformat in, zodat de sessie meteen bij de kern begint.</span></li>
+        <li><span class="num-bullet">3</span><span class="num-text">In de sessie werken we naar een besluit en naar de taal waarin je dat verantwoordt.</span></li>
+        <li><span class="num-bullet">4</span><span class="num-text">Je ontvangt een korte samenvatting met je eerstvolgende stap.</span></li>
+      </ul>
+
+      <h3 style="margin-top: 34px;">Wat je leert</h3>
+      <p>
+        Na afloop heb je één besluit dat je kunt verantwoorden, één eerstvolgende stap die je direct uitvoert
+        en een rolzuivere gesprekslijn, inclusief escalatieroute als dat nodig is.
+      </p>
+    </div>
+  </section>
+
+  <!-- Leerdoelen -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Leerdoelen</div>
+      <h2>Na een sessie kun je</h2>
+      <ul class="num-list">
+        <li><span class="num-bullet">1</span><span class="num-text">je regierol expliciet maken en begrenzen</span></li>
+        <li><span class="num-bullet">2</span><span class="num-text">veiligheidsrisico's methodisch wegen en onderbouwen</span></li>
+        <li><span class="num-bullet">3</span><span class="num-text">een besluit en een eerstvolgende stap formuleren die je kunt verantwoorden</span></li>
+        <li><span class="num-bullet">4</span><span class="num-text">een gesprek voorbereiden en voeren met een heldere taak, een helder doel en heldere taal</span></li>
+        <li><span class="num-bullet">5</span><span class="num-text">je dossiervoering aanscherpen op toetsbaarheid, zonder onnodige details</span></li>
+      </ul>
+
+      <h3 style="margin-top: 34px;">Zo maken we het toetsbaar</h3>
+      <p>
+        Je werkt met een kort voorbereidingsformat.
+        In de sessie vertalen we jouw casus naar concrete keuzes, taal en acties.
+        Je gaat weg met een helder besluit, een gesprekslijn of escalatieroute en een eerstvolgende stap die je direct kunt uitvoeren.
+      </p>
+
+      <h3 style="margin-top: 30px;">Evaluatie</h3>
+      <p>
+        Aan het einde van elke sessie checken we kort wat je hebt geleerd, wat je gaat toepassen en wat je eerstvolgende stap is.
+        Bij afronding van een strippenkaart evalueren we kort op jouw leerdoelen.
+      </p>
+    </div>
+  </section>
+
+  <!-- Tarieven -->
+  <section class="section-beige">
+    <div class="container">
+      <div class="section-label">Tarieven</div>
+      <h2>Los of via een strippenkaart</h2>
+
+      <div class="tarief-grid">
+        <div class="tarief-card">
+          <div class="tarief-naam">Losse sessie</div>
+          <div class="tarief-bedrag">€ 295</div>
+          <div class="tarief-sub">excl. btw, 75 minuten</div>
+        </div>
+        <div class="tarief-card olijf">
+          <div class="tarief-naam">Strippenkaart 3</div>
+          <div class="tarief-bedrag">€ 825</div>
+          <div class="tarief-sub">excl. btw, geldig 6 maanden</div>
+        </div>
+        <div class="tarief-card okergoud">
+          <div class="tarief-naam">Strippenkaart 5</div>
+          <div class="tarief-bedrag">€ 1.325</div>
+          <div class="tarief-sub">excl. btw, geldig 6 maanden</div>
+        </div>
+        <div class="tarief-card rood">
+          <div class="tarief-naam">Kwartaalpakket 6</div>
+          <div class="tarief-bedrag">€ 1.560</div>
+          <div class="tarief-sub">excl. btw, geldig 12 maanden</div>
+        </div>
+      </div>
+
+      <div class="praktisch-grid">
+        <div class="praktisch-item"><div class="praktisch-label">Duur</div><div class="praktisch-value">75 minuten</div></div>
+        <div class="praktisch-item"><div class="praktisch-label">Vorm</div><div class="praktisch-value">Online, 1 op 1</div></div>
+        <div class="praktisch-item"><div class="praktisch-label">Betaling</div><div class="praktisch-value">Vooraf, termijn 14 dagen</div></div>
+        <div class="praktisch-item"><div class="praktisch-label">Accreditatie</div><div class="praktisch-value">SKJ, aangevraagd</div></div>
+      </div>
+
+      <p class="fijn">
+        Annuleren of verzetten kan tot 48 uur voor de sessie kosteloos. Daarna vervalt de sessie.
+        Een strippenkaart is persoonsgebonden en niet overdraagbaar.
+        Niet gebruikte sessies vervallen na afloop van de geldigheidsduur.
+        Een werkgever kan in overleg meerdere strippenkaarten afnemen voor meerdere medewerkers, ieder op eigen naam.
+        Sessies worden ingepland na ontvangst van betaling, of na schriftelijk akkoord voor facturatie met een betaaltermijn van 14 dagen.
+      </p>
+    </div>
+  </section>
+
+  <!-- Vergoeding werkgever -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Vergoeding</div>
+      <h2>Laat je werkgever meebetalen</h2>
+      <p>
+        Veel organisaties vergoeden casuïstiekcoaching uit het scholings- of kwaliteitsbudget.
+        Je ontvangt een kant en klare werkgeversbrief die je alleen hoeft aan te vullen met je eigen gegevens.
+        Daarin staan het doel, de opzet, de investering en de privacykaders beschreven.
+      </p>
+      <p>
+        De werkgever ontvangt geen casusinhoud, geen cliëntgegevens en geen inhoudelijke terugkoppeling.
+        De organisatie ontvangt de factuur en een algemene omschrijving van het traject.
+      </p>
+      <p style="margin-top: 22px;">
+        <a class="download-knop" href="assets/werkgeversbrief-casuistiekcoaching.pdf" download>Download de werkgeversbrief (pdf)</a>
+      </p>
+
+      <h3 style="margin-top: 30px;">Waarom dit relevant is voor de organisatie</h3>
+      <ul class="check-list">
+        <li><span class="mark">✔</span> Snellere en scherpere besluitvorming in complexe casuïstiek</li>
+        <li><span class="mark">✔</span> Eenduidiger regie en rolzuiver handelen, minder escalatie en ruis in de samenwerking</li>
+        <li><span class="mark">✔</span> Sterkere professionele communicatie en veiligheidstaxatie</li>
+        <li><span class="mark">✔</span> Preventie van handelingsverlegenheid en uitval door langdurige druk</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="section-olijf">
+    <div class="container">
+      <div class="section-label">Privacy en beroepscode</div>
+      <h2>Wat ik wel en niet vastleg</h2>
+      <p>
+        Je deelt geen herleidbare cliëntgegevens. Ik maak geen opnames en ik bouw geen cliëntdossier op.
+        Alles wat je inbrengt blijft vertrouwelijk en valt onder professionele geheimhouding.
+      </p>
+      <p>
+        Na elke sessie ontvang je een korte, vertrouwelijke samenvatting met leerpunten en actiepunten, zonder cliëntgegevens.
+        Ik leg geen namen, adressen of herleidbare casusdetails vast.
+        Jij blijft verantwoordelijk voor besluitvorming, uitvoering en dossiervoering binnen je eigen organisatie.
+      </p>
+    </div>
+  </section>
+
+  <!-- Over Marijke -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Wie je begeleidt</div>
+      <h2>Marijke Koomen</h2>
+      <p>
+        Ik werk circa twintig jaar in de jeugdzorg, op het snijvlak van veiligheid, regie en besluitvorming onder druk.
+        In de casuïstiekcoaching scherpen we aan hoe jij weer rolzuiver kunt denken en handelen,
+        zodat je stevig blijft staan in complexe systemen.
+      </p>
+      <p>
+        Ik neem geen dossiers over en ik doe geen therapie.
+        Ik scherp je besluitvorming en je onderbouwing aan, zodat je rolzuiver handelt en verantwoorde taal hebt.
+      </p>
+      <div class="tags">
+        <span class="tag-pill">SKJ-geregistreerd, nr. 110005309</span>
+        <span class="tag-pill">Veilig Thuis</span>
+        <span class="tag-pill">Jeugd- en gezinsbescherming</span>
+        <span class="tag-pill">20 jaar uitvoerende ervaring</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="plannen">
+    <div class="cta-inner">
+      <h2>Plan je sessie</h2>
+      <p class="cta-sub">
+        Je vult het aanmeldformulier in. Dat formulier is tegelijk je voorbereidingsformat,
+        zodat we in de sessie meteen bij de kern beginnen.
+        Je ontvangt daarna een bevestiging en een factuur met betalingslink.
+        Na betaling plan je zelf een datum in.
+      </p>
+      <a class="cta-knop" href="https://app.stroomlijn.nu/forms/ccm50zm5">Plan je sessie</a>
+      <p class="cta-contact">
+        Liever even bellen of mailen?<br>
+        <a href="tel:+31627376003">06&nbsp;27&nbsp;37&nbsp;60&nbsp;03</a> ·
+        <a href="mailto:marijke@praktijkvanmarijk.nl">marijke@praktijkvanmarijk.nl</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Praktijk van Marijk ·
+    <a href="mailto:marijke@praktijkvanmarijk.nl">marijke@praktijkvanmarijk.nl</a>
+    · <a href="tel:+31627376003">06&nbsp;27&nbsp;37&nbsp;60&nbsp;03</a><br>
+    SKJ-registratie 110005309 · geldig t/m 25-05-2028<br>
+    KVK 72258209 · BTW NL002136255B51<br>
+    <a href="https://www.praktijkvanmarijk.nl">praktijkvanmarijk.nl</a>
+    · <a href="https://www.praktijkvanmarijk.nl/#klachtenregeling">Klachtenregeling</a>
+  </footer>
+
+</body>
+</html>
