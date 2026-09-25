@@ -4,7 +4,7 @@ function Contact() {
   const [sending, setSending] = React.useState(false);
   const [error, setError] = React.useState("");
   const up = (k) => (e) => setForm({ ...form, [k]: e.target.value });
- 
+
   const submit = async (e) => {
     e.preventDefault();
     setSending(true);
@@ -30,7 +30,7 @@ function Contact() {
       setSending(false);
     }
   };
- 
+
   const inputStyle = {
     width: '100%', boxSizing: 'border-box',
     fontFamily: 'DM Sans, sans-serif', fontSize: 15, color: 'var(--fg1)',
@@ -46,7 +46,7 @@ function Contact() {
     color: 'var(--fg1)',
     marginBottom: 6
   };
- 
+
   const eyebrowLabel = {
     fontFamily: 'DM Sans, sans-serif',
     fontSize: 11,
@@ -56,7 +56,7 @@ function Contact() {
     fontWeight: 500,
     marginBottom: 14
   };
- 
+
   return (
     <div>
       {/* ============ HERO ============ */}
@@ -84,9 +84,9 @@ function Contact() {
           Laat weten waar je tegenaan loopt. Ik reageer binnen twee werkdagen.
         </p>
       </div>
- 
+
       <SectionDivider />
- 
+
       {/* ============ FORMULIER + GEGEVENS ============ */}
       <div style={{
         padding: '56px 48px 64px',
@@ -126,7 +126,7 @@ function Contact() {
               value={form.bericht}
               onChange={up('bericht')}
               style={{ ...inputStyle, minHeight: 160, resize: 'vertical', lineHeight: 1.65, fontFamily: 'DM Sans, sans-serif' }} />
-            
+
             </div>
             <div style={{ marginTop: 4, display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
               <Button type="submit" disabled={sending}>{sending ? 'Bezig…' : 'Verstuur bericht'}</Button>
@@ -142,7 +142,7 @@ function Contact() {
               )}
             </div>
           </form> :
- 
+
         <div style={{
           padding: 28,
           border: '0.5px solid var(--line)',
@@ -159,8 +159,8 @@ function Contact() {
             </div>
           </div>
         }
- 
-        {/* Rechterkolom, foto + directe gegevens */}
+
+        {/* Rechterkolom: foto + Direct/Werkdagen naast elkaar + Praktijk eronder */}
         <div>
           <div style={{
             background: 'var(--beige)',
@@ -175,11 +175,11 @@ function Contact() {
               src={window.__resources && window.__resources.marijkeContact || "assets/marijke-contact.jpg"}
               alt="Marijke Koomen bij de entree van de praktijk"
               style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-            
+
           </div>
- 
-          {/* Direct & Werkdagen - twee kolommen */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, marginBottom: 28, fontFamily: 'DM Sans, sans-serif', fontSize: 14.5, color: 'var(--fg1)', lineHeight: 1.8 }}>
+
+          {/* Direct & Werkdagen - twee kolommen naast elkaar */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, marginBottom: 14, fontFamily: 'DM Sans, sans-serif', fontSize: 14.5, color: 'var(--fg1)', lineHeight: 1.8 }}>
             {/* Direct */}
             <div>
               <div style={eyebrowLabel}>Direct</div>
@@ -188,35 +188,37 @@ function Contact() {
                   marijke@praktijkvanmarijk.nl
                 </a>
               </div>
-              <div style={{ marginBottom: 28, fontVariantNumeric: 'tabular-nums' }}>
+              <div style={{ fontVariantNumeric: 'tabular-nums' }}>
                 <a href="tel:+31627376003" style={{ color: 'var(--fg1)', textDecoration: 'none', borderBottom: '0.5px solid var(--line-strong)' }}>06 - 27 37 60 03</a>
               </div>
             </div>
- 
+
             {/* Werkdagen */}
             <div>
               <div style={eyebrowLabel}>Werkdagen</div>
               <div style={{
                 display: 'grid',
-                gridTemplateColumns: '1fr',
-                rowGap: 4,
+                gridTemplateColumns: '1fr 1fr',
+                columnGap: 16,
+                rowGap: 6,
                 fontSize: 14,
-                color: 'var(--fg2)'
+                color: 'var(--fg2)',
+                fontVariantNumeric: 'tabular-nums'
               }}>
-                <div style={{ color: 'var(--fg3)' }}>Maandag</div>
+                <div style={{ color: 'var(--fg1)' }}>Maandag</div>
                 <div style={{ color: 'var(--fg1)' }}>09.00 - 17.00</div>
-                <div style={{ color: 'var(--fg3)' }}>Dinsdag</div>
+                <div style={{ color: 'var(--fg1)' }}>Dinsdag</div>
                 <div style={{ color: 'var(--fg1)' }}>09.00 - 17.00</div>
-                <div style={{ color: 'var(--fg3)' }}>Donderdag</div>
+                <div style={{ color: 'var(--fg1)' }}>Donderdag</div>
                 <div style={{ color: 'var(--fg1)' }}>09.00 - 17.00</div>
-                <div style={{ color: 'var(--fg3)', paddingTop: 8 }}>Woensdag</div>
-                <div style={{ color: 'var(--fg1)', paddingTop: 8 }}>Op uitzondering</div>
-                <div style={{ color: 'var(--fg3)' }}>Vrijdag</div>
-                <div style={{ color: 'var(--fg1)' }}>Op uitzondering</div>
+                <div style={{ color: 'var(--fg1)' }}>Woensdag</div>
+                <div style={{ color: 'var(--fg1)' }}>Op afspraak</div>
+                <div style={{ color: 'var(--fg1)' }}>Vrijdag</div>
+                <div style={{ color: 'var(--fg1)' }}>Op afspraak</div>
               </div>
             </div>
           </div>
- 
+
           {/* Praktijk */}
           <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 14.5, color: 'var(--fg1)', lineHeight: 1.8 }}>
             <div style={eyebrowLabel}>Praktijk</div>
@@ -236,7 +238,7 @@ function Contact() {
         </div>
       </div>
     </div>);
- 
+
 }
- 
+
 Object.assign(window, { Contact });
