@@ -293,7 +293,7 @@ export default function PrivacyEnGeheimhouding() {
       >
         Praktijk van Marijk · marijke@praktijkvanmarijk.nl · 06-27376003
         <br />
-        SKJ-registratie 110005309 · geldig t/m 25-05-2028
+        SKJ-registratie 110005309 · 
         <br />
         <a
           href="https://www.praktijkvanmarijk.nl"
