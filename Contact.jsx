@@ -221,9 +221,9 @@ function Contact() {
               <div style={{ color: 'var(--fg3)' }}>Donderdag</div>
               <div style={{ color: 'var(--fg1)' }}>09.00 - 17.00</div>
               <div style={{ color: 'var(--fg3)', paddingTop: 8 }}>Woensdag</div>
-              <div style={{ color: 'var(--fg1)', paddingTop: 8 }}>Op uitzondering</div>
+              <div style={{ color: 'var(--fg1)', paddingTop: 8 }}>Bij uitzondering op afspraak</div>
               <div style={{ color: 'var(--fg3)' }}>Vrijdag</div>
-              <div style={{ color: 'var(--fg1)' }}>Op uitzondering</div>
+              <div style={{ color: 'var(--fg1)' }}>Bij uitzondering op afspraak</div>
             </div>
           </div>
         </div>
