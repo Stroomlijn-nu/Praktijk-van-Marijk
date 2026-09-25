@@ -14,10 +14,12 @@ function Topbar({ route, setRoute }) {
   const TRAININGEN_OVERZICHT_URL = '/Trainingen.html';
   const TRAINING_URL = '/training-intiem-terreur.html';
   const CASUISTIEK_URL = '/Casuistiekcoaching.html';
+  const RAPPORTEREN_URL = '/Rapporteren_onder_druk.html';
 
   const trainingenSubmenu = [
     [TRAINING_URL, 'Training intiem terreur', 'Tweedaagse training intiem terreur voor jeugdprofessionals'],
     [CASUISTIEK_URL, 'Casuïstiekcoaching', 'Individuele casuïstiekcoaching voor jeugdprofessionals'],
+    [RAPPORTEREN_URL, 'Rapporteren onderdruk', 'In-company training rapporteren onder druk voor jeugdprofessionals'],
   ];
 
   const [drawerOpen, setDrawerOpen] = React.useState(false);
