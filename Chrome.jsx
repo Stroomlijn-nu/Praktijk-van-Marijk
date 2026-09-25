@@ -120,7 +120,7 @@ function Topbar({ route, setRoute }) {
                   minWidth: 240,
                   listStyle: 'none',
                   margin: 0,
-                  padding: '8px 0',
+                  padding: '4px 0',
                   background: 'var(--bg)',
                   border: '0.5px solid var(--line)',
                   borderRadius: 6,
@@ -136,7 +136,7 @@ function Topbar({ route, setRoute }) {
                       className="pvm-topbar__sublink"
                       style={{
                         display: 'block',
-                        padding: '9px 18px',
+                        padding: '6px 18px',
                         fontSize: 14,
                         color: 'var(--fg2)',
                         textDecoration: 'none',
