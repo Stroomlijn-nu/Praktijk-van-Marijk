@@ -105,6 +105,19 @@
     .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
     .tag-pill { font-size: 12px; color: var(--mid); background: var(--olijf-licht); border: 1px solid var(--lijn); border-radius: 20px; padding: 5px 12px; }
 
+    /* FAQ sectie */
+    .faq-section { background: var(--olijf-licht); padding: 56px 24px; }
+    .faq-container { max-width: 780px; margin: 0 auto; }
+    .faq-section h2 { margin-top: 0; }
+    .faq-item { background: var(--creme); border: 1px solid var(--lijn); border-radius: 6px; margin-bottom: 14px; overflow: hidden; }
+    .faq-question { padding: 18px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; transition: background 0.2s; }
+    .faq-question:hover { background: #fdfbf8; }
+    .faq-question-text { font-size: 15px; font-weight: 500; color: var(--donker); }
+    .faq-toggle { font-size: 18px; color: var(--rood); font-weight: 300; min-width: 20px; text-align: right; }
+    .faq-answer { display: none; padding: 0 20px 18px 20px; font-size: 15px; color: var(--mid); line-height: 1.8; }
+    .faq-answer.open { display: block; }
+    .faq-item.active .faq-answer { display: block; }
+
     /* CTA */
     .cta-section { background: var(--donker); color: var(--creme); padding: 64px 24px; text-align: center; }
     .cta-inner { max-width: 560px; margin: 0 auto; }
@@ -125,7 +138,7 @@
     .fijn { font-size: 13px; color: var(--zacht); line-height: 1.75; margin-top: 18px; }
   </style>
 </head>
-  
+
 <body>
 
   <div class="topbar">
@@ -185,7 +198,7 @@
       <div class="info-card">
         <span class="info-badge">SKJ-registerpunten</span>
         <p style="margin-bottom: 0;">
-        Deelnemers dienen de bestede tijd aan deze casuïstiekcoaching zelf in bij SKJ, onder reflectie..
+        Deelnemers dienen de bestede tijd aan deze casuïstiekcoaching zelf in bij SKJ, onder reflectie.
         </p>
       </div>
     </div>
@@ -195,7 +208,7 @@
   <section class="section">
     <div class="container">
       <div class="section-label">Voor wie</div>
-      <h2>Voor wie dit werkt en voor wie niet?</h2>
+      <h2>Voor wie dit werkt en voor wie niet</h2>
       <div class="split">
         <div class="split-card wel">
           <div class="split-label">Wel voor</div>
@@ -377,6 +390,114 @@
     </div>
   </section>
 
+  <!-- Veelgestelde vragen -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <div class="section-label" style="color: var(--rood);">Veel gestelde vragen</div>
+      <h2>Veelgestelde vragen over casuïstiekcoaching</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-question-text">Wat is casuïstiekcoaching precies</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          Casuïstiekcoaching is individuele professionele begeleiding rond een concrete casus waar je als professional mee worstelt. Je brengt de casus in, we analyseren samen de besluitlogica, veiligheidstaxatie en regie, en je gaat weg met een helder besluit en een concrete volgende stap die je zelf uitvoert. Het is geen therapie, geen dossierbehandeling en geen overname van verantwoordelijkheid door mij.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-question-text">Hoelang duurt een sessie en hoe boek ik</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          Een sessie duurt 75 minuten, online en 1 op 1. Je boekt en betaalt via het inschrijfformulier op deze pagina. Na betaling ontvang je het voorbereidingsformat, dat je vooraf invult. Zo kunnen we meteen bij de kern van je casus beginnen. Je ontvangt een bevestiging en een factuur met een betaallink.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-question-text">Hoeveel kost casuïstiekcoaching</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          Een losse sessie kost 295 euro (excl. btw). Je kunt ook kiezen voor een strippenkaart van 3, 5 of 6 sessies met aanzienlijke korting per sessie en een langere geldigheidsduur. Veel werkgevers vergoeden dit uit hun scholingsbudget. Je kunt een kant-en-klare werkgeversbrief aanvragen.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-question-text">Kan ik dit van mijn werkgever betaald krijgen</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          Veel organisaties vergoeden casuïstiekcoaching uit hun scholings- of kwaliteitsbudget. Je vult een formulier in en ontvangt direct per e-mail een werkgeversbrief die je naar je leidinggevende kunt sturen. Daarin staan het doel, de inhoud, de investering en de privacykaders. De werkgever ontvangt geen casusdetails, alleen de factuur en een algemene omschrijving.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-question-text">Telt dit mee voor SKJ-registerpunten</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          Ja, je kunt de tijd die je aan casuïstiekcoaching besteedt, zelf indienen bij SKJ onder 'Reflectie'. Dit geldt alleen voor SKJ-geregistreerde jeugdprofessionals. Je bent zelf verantwoordelijk voor het indienen onder het juiste kopje op je SKJ-profiel.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-question-text">Kan ik mijn casuïstiek geheim houden</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          Ja, volledig. Je deelt geen herleidbare cliëntgegevens. Ik maak geen opnames, bouw geen dossier op en deel nooit informatie met derden zonder je toestemming. Alles valt onder professionele geheimhouding. Na afloop ontvang je een korte samenvatting met leerpunten, ook zonder cliëntgegevens. Je bent zelf verantwoordelijk voor anonimisering.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-question-text">Wat als ik een sessie wil cancellen of verzetten</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          Je kunt tot 48 uur voor je sessie kosteloos cancellen of verzetten. Daarna vervalt je sessie (losse boeking) of je strippe (strippenkaart). Als je een strippenkaart hebt, geldt de geldigheidsduur van 6 of 12 maanden. Niet gebruikte sessies vervallen na afloop van die periode.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-question-text">Wat als ik niet zeker weet of dit voor mij geschikt is</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          Je kunt altijd rechtstreeks contact opnemen via email of telefoon. Ik beantwoord je vragen graag. In je voorbereidingsformat krijg je ruimte om te beschrijven wat je speelt. Zo kunnen we van tevoren checken of casuïstiekcoaching passend is voor je vraag of situatie.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-question-text">Praktische bereikbaarheid en voorwaarden</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          Voor vragen over planning, inschrijving, betaling en facturatie kun je mailen of bellen. Als ik niet opneem, kun je een voicemail inspreken. Je ontvangt binnen 2 werkdagen een reactie. Ik ben bereikbaar op maandag, dinsdag en donderdag. Alle voorwaarden, privacy en geheimhouding staan beschreven in de documenten die je ontvangt bij inschrijving.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-question-text">Contactgegevens en aanmelding</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          Je kunt je aanmelden via het formulier op deze pagina, mailen naar marijke@praktijkvanmarijk.nl of bellen naar 06-27 37 60 03. Werkdagen: maandag, dinsdag, donderdag. Bij voicemail ontvang je antwoord binnen 2 werkdagen. Voor een werkgeversbrief vul je een apart formulier in. Na aanmelding ontvang je het voorbereidingsformat en een factuur met betaallink.
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="cta-section" id="plannen">
     <div class="cta-inner">
@@ -389,7 +510,7 @@
       </p>
       <a class="cta-knop" href="https://app.stroomlijn.nu/forms/ccm50zm5">Plan je sessie</a>
       <p class="cta-contact">
-        Liever even bellen of mailen?<br>
+        Liever even bellen of mailen<br>
         <a href="tel:+31627376003">06&nbsp;27&nbsp;37&nbsp;60&nbsp;03</a> ·
         <a href="mailto:marijke@praktijkvanmarijk.nl">marijke@praktijkvanmarijk.nl</a>
       </p>
@@ -405,6 +526,28 @@
     <a href="https://www.praktijkvanmarijk.nl">praktijkvanmarijk.nl</a>
     · <a href="https://www.praktijkvanmarijk.nl/#klachtenregeling">Klachtenregeling</a>
   </footer>
+
+  <script>
+    function toggleFaq(element) {
+      const item = element.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const toggle = element.querySelector('.faq-toggle');
+
+      item.classList.toggle('active');
+
+      if (item.classList.contains('active')) {
+        toggle.textContent = '−';
+      } else {
+        toggle.textContent = '+';
+      }
+    }
+
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', function() {
+        toggleFaq(this);
+      });
+    });
+  </script>
 
 </body>
 </html>
