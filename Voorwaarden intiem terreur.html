@@ -170,18 +170,73 @@
       text-decoration: underline;
     }
 
+    /* ── Download knop ────────────────────────────────────────────── */
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #89221d;
+      color: #faf8f4;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      transition: background 0.2s;
+      cursor: pointer;
+      border: none;
+      font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .print-btn:hover {
+      background: #6d1916;
+    }
+
     /* ── Print ────────────────────────────────────────────────────── */
     @media print {
+      @page {
+        size: A4;
+        margin: 18mm 16mm 20mm 16mm;
+      }
+
       .footer-section,
       .breadcrumb {
-        display: none;
+        display: none !important;
       }
+
       body {
-        background: white;
+        background: #fff !important;
+        color: #2e1f0e !important;
       }
+
+      .container {
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+
       .header {
-        border-bottom: none;
-        padding-bottom: 0;
+        border-bottom: 2px solid #cf872d !important;
+        padding-bottom: 24px !important;
+        margin-bottom: 32px !important;
+      }
+
+      h2 {
+        page-break-after: avoid;
+      }
+
+      h3 {
+        page-break-after: avoid;
+      }
+
+      .info-block {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      ul, p {
+        orphans: 3;
+        widows: 3;
       }
     }
   </style>
@@ -298,7 +353,19 @@
 
     <!-- Footer -->
     <div class="footer-section">
-      <a href="Termijnen-en-voorwaarden-intiem-terreur.pdf" download class="download-btn">↓ Download PDF</a>
+      <button
+        onclick="window.print()"
+        class="print-btn"
+        aria-label="Download deze voorwaarden als PDF"
+        title="Download als PDF"
+      >
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+        Download als PDF
+      </button>
       <a href="training-intiem-terreur.html" class="back-link">← Terug naar training</a>
     </div>
   </div>
