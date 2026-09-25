@@ -126,7 +126,7 @@ function Contact() {
               value={form.bericht}
               onChange={up('bericht')}
               style={{ ...inputStyle, minHeight: 160, resize: 'vertical', lineHeight: 1.65, fontFamily: 'DM Sans, sans-serif' }} />
-            
+
             </div>
             <div style={{ marginTop: 4, display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
               <Button type="submit" disabled={sending}>{sending ? 'Bezig…' : 'Verstuur bericht'}</Button>
@@ -160,7 +160,7 @@ function Contact() {
           </div>
         }
 
-        {/* Rechterkolom, foto + directe gegevens */}
+        {/* Rechterkolom: foto + Direct/Werkdagen naast elkaar + Praktijk eronder */}
         <div>
           <div style={{
             background: 'var(--beige)',
@@ -175,38 +175,51 @@ function Contact() {
               src={window.__resources && window.__resources.marijkeContact || "assets/marijke-contact.jpg"}
               alt="Marijke Koomen bij de entree van de praktijk"
               style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-            
+
           </div>
 
+          {/* Direct & Werkdagen - twee kolommen naast elkaar */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, marginBottom: 28, fontFamily: 'DM Sans, sans-serif', fontSize: 14.5, color: 'var(--fg1)', lineHeight: 1.8 }}>
+            {/* Direct */}
+            <div>
+              <div style={eyebrowLabel}>Direct</div>
+              <div style={{ marginBottom: 4 }}>
+                <a href="mailto:marijke@praktijkvanmarijk.nl" style={{ color: 'var(--fg1)', textDecoration: 'none', borderBottom: '0.5px solid var(--line-strong)' }}>
+                  marijke@praktijkvanmarijk.nl
+                </a>
+              </div>
+              <div style={{ marginBottom: 28, fontVariantNumeric: 'tabular-nums' }}>
+                <a href="tel:+31627376003" style={{ color: 'var(--fg1)', textDecoration: 'none', borderBottom: '0.5px solid var(--line-strong)' }}>06 - 27 37 60 03</a>
+              </div>
+            </div>
+
+            {/* Werkdagen */}
+            <div>
+              <div style={eyebrowLabel}>Werkdagen</div>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr',
+                rowGap: 4,
+                fontSize: 14,
+                color: 'var(--fg2)'
+              }}>
+                <div style={{ color: 'var(--fg3)' }}>Maandag</div>
+                <div style={{ color: 'var(--fg1)' }}>09.00 - 17.00</div>
+                <div style={{ color: 'var(--fg3)' }}>Dinsdag</div>
+                <div style={{ color: 'var(--fg1)' }}>09.00 - 17.00</div>
+                <div style={{ color: 'var(--fg3)' }}>Donderdag</div>
+                <div style={{ color: 'var(--fg1)' }}>09.00 - 17.00</div>
+                <div style={{ color: 'var(--fg3)', paddingTop: 8 }}>Woensdag</div>
+                <div style={{ color: 'var(--fg1)', paddingTop: 8 }}>Bij uitzondering op afspraak</div>
+                <div style={{ color: 'var(--fg3)' }}>Vrijdag</div>
+                <div style={{ color: 'var(--fg1)' }}>Bij uitzondering op afspraak</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Praktijk - volle breedte eronder */}
           <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 14.5, color: 'var(--fg1)', lineHeight: 1.8 }}>
-            <div style={eyebrowLabel}>Direct</div>
-            <div style={{ marginBottom: 4 }}>
-              <a href="mailto:marijke@praktijkvanmarijk.nl" style={{ color: 'var(--fg1)', textDecoration: 'none', borderBottom: '0.5px solid var(--line-strong)' }}>
-                marijke@praktijkvanmarijk.nl
-              </a>
-            </div>
-            <div style={{ marginBottom: 28, fontVariantNumeric: 'tabular-nums' }}>
-              <a href="tel:+31627376003" style={{ color: 'var(--fg1)', textDecoration: 'none', borderBottom: '0.5px solid var(--line-strong)' }}>06 - 27 37 60 03
-
-              </a>
-            </div>
-
             <div style={eyebrowLabel}>Praktijk</div>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: '92px 1fr',
-              rowGap: 4,
-              fontSize: 14,
-              color: 'var(--fg2)',
-              marginBottom: 28
-            }}>
-              <div style={{ color: 'var(--fg3)' }}>SKJ</div>
-              <div style={{ color: 'var(--fg1)', fontVariantNumeric: 'tabular-nums' }}>110005309</div>
-              <div style={{ color: 'var(--fg3)' }}>KvK</div>
-              <div style={{ color: 'var(--fg1)', fontVariantNumeric: 'tabular-nums' }}>72258209</div>
-            </div>
-
-            <div style={eyebrowLabel}>Werkdagen</div>
             <div style={{
               display: 'grid',
               gridTemplateColumns: '92px 1fr',
@@ -214,16 +227,10 @@ function Contact() {
               fontSize: 14,
               color: 'var(--fg2)'
             }}>
-              <div style={{ color: 'var(--fg3)' }}>Maandag</div>
-              <div style={{ color: 'var(--fg1)' }}>09.00 - 17.00</div>
-              <div style={{ color: 'var(--fg3)' }}>Dinsdag</div>
-              <div style={{ color: 'var(--fg1)' }}>09.00 - 17.00</div>
-              <div style={{ color: 'var(--fg3)' }}>Donderdag</div>
-              <div style={{ color: 'var(--fg1)' }}>09.00 - 17.00</div>
-              <div style={{ color: 'var(--fg3)', paddingTop: 8 }}>Woensdag</div>
-              <div style={{ color: 'var(--fg1)', paddingTop: 8 }}>Bij uitzondering op afspraak</div>
-              <div style={{ color: 'var(--fg3)' }}>Vrijdag</div>
-              <div style={{ color: 'var(--fg1)' }}>Bij uitzondering op afspraak</div>
+              <div style={{ color: 'var(--fg3)' }}>SKJ</div>
+              <div style={{ color: 'var(--fg1)', fontVariantNumeric: 'tabular-nums' }}>110005309</div>
+              <div style={{ color: 'var(--fg3)' }}>KvK</div>
+              <div style={{ color: 'var(--fg1)', fontVariantNumeric: 'tabular-nums' }}>72258209</div>
             </div>
           </div>
         </div>
