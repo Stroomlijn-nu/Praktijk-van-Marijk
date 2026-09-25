@@ -4,11 +4,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menswaardig en juridisch toetsbaar rapporteren onder druk | Praktijk van Marijk</title>
   <meta name="description" content="Incompany training voor jeugd- en gezinsprofessionals. Rapporteren in dossiers waar macht, controle en angst meespelen. Feitelijk, toetsbaar en zonder escalatie. SKJ-accreditatie in aanvraag.">
+   <meta name="robots" content="noindex">
   <link rel="canonical" href="https://praktijkvanmarijk.nl/Training-rapporteren-onder-druk.html">
   <link rel="icon" type="image/svg+xml" href="https://app.stroomlijn.nu/objects/quick-uploads/927/478daf4edcf250ce.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Lora:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+
+<meta property="og:title" content="Menswaardig en juridisch toetsbaar rapporteren onder druk | Praktijk van Marijk"/>
+<meta property="og:description" content="Incompany training voor jeugd- en gezinsprofessionals. Rapporteren onder druk in complexe gezinsdynamieken. Feitelijk, toetsbaar en juridisch sluitend. SKJ-accreditatie in aanvraag."/>
+<meta property="og:url" content="https://praktijkvanmarijk.nl/Training-rapporteren-onder-druk.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://praktijkvanmarijk.nl/og-image.jpg"/>
+<meta property="og:locale" content="nl_NL"/>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -118,6 +126,13 @@
     .modal-close:hover { color: var(--rood); }
     .modal h2 { margin-top: 0; }
     .modal p { font-size: 15px; }
+
+ /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .topbar { padding: 0 16px; }
+      .prijs-box { flex-direction: column; gap: 12px; }
+      .form-rij { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
