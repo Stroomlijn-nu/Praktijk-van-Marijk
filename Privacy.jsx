@@ -1,5 +1,5 @@
 // Privacyverklaring — Praktijk van Marijk
-// Versie juli 2026
+// Versie september 2026
 // Zelfde leespagina-opzet als de Algemene Voorwaarden: TOC links, genummerde artikelen rechts.
 // Brand: bordeaux primair, oker voor cijfers, Lora voor titels, DM Sans voor body.
 
@@ -67,7 +67,7 @@ function Privacyverklaring() {
               ['Correspondentie', 'de inhoud van uw berichten aan ons'],
             ]}
           />
-          <p style={pPv.body}>De website gebruikt Google Tag voor bezoekersanalyse. Daarom verwerken wij ook websitegegevens zoals IP-adres, apparaat- en browsergegevens en surfgedrag. Zie artikel 11 voor de cookies die hiervoor worden geplaatst.</p>
+          <p style={pPv.body}>De website gebruikt Google Tag voor bezoekersanalyse. Daarom verwerken wij ook websitegegevens zoals IP-adres, apparaat- en browsergegevens en surfgedrag. Zie artikel 12 voor de cookies die hiervoor worden geplaatst.</p>
           <p style={pPv.body}><strong>Bijzondere persoonsgegevens.</strong> Wij streven ernaar geen bijzondere categorieën van persoonsgegevens (zoals gezondheidsgegevens) te verwerken. Als de intake of casuïstiek onverhoopt gevoelige informatie kan bevatten, vragen wij u die tot het noodzakelijke te beperken. Casuïstiek bespreken wij zoveel mogelijk geanonimiseerd.</p>
         </React.Fragment>
       ),
@@ -173,6 +173,25 @@ function Privacyverklaring() {
     },
     {
       nr: '10',
+      slug: 'klachtenafhandeling',
+      title: 'Klachtenafhandeling',
+      render: () => (
+        <React.Fragment>
+          <p style={pPv.body}>Heeft u een klacht over de manier waarop wij met uw persoonsgegevens omgaan, of over onze dienstverlening in het algemeen? Neem dan eerst contact met ons op via <a href="mailto:marijke@praktijkvanmarijk.nl" style={pPv.bgLink}>marijke@praktijkvanmarijk.nl</a>. Wij nemen uw klacht serieus en zoeken samen met u naar een passende oplossing. De volledige procedure, inclusief de te volgen stappen en termijnen, staat beschreven in onze klachtenregeling.</p>
+          <p style={pPv.body}>Komen wij er samen niet uit, dan kunt u uw klacht voorleggen aan een onafhankelijke, externe klachten- en geschilleninstantie:</p>
+          <div style={pPv.bedrijfsgegevens}>
+            <div style={pPv.bgGrid}>
+              <div style={pPv.bgLabel}>Instantie</div>
+              <div style={pPv.bgValue}>"Er is iets misgegaan" &mdash; Preventie en Klachtenopvang</div>
+              <div style={pPv.bgLabel}>Website</div>
+              <div style={pPv.bgValue}><a style={pPv.bgLink} href="https://erisietsmisgegaan.nl/" target="_blank" rel="noopener noreferrer">erisietsmisgegaan.nl</a></div>
+            </div>
+          </div>
+        </React.Fragment>
+      ),
+    },
+    {
+      nr: '11',
       slug: 'klacht-ap',
       title: 'Klacht bij de Autoriteit Persoonsgegevens',
       render: () => (
@@ -180,7 +199,7 @@ function Privacyverklaring() {
       ),
     },
     {
-      nr: '11',
+      nr: '12',
       slug: 'cookies',
       title: 'Cookies',
       render: () => (
@@ -190,11 +209,11 @@ function Privacyverklaring() {
       ),
     },
     {
-      nr: '12',
+      nr: '13',
       slug: 'wijzigingen',
       title: 'Wijzigingen',
       render: () => (
-        <p style={pPv.body}>Wij kunnen deze privacyverklaring van tijd tot tijd aanpassen. De actuele versie staat altijd op onze website. Deze versie is vastgesteld in juli 2026.</p>
+        <p style={pPv.body}>Wij kunnen deze privacyverklaring van tijd tot tijd aanpassen. De actuele versie staat altijd op onze website. Deze versie is vastgesteld in september 2026.</p>
       ),
     },
   ];
@@ -228,7 +247,7 @@ function Privacyverklaring() {
           margin: '0 0 28px',
           maxWidth: '60ch',
         }}>
-          Hierin staat welke persoonsgegevens Praktijk van Marijk verwerkt, met welk doel, op welke grondslag en hoe lang deze worden bewaard. Ook de rechten die u heeft, zijn hier terug te vinden. Deze verklaring geldt voor de website, aanmeldingen, intake, deelname aan trainingen en overige dienstverlening.
+          Hierin staat welke persoonsgegevens Praktijk van Marijk verwerkt, met welk doel, op welke grondslag en hoe lang deze worden bewaard. Ook de rechten die u heeft, en de wijze waarop wij klachten afhandelen, zijn hier terug te vinden. Deze verklaring geldt voor de website, aanmeldingen, intake, deelname aan trainingen en overige dienstverlening.
         </p>
 
         <div className="pvm-pv__meta" style={{
@@ -243,7 +262,7 @@ function Privacyverklaring() {
           </Button>
           <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 13, color: 'var(--fg3)', whiteSpace: 'nowrap' }}>
             <span style={{ letterSpacing: '0.12em', textTransform: 'uppercase', marginRight: 10 }}>Versie</span>
-            <span style={{ color: 'var(--fg1)', fontWeight: 500 }}>Juli 2026</span>
+            <span style={{ color: 'var(--fg1)', fontWeight: 500 }}>September 2026</span>
           </div>
         </div>
       </div>
