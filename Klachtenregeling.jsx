@@ -202,16 +202,26 @@ function Klachtenregeling() {
         <div style={st.block}>
           <h2 style={st.h2}>Als we er samen niet uitkomen</h2>
           <p style={st.body}>
-            Ben je niet tevreden met de afhandeling, dan kun je de klacht
-            voorleggen aan een externe instantie. Ik ben aangesloten bij
-            [naam klachteninstantie invullen]. Je kunt daar terecht via
-            [website of contactgegevens invullen].
+            Ben je niet tevreden over de afhandeling van je klacht, dan kun je deze
+            voorleggen aan een onafhankelijke, externe klachten- en
+            geschilleninstantie. Ik ben hiervoor aangesloten bij "Er is iets
+            misgegaan", een instantie gericht op preventie en klachtenopvang in de
+            zorg.
           </p>
-          <p style={st.body} style={{ ...st.body, fontSize: 13, color: 'var(--fg3, #8a7a68)', fontStyle: 'italic' }}>
-            Let op: vul hier de naam en contactgegevens in van de externe klachten-
-            of geschilleninstantie waarbij je bent aangesloten. Dit is een wettelijke
-            verplichting onder de Wkkgz.
-          </p>
+          <div style={st.contactBox}>
+            <div style={st.contactLabel}>Externe klachteninstantie</div>
+            <div style={st.contactLine}>
+              "Er is iets misgegaan" &mdash; Preventie en Klachtenopvang<br />
+              <a
+                href="https://erisietsmisgegaan.nl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={st.contactLink}
+              >
+                erisietsmisgegaan.nl
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* 4. SKJ */}
@@ -269,3 +279,11 @@ function Klachtenregeling() {
     </div>
   );
 }
+
+// ── Registratie in App.jsx ──────────────────────────────────────────────────
+// 1. Voeg 'klachtenregeling: <Klachtenregeling />,' toe aan het routeobject
+//    in de page-map (naast privacy, voorwaarden, enz.).
+// 2. Voeg de route toe aan het label-object en aan ROUTES, zodat
+//    #klachtenregeling herkend wordt door de hash-router.
+// 3. Link er bijvoorbeeld vanuit de footer naar met
+//    <a href="#klachtenregeling">Klachtenregeling</a>.
