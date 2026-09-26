@@ -243,7 +243,7 @@ function Topbar({ route, setRoute }) {
                   >{mobileTrainOpen ? '−' : '+'}</button>
                 </div>
                 {mobileTrainOpen && (
-                  <ul style={{ listStyle: 'none', margin: 0, padding: '0 0 4px 18px' }}>
+                  <ul style={{ listStyle: 'none', margin: 0, padding: '0 0 2px 18px' }}>
                     {trainingenSubmenu.map(([url, label, title]) => (
                       <li key={url}>
                         <a
