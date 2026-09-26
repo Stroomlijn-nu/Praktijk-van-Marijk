@@ -30,9 +30,10 @@
     body { font-family: 'DM Sans', 'Helvetica Neue', sans-serif; background: var(--creme); color: var(--donker); line-height: 1.7; }
     .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
 
-    /* Topbalk */
+     /* Topbalk */
     .topbar { background: var(--creme); border-bottom: 0.5px solid var(--lijn); padding: 0 32px; height: 54px; display: flex; align-items: center; justify-content: space-between; }
-    .topbar-logo { font-size: 10px; font-weight: 500; color: var(--donker); text-decoration: none; }
+    .topbar-logo { display: flex; align-items: center; }
+    .topbar-logo img { height: 42px; width: auto; display: block; }
     .topbar-back { font-size: 13px; color: var(--zacht); text-decoration: none; letter-spacing: 0.01em; }
     .topbar-back:hover { color: var(--rood); }
 
@@ -140,10 +141,10 @@
 </head>
 
 <body>
-
   <div class="topbar">
     <a class="topbar-logo" href="https://www.praktijkvanmarijk.nl"><img src="https://app.stroomlijn.nu/objects/quick-uploads/927/4fb9115b192b7216.png" alt="Praktijk van Marijk"></a>
     <a class="topbar-back" href="https://www.praktijkvanmarijk.nl">Terug naar de site</a>
+  </div>
 
   </div>
 
