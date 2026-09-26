@@ -26,7 +26,7 @@ function Home({ setRoute }) {
             <Button href="https://calendly.com/praktijkvanmarijk/25min" target="_blank">Neem contact op&nbsp;→</Button>
           </div>
         </div>
-        <figure style={{ margin: 0, width: '100%', maxWidth: 400, justifySelf: 'end' }}>
+        <figure style={{ margin: 0, width: '100%', maxWidth: 550, justifySelf: 'end' }}>
           <div style={{ background: 'var(--beige)', borderRadius: 6, aspectRatio: '3/2', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: 'var(--accent-3)', zIndex: 2 }}></div>
             <img src={(window.__resources && window.__resources.marijkeSessie) || "assets/marijke-sessie.jpg"} alt="Marijke Koomen in gesprek met twee professionals aan tafel" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', display: 'block' }} />
