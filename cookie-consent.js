@@ -4,7 +4,7 @@
  *
  * Werking
  * - Google Analytics (GA4) laadt pas na toestemming. Zonder toestemming wordt er niets van Google geladen.
- * - De keuze wordt 12 maanden bewaard in localStorage ('cookie_consent'), gedeeld door alle pagina's.
+ * - De keuze wordt 12 maanden bewaard in localStorage ('pvm_cookie_consent_v2'), gedeeld door alle pagina's.
  * - Via window.pvmCookies.open() kan de bezoeker de keuze altijd wijzigen (link "Cookie-instellingen").
  * - Intrekken van toestemming verwijdert de GA-cookies en herlaadt de pagina.
  *
@@ -14,7 +14,8 @@
   'use strict';
 
   var GA_ID = 'G-TK9PF14T2J';
-  var KEY = 'cookie_consent';
+  var KEY = 'pvm_cookie_consent_v2';   // nieuwe naam: keuzes uit de oude banner tellen niet mee
+  var OLD_KEYS = ['cookie_consent'];
   var EXPIRY_DAYS = 365;
   var PRIVACY_URL = '/#privacy';
 
@@ -27,7 +28,7 @@
       var raw = localStorage.getItem(KEY);
       if (!raw) return null;
       var data = JSON.parse(raw);
-      if (!data || !data.expires || new Date(data.expires) <= new Date()) return null;
+      if (!data || data.v !== 2 || !data.expires || new Date(data.expires) <= new Date()) return null;
       return data.prefs || null;
     } catch (e) { return null; }
   }
@@ -172,6 +173,7 @@
 
   // ── Start ──────────────────────────────────────────────────────────────
   function init() {
+    try { OLD_KEYS.forEach(function (k) { localStorage.removeItem(k); }); } catch (e) {}
     var prefs = read();
     if (!prefs) open();
     else if (prefs.analytics) loadGA();
