@@ -2,7 +2,7 @@ function Home({ setRoute }) {
   return (
     <div>
       {/* Hero */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: 56, padding: '56px 48px 48px', alignItems: 'start' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: 56, padding: '56px 48px 24px', alignItems: 'start' }}>
         <div style={{ maxWidth: 480 }}>
           <p style={{
             fontFamily: 'DM Sans, sans-serif',
@@ -26,7 +26,7 @@ function Home({ setRoute }) {
             <Button href="https://calendly.com/praktijkvanmarijk/25min" target="_blank">Neem contact op&nbsp;→</Button>
           </div>
         </div>
-        <figure style={{ margin: 0 }}>
+        <figure style={{ margin: 0, maxWidth: 400, justifySelf: 'end' }}>
           <div style={{ background: 'var(--beige)', borderRadius: 6, aspectRatio: '3/2', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: 'var(--accent-3)', zIndex: 2 }}></div>
             <img src={(window.__resources && window.__resources.marijkeSessie) || "assets/marijke-sessie.jpg"} alt="Marijke Koomen in gesprek met twee professionals aan tafel" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', display: 'block' }} />
