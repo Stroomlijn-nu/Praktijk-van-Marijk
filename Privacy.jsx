@@ -11,7 +11,7 @@ function Privacyverklaring() {
       title: 'Wie is verantwoordelijk voor uw gegevens?',
       render: () => (
         <React.Fragment>
-          <p style={pPv.body}>De verwerkingsverantwoordelijke voor de in deze verklaring beschreven verwerkingen is:</p>
+          <p style={pPv.body}>De verwerkingsverantwoordelijke voor de in dit privacybeleid beschreven verwerkingen is:</p>
           <div style={pPv.bedrijfsgegevens}>
             <div style={pPv.bgGrid}>
               <div style={pPv.bgLabel}>Praktijk</div>
@@ -33,10 +33,10 @@ function Privacyverklaring() {
     {
       nr: '02',
       slug: 'wanneer-geldt-verklaring',
-      title: 'Wanneer geldt deze privacyverklaring?',
+      title: 'Wanneer geldt dit privacybeleid?',
       render: () => (
         <React.Fragment>
-          <p style={pPv.body}>Deze verklaring geldt voor het verwerken van persoonsgegevens door Praktijk van Marijk als verwerkingsverantwoordelijke, waaronder in de volgende situaties:</p>
+          <p style={pPv.body}>Dit privacybeleid geldt voor het verwerken van persoonsgegevens door Praktijk van Marijk als verwerkingsverantwoordelijke, waaronder in de volgende situaties:</p>
           <ul style={pPv.list}>
             <li>het bezoeken van en contact opnemen via onze website www.praktijkvanmarijk.nl</li>
             <li>aanmelding en inschrijving voor open trainingen, intervisie en overige diensten</li>
@@ -213,7 +213,7 @@ function Privacyverklaring() {
       slug: 'wijzigingen',
       title: 'Wijzigingen',
       render: () => (
-        <p style={pPv.body}>Wij kunnen deze privacyverklaring van tijd tot tijd aanpassen. De actuele versie staat altijd op onze website. Deze versie is vastgesteld in september 2026.</p>
+        <p style={pPv.body}>Wij kunnen dit privacybeleid van tijd tot tijd aanpassen. De actuele versie staat altijd op onze website. Deze versie is vastgesteld in september 2026.</p>
       ),
     },
   ];
@@ -224,7 +224,7 @@ function Privacyverklaring() {
   };
 
   return (
-    <div className="pvm-pv" data-screen-label="08 Privacyverklaring">
+    <div className="pvm-pv" data-screen-label="08 Privacybeleid">
       {/* ============ HERO ============ */}
       <div className="pvm-section pvm-pv__hero" style={{ padding: '64px 48px 40px', maxWidth: 900 }}>
         <Eyebrow>Juridisch</Eyebrow>
@@ -237,7 +237,7 @@ function Privacyverklaring() {
           margin: '0 0 20px',
           textWrap: 'balance',
         }}>
-          Privacyverklaring.
+          Privacybeleid.
         </h1>
         <p style={{
           fontFamily: 'DM Sans, sans-serif',
@@ -247,7 +247,7 @@ function Privacyverklaring() {
           margin: '0 0 28px',
           maxWidth: '60ch',
         }}>
-          Hierin staat welke persoonsgegevens Praktijk van Marijk verwerkt, met welk doel, op welke grondslag en hoe lang deze worden bewaard. Ook de rechten die u heeft, en de wijze waarop wij klachten afhandelen, zijn hier terug te vinden. Deze verklaring geldt voor de website, aanmeldingen, intake, deelname aan trainingen en overige dienstverlening.
+          Hierin staat welke persoonsgegevens Praktijk van Marijk verwerkt, met welk doel, op welke grondslag en hoe lang deze worden bewaard. Ook de rechten die u heeft, en de wijze waarop wij klachten afhandelen, zijn hier terug te vinden. Dit beleid geldt voor de website, aanmeldingen, intake, deelname aan trainingen en overige dienstverlening.
         </p>
 
         <div className="pvm-pv__meta" style={{
@@ -393,7 +393,7 @@ function Privacyverklaring() {
               color: 'var(--fg-on-dark)',
               lineHeight: 1.4,
               margin: '0 0 14px',
-            }}>Heeft u vragen over deze privacyverklaring?</h3>
+            }}>Heeft u vragen over dit privacybeleid?</h3>
             <p style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: 15,
