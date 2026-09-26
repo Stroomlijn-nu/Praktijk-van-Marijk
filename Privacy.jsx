@@ -204,7 +204,9 @@ function Privacyverklaring() {
       title: 'Cookies',
       render: () => (
         <React.Fragment>
-          <p style={pPv.body}>De website gebruikt functionele cookies die nodig zijn om de website goed te laten werken. Daarnaast staat Google Tag actief voor bezoekersanalyse, Google Analytics (GA4). Dit zijn niet-functionele cookies. Voor het plaatsen hiervan wordt vooraf toestemming gevraagd via een cookiemelding. Zonder toestemming worden deze cookies niet geplaatst.</p>
+          <p style={pPv.body}>De website gebruikt alleen opslag die nodig is om de website goed te laten werken. Daarbij wordt uw cookiekeuze twaalf maanden in uw browser bewaard, zodat de cookiemelding niet bij elk bezoek terugkomt.</p>
+          <p style={pPv.body}>Met uw toestemming gebruikt de website daarnaast Google Analytics (GA4) voor bezoekersstatistieken. Google Analytics plaatst dan analytische cookies (_ga en _ga_*). Advertentiefuncties en Google-signalen staan uit. Zonder uw toestemming wordt Google Analytics niet geladen en worden deze cookies niet geplaatst.</p>
+          <p style={pPv.body}>U kunt uw keuze altijd wijzigen of intrekken via de link Cookie-instellingen onderaan elke pagina. Trekt u uw toestemming in, dan worden de analytische cookies verwijderd.</p>
         </React.Fragment>
       ),
     },

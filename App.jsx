@@ -2,11 +2,13 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "skjPlacement": "bottom-aligned"
 }/*EDITMODE-END*/;
 
-const ROUTES = ['home', 'over', 'professionals', 'werkwijze', 'ervaringen', 'contact', 'voorwaarden', 'privacy', 'klachtenregeling'];
+const ROUTES = ['home', 'over', 'professionals', 'werkwijze', 'ervaringen', 'contact', 'voorwaarden', 'privacy', 'klachtenregeling', 'copyright'];
 
 function readHashRoute() {
   const h = (window.location.hash || '').replace(/^#\/?/, '').toLowerCase();
-  return ROUTES.includes(h) ? h : 'home';
+  // Subankers zoals #voorwaarden/intellectuele-eigendom openen de hoofdpagina
+  const base = h.split('/')[0];
+  return ROUTES.includes(base) ? base : 'home';
 }
 
 function App() {
@@ -26,6 +28,11 @@ function App() {
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
+
+  // Paginaweergave naar Google Analytics, alleen als de bezoeker toestemming gaf
+  React.useEffect(() => {
+    if (window.pvmTrackPage) window.pvmTrackPage();
+  }, [route]);
 
   React.useEffect(() => {
     if (window.parent === window) return;
@@ -54,16 +61,16 @@ function App() {
     voorwaarden: <AlgemeneVoorwaarden />,
     privacy: <Privacy />,
     klachtenregeling: <Klachtenregeling />,
+    copyright: <Copyright setRoute={setRoute} />,
   }[route];
 
-  const label = { home: '01 Home', over: '02 Over Marijke', professionals: '03 Professionals', werkwijze: '04 Werkwijze en aanpak', ervaringen: '05 Ervaringen jeugdzorg', contact: '06 Contact', voorwaarden: '07 Algemene voorwaarden', privacy: '08 Privacybeleid', klachtenregeling: '09 Klachtenregeling', }[route];
+  const label = { home: '01 Home', over: '02 Over Marijke', professionals: '03 Professionals', werkwijze: '04 Werkwijze en aanpak', ervaringen: '05 Ervaringen jeugdzorg', contact: '06 Contact', voorwaarden: '07 Algemene voorwaarden', privacy: '08 Privacybeleid', klachtenregeling: '09 Klachtenregeling', copyright: '10 Copyright', }[route];
 
   return (
     <div data-screen-label={label} style={{ minHeight: '100vh', background: 'var(--bg)' }}>
       <Topbar route={route} setRoute={setRoute} />
       {page}
       <Footer setRoute={setRoute} />
-      <CookieBanner onNavigate={setRoute} />
 
       <TweaksPanel>
         <TweakSection label="Voor professionals, SKJ-strip" />

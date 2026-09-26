@@ -353,7 +353,7 @@ function Footer({ setRoute }) {
         lineHeight: 1.6,
       }}>
         <div style={{ letterSpacing: '0.01em' }}>
-          © {new Date().getFullYear()} Praktijk van Marijk · Marijke Koomen
+          © {new Date().getFullYear()} Praktijk van Marijk · Marijke Koomen · Alle rechten voorbehouden
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: 18 }}>
           <a
@@ -374,6 +374,18 @@ function Footer({ setRoute }) {
             onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
             onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
           >Klachtenregeling</a>
+          <a
+            onClick={() => setRoute('copyright')}
+            style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
+          >Copyright</a>
+          <a
+            onClick={() => window.pvmCookies && window.pvmCookies.open()}
+            style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
+          >Cookie-instellingen</a>
           <a
             onClick={() => { setRoute('voorwaarden'); setTimeout(() => window.print(), 350); }}
             style={{ color: 'var(--fg3)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6, transition: 'color 200ms', cursor: 'pointer' }}

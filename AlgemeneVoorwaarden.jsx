@@ -297,6 +297,26 @@ function AlgemeneVoorwaarden() {
     },
   ];
 
+  // Scroll naar een artikel, met ruimte voor de vaste topbar
+  const scrollToArticle = (slug) => {
+    const el = document.getElementById(slug);
+    if (!el) return;
+    const y = el.getBoundingClientRect().top + window.pageYOffset - 96;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
+
+  // Directe link, bijvoorbeeld #voorwaarden/intellectuele-eigendom
+  React.useEffect(() => {
+    const sub = (window.location.hash || '').replace(/^#\/?/, '').split('/')[1];
+    if (sub) setTimeout(() => scrollToArticle(sub), 150);
+  }, []);
+
+  const handleTocClick = (e, slug) => {
+    e.preventDefault();
+    try { history.replaceState(null, '', '#voorwaarden/' + slug); } catch (_) {}
+    scrollToArticle(slug);
+  };
+
   const handlePrint = (e) => {
     e.preventDefault();
     window.print();
@@ -384,7 +404,7 @@ function AlgemeneVoorwaarden() {
                   fontVariantNumeric: 'tabular-nums',
                   minWidth: 18,
                 }}>{a.nr}</span>
-                <a href={`#${a.slug}`} style={{
+                <a href={`#voorwaarden/${a.slug}`} onClick={(e) => handleTocClick(e, a.slug)} style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: 13,
                   color: 'var(--fg2)',
