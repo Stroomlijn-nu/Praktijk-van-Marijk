@@ -500,6 +500,41 @@ function Over() {
           </p>
         </div>
       </div>
+
+      <SectionDivider />
+
+      {/* ============ PRAKTISCHE VRAGEN EN BEREIKBAARHEID ============ */}
+      <div style={{ padding: '64px 48px 80px', display: 'grid', gridTemplateColumns: '1fr 2.4fr', gap: 64, alignItems: 'start' }}>
+        <div>
+          <Eyebrow>Praktisch</Eyebrow>
+          <h2 style={{ fontFamily: 'Lora, serif', fontSize: 22, fontWeight: 500, color: 'var(--fg1)', lineHeight: 1.4, margin: 0, maxWidth: 280 }}>
+            Praktische vragen en bereikbaarheid
+          </h2>
+        </div>
+        <div>
+          <p style={{ fontSize: 16, color: 'var(--fg2)', lineHeight: 1.75, margin: '0 0 28px', maxWidth: 620 }}>
+            Voor vragen over planning, deelname, locatie en facturatie kun je mailen of bellen. Als ik niet opneem, dan kun je mijn voicemail inspreken. Je ontvangt binnen 2 werkdagen een reactie. Op trainingsdagen ben ik telefonisch bereikbaar voor praktische zaken rondom de uitvoering.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: '100px 1fr', rowGap: 10, columnGap: 16, maxWidth: 620, paddingTop: 20, borderTop: '0.5px solid var(--line)', fontFamily: 'DM Sans, sans-serif', fontSize: 15, lineHeight: 1.6 }}>
+            <div style={{ color: 'var(--fg3)' }}>E-mail</div>
+            <div style={{ color: 'var(--fg1)', overflowWrap: 'anywhere' }}>
+              <a href="mailto:marijke@praktijkvanmarijk.nl" style={{ color: 'var(--fg1)', textDecoration: 'none', borderBottom: '0.5px solid var(--line-strong)' }}>
+                marijke@praktijkvanmarijk.nl
+              </a>
+            </div>
+            <div style={{ color: 'var(--fg3)' }}>Telefoon</div>
+            <div style={{ color: 'var(--fg1)', fontVariantNumeric: 'tabular-nums' }}>
+              <a href="tel:+31627376003" style={{ color: 'var(--fg1)', textDecoration: 'none', borderBottom: '0.5px solid var(--line-strong)' }}>
+                06-27 37 60 03
+              </a>
+            </div>
+            <div style={{ color: 'var(--fg3)' }}>Voicemail</div>
+            <div style={{ color: 'var(--fg1)' }}>Je hoort antwoord binnen 2 werkdagen</div>
+            <div style={{ color: 'var(--fg3)' }}>Werkdagen</div>
+            <div style={{ color: 'var(--fg1)' }}>Maandag, dinsdag, donderdag</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
