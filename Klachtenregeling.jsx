@@ -397,8 +397,8 @@ function Klachtenregeling() {
           <div style={st.skjStrip}>
             <div style={st.skjIcon}>📋</div>
             <div style={st.skjText}>
-              <strong>SKJ-registratie 110005309</strong><br />
-              Geldig tot 25 mei 2028<br />
+              <strong>SKJ-registratie 110005309</strong>
+              <br />
               <a
                 href="https://www.skjeugd.nl"
                 target="_blank"
