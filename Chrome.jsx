@@ -111,44 +111,48 @@ function Topbar({ route, setRoute }) {
             >Trainingen</a>
 
             {desktopDropOpen && (
-              <ul
-                className="pvm-topbar__submenu"
-                style={{
-                  position: 'absolute',
-                  top: '100%',
-                  left: 0,
-                  minWidth: 240,
-                  listStyle: 'none',
-                  margin: 0,
-                  padding: '4px 0',
-                  background: 'var(--bg)',
-                  border: '0.5px solid var(--line)',
-                  borderRadius: 6,
-                  boxShadow: '0 8px 24px rgba(0,0,0,0.08)',
-                }}
-              >
-                {trainingenSubmenu.map(([url, label, title]) => (
-                  <li key={url}>
-                    <a
-                      href={url}
-                      title={title}
-                      aria-label={title}
-                      className="pvm-topbar__sublink"
-                      style={{
-                        display: 'block',
-                        padding: '6px 18px',
-                        fontSize: 14,
-                        color: 'var(--fg2)',
-                        textDecoration: 'none',
-                        whiteSpace: 'nowrap',
-                      }}
-                      onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; }}
-                      onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; }}
-                    >{label}</a>
-                  </li>
-                ))}
-              </ul>
-            )}
+  <ul
+    className="pvm-topbar__submenu"
+    style={{
+      position: 'absolute',
+      top: '100%',
+      left: 0,
+      minWidth: 240,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 0,
+      listStyle: 'none',
+      margin: 0,
+      padding: '4px 0',
+      background: 'var(--bg)',
+      border: '0.5px solid var(--line)',
+      borderRadius: 6,
+      boxShadow: '0 8px 24px rgba(0,0,0,0.08)',
+      zIndex: 20,
+    }}
+  >
+    {trainingenSubmenu.map(([url, label, title]) => (
+      <li key={url} style={{ display: 'block', width: '100%' }}>
+        <a
+          href={url}
+          title={title}
+          aria-label={title}
+          className="pvm-topbar__sublink"
+          style={{
+            display: 'block',
+            padding: '8px 18px',
+            fontSize: 14,
+            color: 'var(--fg2)',
+            textDecoration: 'none',
+            whiteSpace: 'nowrap',
+          }}
+          onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; }}
+          onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; }}
+        >{label}</a>
+      </li>
+    ))}
+  </ul>
+)}
           </li>
 
           {itemsNaTraining.map(([key, label, title]) => (
