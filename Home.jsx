@@ -63,8 +63,37 @@ function Home({ setRoute }) {
         </div>
       </div>
 
+      {/* Missie en visie */}
+      <section
+        id="missie-visie"
+        aria-label="Missie en visie"
+        style={{ padding: '56px 48px', background: 'var(--surface-alt)' }}
+      >
+        <Eyebrow>Missie en visie</Eyebrow>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 56 }}>
+          <div>
+            <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)', margin: '0 0 12px' }}>Missie</div>
+            <h2 style={{ fontFamily: 'Lora, serif', fontSize: 24, fontWeight: 500, color: 'var(--fg1)', margin: '0 0 14px', lineHeight: 1.35, textWrap: 'balance' }}>
+              Ik breng structuur, taal en besluitkracht in complexe ketencasuïstiek.
+            </h2>
+            <p style={{ fontSize: 15, color: 'var(--fg2)', lineHeight: 1.7, margin: 0, maxWidth: '46ch' }}>
+              Zo borg ik veiligheid door volwassen samenwerking.
+            </p>
+          </div>
+          <div>
+            <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)', margin: '0 0 12px' }}>Visie</div>
+            <h2 style={{ fontFamily: 'Lora, serif', fontSize: 24, fontWeight: 500, color: 'var(--fg1)', margin: '0 0 14px', lineHeight: 1.35, textWrap: 'balance' }}>
+              Veiligheid in de keten leunt niet op individuele helden.
+            </h2>
+            <p style={{ fontSize: 15, color: 'var(--fg2)', lineHeight: 1.7, margin: 0, maxWidth: '46ch' }}>
+              Veiligheid is geborgd in heldere kaders, in gezamenlijke taal en in besluitvorming.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Aanbod */}
-      <div style={{ padding: '8px 48px 56px' }}>
+      <div style={{ padding: '56px 48px 56px' }}>
         <Eyebrow>Wat ik aanbied</Eyebrow>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
           {[
