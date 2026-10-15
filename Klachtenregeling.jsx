@@ -275,20 +275,27 @@ function Klachtenregeling() {
               <div style={st.stapNr}>2</div>
               <div style={st.stapText}>
                 <span style={st.stapStrong}>Bespreking</span>
-                Marijke neemt contact met je op om de klacht te bespreken. Samen
-                zoeken jullie naar een oplossing.
+                Marijke neemt binnen 5 werkdagen na ontvangst van je klacht contact met je op om de klacht te bespreken en de vervolgstappen af te stemmen.
               </div>
             </div>
             <div style={st.stap}>
               <div style={st.stapNr}>3</div>
               <div style={st.stapText}>
                 <span style={st.stapStrong}>Afhandeling</span>
-                Marijke streeft ernaar de klacht binnen vier weken af te handelen.
-                Je ontvangt een schriftelijke reactie.
+                Je ontvangt binnen 15 werkdagen na ontvangst van je klacht een inhoudelijke schriftelijke reactie. 
+                Als er meer tijd nodig is voor onderzoek, dan ontvang je binnen deze termijn een bericht met toelichting en een indicatie van wanneer je uitsluitsel krijgt. 
+                In dat geval wordt de klacht uiterlijk binnen 35 werkdagen na ontvangst afgehandeld.
               </div>
             </div>
           </div>
         </div>
+        {/* 2b. Afwezigheid en overmacht */}
+<div style={st.block}>
+  <h2 style={st.h2}>Afwezigheid en overmacht</h2>
+  <p style={st.body}>
+    Is Marijke door vakantie, ziekte of andere overmacht niet in staat de klacht binnen deze termijnen af te handelen, dan ontvang je binnen 5 werkdagen na ontvangst van je klacht een schriftelijk bericht met toelichting en een nieuwe indicatie van de afhandelingstermijn. De klacht wordt dan uiterlijk binnen 35 werkdagen na ontvangst afgehandeld.
+  </p>
+</div>
 
         {/* 3. Externe instantie */}
         <div style={st.block}>
@@ -415,10 +422,9 @@ function Klachtenregeling() {
         <div style={st.block}>
           <h2 style={st.h2}>Vertrouwelijkheid</h2>
           <p style={st.body}>
-            Praktijk van Marijk behandelt klachten vertrouwelijk. Gegevens die je
-            deelt in het kader van de klachtenprocedure worden niet gebruikt voor
-            andere doeleinden en worden bewaard conform het privacybeleid van
-            Praktijk van Marijk.
+          Praktijk van Marijk behandelt klachten vertrouwelijk. 
+          Gegevens die je deelt in het kader van de klachtenprocedure worden niet gebruikt voor andere doeleinden. 
+          Klachten en de wijze van afhandeling worden geregistreerd en 2 jaar bewaard.
           </p>
         </div>
 
