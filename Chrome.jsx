@@ -314,7 +314,7 @@ function Footer({ setRoute }) {
           <div><a href="mailto:marijke@praktijkvanmarijk.nl" style={{ color: 'var(--fg2)', textDecoration: 'none', wordBreak: 'break-word' }}>marijke@praktijkvanmarijk.nl</a></div>
           <div style={{ fontVariantNumeric: 'tabular-nums' }}><a href="tel:+31627376003" style={{ color: 'var(--fg2)', textDecoration: 'none' }}>06 - 27 37 60 03</a></div>
           <a
-            href="https://calendly.com/praktijkvanmarijk/25min"
+            href="https://app.stroomlijn.nu/book/kennismaking"
             target="_blank"
             rel="noopener noreferrer"
             style={{ display: 'inline-block', marginTop: 8, color: 'var(--accent)', cursor: 'pointer', textDecoration: 'none' }}
