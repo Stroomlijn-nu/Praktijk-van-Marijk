@@ -110,6 +110,8 @@
 
     /* ── Voorwaarden-box ── */
     .voorwaarden-box { background: var(--beige); border: 1px solid var(--lijn); border-radius: 6px; padding: 18px 20px; font-size: 13px; line-height: 1.7; color: var(--mid); }
+    .voorwaarden-box p { font-size: 13px; line-height: 1.7; margin-bottom: 8px; }
+    .voorwaarden-box p:last-child { margin-bottom: 0; }
     .voorwaarden-link { color: var(--rood); text-decoration: none; font-weight: 500; }
     .voorwaarden-link:hover { text-decoration: underline; }
 
@@ -125,7 +127,7 @@
     .form-veld { display: flex; flex-direction: column; gap: 6px; }
     .form-veld label { font-size: 13px; color: rgba(250,248,244,0.75); font-weight: 500; }
     .req { color: var(--okergoud); }
-    .form-veld input, .form-veld select { padding: 11px 13px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: var(--creme); font-size: 14px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 180ms; width: 100%; }
+    .form-veld input[type="text"], .form-veld input[type="email"], .form-veld input[type="tel"], .form-veld select { padding: 11px 13px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: var(--creme); font-size: 14px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 180ms; width: 100%; }
     .form-veld input::placeholder { color: rgba(250,248,244,0.35); }
     .form-veld input:focus, .form-veld select:focus { border-color: var(--okergoud); }
     .form-veld select { cursor: pointer; }
@@ -133,6 +135,21 @@
     .tel-wrap { display: flex; }
     .tel-prefix { display: flex; align-items: center; padding: 11px 12px; border-radius: 4px 0 0 4px; border: 1.5px solid rgba(255,255,255,0.2); border-right: none; background: rgba(255,255,255,0.05); color: rgba(250,248,244,0.75); font-size: 13px; white-space: nowrap; }
     .tel-wrap input { border-radius: 0 4px 4px 0; border-left: none; }
+
+    /* ── Boekingsvorm (zakelijk of consument) ── */
+    .boeking-groep { border: none; margin: 4px 0 14px; padding: 0; min-width: 0; }
+    .boeking-groep legend { font-size: 13px; color: rgba(250,248,244,0.75); font-weight: 500; margin-bottom: 8px; padding: 0; }
+    .boeking-optie { display: flex; align-items: flex-start; gap: 10px; padding: 11px 13px; margin-bottom: 8px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: var(--creme); font-size: 14px; line-height: 1.5; cursor: pointer; transition: border-color 180ms; }
+    .boeking-optie:hover { border-color: rgba(207,135,45,0.7); }
+    .boeking-optie input { margin-top: 3px; accent-color: var(--okergoud); flex-shrink: 0; cursor: pointer; }
+    .boeking-optie.gekozen { border-color: var(--okergoud); }
+
+    .akkoord-blok { display: none; margin: 0 0 14px; padding: 12px 14px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); }
+    .akkoord-blok.zichtbaar { display: block; }
+    .akkoord-blok label { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; line-height: 1.6; color: rgba(250,248,244,0.85); cursor: pointer; }
+    .akkoord-blok input { margin-top: 3px; accent-color: var(--okergoud); flex-shrink: 0; cursor: pointer; }
+    .akkoord-blok a { color: var(--okergoud); text-decoration: underline; }
+
     #submit-btn { width: 100%; margin-top: 6px; background: var(--okergoud); color: var(--donker); border: none; border-radius: 4px; padding: 13px 24px; font-size: 15px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: opacity 180ms; }
     #submit-btn:hover { opacity: 0.88; }
     #submit-btn:disabled { background: #8a7a68; cursor: not-allowed; opacity: 1; }
@@ -472,9 +489,12 @@
   <section class="section">
     <div class="container">
       <div class="voorwaarden-box">
-        <strong>Let op.</strong> Dit traject volgt de voorwaarden van inschrijving en deelname. Lees de
+        <p><strong>Let op.</strong> Dit traject volgt de voorwaarden van inschrijving en deelname. Lees de
         <a href="/voorwaarden-intiem-terreur.html" target="_blank" class="voorwaarden-link">termijnen en voorwaarden</a>
-        aandachtig voordat je je aanmeldt.
+        aandachtig voordat je je aanmeldt.</p>
+        <p>Lees ook de
+        <a href="https://praktijkvanmarijk.nl/Voorwaarden%20B2C.html" target="_blank" rel="noopener" class="voorwaarden-link">Algemene Voorwaarden B2B</a>
+        voordat je je aanmeldt.</p>
       </div>
     </div>
   </section>
@@ -492,27 +512,49 @@
         <div class="eigen-form">
           <div class="form-rij">
             <div class="form-veld">
-              <label>Naam <span class="req">*</span></label>
+              <label for="f-naam">Naam <span class="req">*</span></label>
               <input type="text" id="f-naam" placeholder="Volledige naam" autocomplete="name">
             </div>
             <div class="form-veld">
-              <label>E-mailadres <span class="req">*</span></label>
+              <label for="f-email">E-mailadres <span class="req">*</span></label>
               <input type="email" id="f-email" placeholder="naam@organisatie.nl" autocomplete="email">
             </div>
           </div>
           <div class="form-rij">
             <div class="form-veld">
-              <label>Telefoonnummer <span class="req">*</span></label>
+              <label for="f-telefoon">Telefoonnummer <span class="req">*</span></label>
               <div class="tel-wrap">
                 <span class="tel-prefix">🇳🇱 +31</span>
                 <input type="tel" id="f-telefoon" placeholder="6 12 34 56 78" autocomplete="tel">
               </div>
             </div>
             <div class="form-veld">
-              <label>Functie <span class="req">*</span></label>
+              <label for="f-functie">Functie <span class="req">*</span></label>
               <input type="text" id="f-functie" placeholder="Bijv. jeugdbeschermer" autocomplete="off">
             </div>
           </div>
+
+          <!-- Zakelijk of consument -->
+          <fieldset class="boeking-groep">
+            <legend>Hoe boek je? <span class="req">*</span></legend>
+            <label class="boeking-optie" id="optie-zakelijk">
+              <input type="radio" name="boekingstype" value="zakelijk" onchange="updateBoekingstype()">
+              <span>Ik boek zakelijk namens werkgever</span>
+            </label>
+            <label class="boeking-optie" id="optie-consument">
+              <input type="radio" name="boekingstype" value="consument" onchange="updateBoekingstype()">
+              <span>Ik boek als consument</span>
+            </label>
+          </fieldset>
+
+          <!-- Alleen zichtbaar bij consument, automatisch aangevinkt -->
+          <div class="akkoord-blok" id="akkoord-blok">
+            <label>
+              <input type="checkbox" id="f-akkoord-b2c">
+              <span>Ik heb de <a href="https://praktijkvanmarijk.nl/Voorwaarden%20B2C.html" target="_blank" rel="noopener">Algemene Voorwaarden B2C</a> gelezen en ga hiermee akkoord.</span>
+            </label>
+          </div>
+
           <p id="form-error" class="form-error" style="display:none;"></p>
           <button id="submit-btn" onclick="submitForm()">Aanmelden interesse</button>
           <p class="form-disclaimer">
@@ -562,6 +604,24 @@
       }
     }
 
+    // Zakelijk of consument: bij consument verschijnt het vinkje en staat het automatisch aan
+    function updateBoekingstype() {
+      const gekozen = document.querySelector('input[name="boekingstype"]:checked');
+      const blok = document.getElementById('akkoord-blok');
+      const vink = document.getElementById('f-akkoord-b2c');
+
+      document.getElementById('optie-zakelijk').classList.toggle('gekozen', !!gekozen && gekozen.value === 'zakelijk');
+      document.getElementById('optie-consument').classList.toggle('gekozen', !!gekozen && gekozen.value === 'consument');
+
+      if (gekozen && gekozen.value === 'consument') {
+        blok.classList.add('zichtbaar');
+        vink.checked = true;
+      } else {
+        blok.classList.remove('zichtbaar');
+        vink.checked = false;
+      }
+    }
+
     const WEBHOOK = 'https://app.stroomlijn.nu/api/webhooks/flow/j1lvbs7a/7938f02fcf2207eee50a94fad5e923b4260bb318980b55a66b9541f219df1594';
 
     async function submitForm() {
@@ -569,6 +629,8 @@
       const email   = document.getElementById('f-email').value.trim();
       const tel     = document.getElementById('f-telefoon').value.trim();
       const functie = document.getElementById('f-functie').value.trim();
+      const gekozen = document.querySelector('input[name="boekingstype"]:checked');
+      const akkoord = document.getElementById('f-akkoord-b2c').checked;
       const errEl   = document.getElementById('form-error');
       const btn     = document.getElementById('submit-btn');
 
@@ -584,8 +646,21 @@
         errEl.style.display = 'block';
         return;
       }
+      if (!gekozen) {
+        errEl.textContent = 'Kies of je zakelijk boekt namens je werkgever of als consument.';
+        errEl.style.display = 'block';
+        return;
+      }
+      if (gekozen.value === 'consument' && !akkoord) {
+        errEl.textContent = 'Ga akkoord met de Algemene Voorwaarden B2C om je aan te melden.';
+        errEl.style.display = 'block';
+        return;
+      }
 
       const volledigTel = '+31' + tel.replace(/^0/, '').replace(/\s/g, '');
+      const boekingstypeTekst = gekozen.value === 'zakelijk'
+        ? 'Ik boek zakelijk namens werkgever'
+        : 'Ik boek als consument';
 
       btn.disabled = true;
       btn.textContent = 'Bezig…';
@@ -599,10 +674,12 @@
             contactEmail: email,
             contactPhone: volledigTel,
             data: {
-              functie:   functie,
-              ronde:     'Voorjaar 2027',
-              datum:     new Date().toISOString().slice(0, 10),
-              source:    'belangstelling_training_intiem_terreur'
+              functie:        functie,
+              ronde:          'Voorjaar 2027',
+              datum:          new Date().toISOString().slice(0, 10),
+              source:         'belangstelling_training_intiem_terreur',
+              boekingstype:   boekingstypeTekst,
+              akkoord_voorwaarden_b2c: gekozen.value === 'consument' ? 'ja' : 'nvt'
             }
           })
         });
