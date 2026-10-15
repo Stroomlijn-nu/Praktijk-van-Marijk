@@ -1,5 +1,5 @@
 // Algemene Voorwaarden — Praktijk van Marijk
-// Versie juli 2026 — zakelijke dienstverlening (B2B)
+// Versie oktober 2026 — zakelijke dienstverlening (B2B)
 // Lange leespagina met TOC links, genummerde artikelen rechts.
 // Brand: bordeaux primair, oker voor cijfers, Lora voor titels, DM Sans voor body.
 
@@ -133,7 +133,7 @@ function AlgemeneVoorwaarden() {
           <p style={pAv.body}><span style={pAv.clause}>8.3</span> Bij trajecten met een looptijd van meer dan een jaar is opdrachtnemer gerechtigd tarieven, dienstverlening en voorwaarden tussentijds te wijzigen. Opdrachtnemer informeert opdrachtgever hierover ten minste vier weken voordat de wijziging ingaat. Indien opdrachtgever een tussentijdse verhoging van het tarief niet wenst te aanvaarden, is opdrachtgever gerechtigd de overeenkomst schriftelijk op te zeggen tegen de datum waarop de wijziging zou ingaan. Dit opzegrecht geldt niet indien de wijziging voortvloeit uit een wettelijke verplichting of uit een reeds bij het sluiten van de overeenkomst overeengekomen indexering.</p>
           <p style={pAv.body}><span style={pAv.clause}>8.4</span> Elk van partijen kan de overeenkomst geheel of gedeeltelijk ontbinden indien de andere partij tekortschiet in de nakoming van haar verplichtingen en die tekortkoming, na schriftelijke ingebrekestelling met een redelijke termijn voor herstel, niet binnen die termijn wordt hersteld. Ontbinding is niet vereist voor zover nakoming blijvend of tijdelijk onmogelijk is.</p>
           <p style={pAv.body}><span style={pAv.clause}>8.5</span> Opdrachtnemer kan de overeenkomst met onmiddellijke ingang en zonder ingebrekestelling geheel of gedeeltelijk beëindigen indien aan opdrachtgever surseance van betaling wordt verleend, het faillissement van opdrachtgever wordt aangevraagd of uitgesproken, of de onderneming van opdrachtgever wordt geliquideerd of beëindigd.</p>
-          <p style={pAv.body}><span style={pAv.clause}>8.6</span> Opdrachtnemer kan een training annuleren, deelname weigeren of een deelnemer van verdere deelname uitsluiten indien daartoe een redelijke grond bestaat. Annuleert opdrachtnemer een training buiten een aan opdrachtgever toe te rekenen oorzaak, dan wordt het voor die training reeds betaalde bedrag naar rato terugbetaald. Verdergaande aansprakelijkheid is uitgesloten, behoudens het bepaalde in artikel 13.</p>
+          <p style={pAv.body}><span style={pAv.clause}>8.6</span> Opdrachtnemer kan deelname weigeren of een deelnemer van verdere deelname uitsluiten indien daartoe een redelijke grond bestaat. Voor annulering en verplaatsing van een training door opdrachtnemer gelden de leden 3 tot en met 5 van artikel 9. Verdergaande aansprakelijkheid is uitgesloten, behoudens het bepaalde in artikel 13.</p>
           <p style={pAv.body}><span style={pAv.clause}>8.7</span> Bedragen die opdrachtnemer voor het einde van de overeenkomst heeft gefactureerd voor reeds verrichte werkzaamheden of gereserveerde capaciteit, blijven verschuldigd en worden op het moment van beëindiging direct opeisbaar.</p>
         </React.Fragment>
       ),
@@ -141,7 +141,7 @@ function AlgemeneVoorwaarden() {
     {
       nr: '09',
       slug: 'annulering-verplaatsing',
-      title: 'Annulering en verplaatsing door opdrachtgever',
+      title: 'Annulering en verplaatsing',
       render: () => (
         <React.Fragment>
           <p style={pAv.body}><span style={pAv.clause}>9.1</span> Annulering of verplaatsing van een geplande dienst, training of sessie door opdrachtgever of deelnemer dient schriftelijk te gebeuren. Bij annulering of verplaatsing gelden, tenzij schriftelijk anders overeengekomen, de volgende vergoedingen, gerekend vanaf de ontvangst van de schriftelijke melding tot de geplande aanvangsdatum:</p>
@@ -151,8 +151,10 @@ function AlgemeneVoorwaarden() {
             <li>binnen een week voor aanvang of bij niet verschijnen: 100% van het overeengekomen bedrag</li>
           </ul>
           <p style={pAv.body}><span style={pAv.clause}>9.2</span> In plaats van te annuleren mag opdrachtgever of deelnemer kosteloos een vervangende deelnemer aandragen, mits deze voldoet aan de toelatingscriteria van opdrachtnemer en de vervanging uiterlijk drie werkdagen voor aanvang schriftelijk is doorgegeven.</p>
-          <p style={pAv.body}><span style={pAv.clause}>9.3</span> Indien opdrachtnemer een training of sessie wegens overmacht verplaatst, plannen partijen in overleg een nieuwe datum. Is een nieuwe datum niet mogelijk, dan wordt het voor die training of sessie reeds betaalde bedrag naar rato terugbetaald.</p>
-          <p style={pAv.body}><span style={pAv.clause}>9.4</span> Beëindigt opdrachtgever een lopend traject tussentijds, dan is opdrachtgever de vergoeding verschuldigd voor de tot dat moment verrichte werkzaamheden en voor de reeds gereserveerde capaciteit die opdrachtnemer redelijkerwijs niet meer kan invullen. Reeds betaalde bedragen worden niet gerestitueerd, behoudens het bepaalde in de leden 1 en 3 van dit artikel. Opdrachtnemer kan, uitsluitend naar eigen inzicht en bij wijze van coulance, besluiten een deel van het betaalde te restitueren of te verrekenen, zonder dat opdrachtgever hieraan rechten voor volgende gevallen kan ontlenen.</p>
+          <p style={pAv.body}><span style={pAv.clause}>9.3</span> Een training gaat door bij minimaal 6 deelnemers. Bij minder dan 6 deelnemers behoudt opdrachtnemer zich het recht voor de training te verplaatsen of te annuleren. Opdrachtnemer informeert deelnemers uiterlijk 10 werkdagen vóór de startdatum of de training doorgaat.</p>
+          <p style={pAv.body}><span style={pAv.clause}>9.4</span> Bij verplaatsing van een training door opdrachtnemer, waaronder verplaatsing wegens overmacht, wordt een nieuwe datum aangeboden binnen 3 maanden. Als de deelnemer niet kan op de nieuwe datum, dan wordt het betaalde bedrag binnen 14 dagen gerestitueerd.</p>
+          <p style={pAv.body}><span style={pAv.clause}>9.5</span> Opdrachtnemer is bij annulering of verplaatsing niet gehouden tot vergoeding van andere kosten dan het reeds betaalde trainingsbedrag, zoals reis, verblijf of verletkosten.</p>
+          <p style={pAv.body}><span style={pAv.clause}>9.6</span> Beëindigt opdrachtgever een lopend traject tussentijds, dan is opdrachtgever de vergoeding verschuldigd voor de tot dat moment verrichte werkzaamheden en voor de reeds gereserveerde capaciteit die opdrachtnemer redelijkerwijs niet meer kan invullen. Reeds betaalde bedragen worden niet gerestitueerd, behoudens het bepaalde in de leden 1, 3 en 4 van dit artikel. Opdrachtnemer kan, uitsluitend naar eigen inzicht en bij wijze van coulance, besluiten een deel van het betaalde te restitueren of te verrekenen, zonder dat opdrachtgever hieraan rechten voor volgende gevallen kan ontlenen.</p>
         </React.Fragment>
       ),
     },
@@ -216,7 +218,7 @@ function AlgemeneVoorwaarden() {
       title: 'Overmacht',
       render: () => (
         <React.Fragment>
-          <p style={pAv.body}><span style={pAv.clause}>14.1</span> Opdrachtnemer is niet gehouden tot het nakomen van enige verplichting indien zij daartoe verhinderd is als gevolg van overmacht. Onder overmacht wordt verstaan elke van de wil van opdrachtnemer onafhankelijke omstandigheid die nakoming van de overeenkomst tijdelijk of blijvend verhindert, waaronder ziekte of uitval van opdrachtnemer, storingen, epidemieën en van overheidswege opgelegde maatregelen.</p>
+          <p style={pAv.body}><span style={pAv.clause}>14.1</span> Opdrachtnemer is niet gehouden tot het nakomen van enige verplichting indien zij daartoe verhinderd is als gevolg van overmacht. Onder overmacht wordt verstaan: ziekte, ongeval of plotselinge uitval van de trainer waardoor uitvoering redelijkerwijs niet mogelijk is, overlijden of plotselinge ernstige ziekte van de trainer of een direct gezinslid, brand, ernstige storing of uitval van de trainingslocatie of essentiële voorzieningen, overheidsmaatregelen, en calamiteiten waardoor de training niet (veilig) kan plaatsvinden. Tevens geldt als overmacht: andere onvoorziene omstandigheden buiten de invloedssfeer van opdrachtnemer, waardoor nakoming redelijkerwijs niet kan worden verlangd.</p>
           <p style={pAv.body}><span style={pAv.clause}>14.2</span> Gedurende de periode van overmacht worden de verplichtingen van opdrachtnemer opgeschort. Duurt de overmacht langer dan 30 dagen, dan is elk van partijen gerechtigd de overeenkomst te ontbinden voor het deel dat door de overmacht niet kan worden uitgevoerd, zonder tot schadevergoeding gehouden te zijn.</p>
           <p style={pAv.body}><span style={pAv.clause}>14.3</span> Voor zover opdrachtnemer bij het intreden van de overmacht een deel van haar verplichtingen reeds is nagekomen, is zij gerechtigd dat deel afzonderlijk te factureren.</p>
         </React.Fragment>
@@ -291,7 +293,7 @@ function AlgemeneVoorwaarden() {
         <React.Fragment>
           <p style={pAv.body}><span style={pAv.clause}>20.1</span> Opdrachtnemer is gerechtigd deze algemene voorwaarden te wijzigen. Gewijzigde voorwaarden gelden voor nieuwe overeenkomsten en, na schriftelijke kennisgeving, voor lopende overeenkomsten van onbepaalde duur na verloop van een redelijke termijn.</p>
           <p style={pAv.body}><span style={pAv.clause}>20.2</span> In gevallen waarin deze algemene voorwaarden niet voorzien, handelen partijen naar de maatstaven van redelijkheid en billijkheid en zoveel mogelijk in de geest van deze voorwaarden.</p>
-          <p style={pAv.body}><span style={pAv.clause}>20.3</span> Deze algemene voorwaarden zijn vastgesteld in juli 2026 en vervangen alle eerdere versies.</p>
+          <p style={pAv.body}><span style={pAv.clause}>20.3</span> Deze algemene voorwaarden zijn vastgesteld in oktober 2026 en vervangen alle eerdere versies.</p>
         </React.Fragment>
       ),
     },
@@ -361,7 +363,7 @@ function AlgemeneVoorwaarden() {
           </Button>
           <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 13, color: 'var(--fg3)', whiteSpace: 'nowrap' }}>
             <span style={{ letterSpacing: '0.12em', textTransform: 'uppercase', marginRight: 10 }}>Versie</span>
-            <span style={{ color: 'var(--fg1)', fontWeight: 500 }}>Juli 2026</span>
+            <span style={{ color: 'var(--fg1)', fontWeight: 500 }}>Oktober 2026</span>
           </div>
         </div>
       </div>
