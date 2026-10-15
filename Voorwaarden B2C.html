@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aanvullende voorwaarden B2C | Praktijk van Marijk</title>
+  <meta name="description" content="Aanvullende voorwaarden voor consumenten die een training, consult of andere dienst boeken bij Praktijk van Marijk. Versie oktober 2026.">
+  <link rel="canonical" href="https://praktijkvanmarijk.nl/voorwaarden-b2c.html">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAF8F4;
+      --bg-sunken: #F0EBE0;
+      --surface-dark: #2E1F0E;
+      --line: #E0D8CC;
+      --line-strong: #C8BDA9;
+      --fg1: #2E1F0E;
+      --fg2: #5A4A38;
+      --fg3: #8A7A68;
+      --fg-on-dark: #F0E8DE;
+      --fg-on-accent: #FAF8F4;
+      --accent: #89221D;
+      --accent-hover: #6F1A17;
+      --accent-3: #CF872D;
+      --focus-ring: rgba(137, 34, 29, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg1);
+      font-family: 'DM Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--focus-ring);
+      outline-offset: 3px;
+    }
+
+    /* ---------- Topbar ---------- */
+    .topbar {
+      border-bottom: 0.5px solid var(--line);
+      padding: 18px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .topbar a {
+      font-size: 13px;
+      color: var(--fg2);
+      text-decoration: none;
+    }
+    .topbar a:hover { color: var(--accent); }
+    .topbar__brand {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--fg1) !important;
+    }
+
+    /* ---------- Hero ---------- */
+    .pvm-av__hero {
+      max-width: 900px;
+      padding: 64px 48px 40px;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 34px;
+      font-weight: 500;
+      color: var(--fg1);
+      line-height: 1.3;
+      margin: 0 0 20px;
+      text-wrap: balance;
+    }
+    .hero__lead {
+      font-size: 17px;
+      color: var(--fg2);
+      line-height: 1.7;
+      margin: 0 0 28px;
+      max-width: 60ch;
+    }
+    .pvm-av__meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      padding-top: 4px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      padding: 10px 22px;
+      border-radius: 4px;
+      background: var(--accent);
+      color: var(--fg-on-accent);
+      border: 1px solid var(--accent);
+      cursor: pointer;
+      line-height: 1;
+      text-decoration: none;
+      transition: background 200ms, border-color 200ms;
+    }
+    .btn:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+    .version {
+      font-size: 13px;
+      color: var(--fg3);
+      white-space: nowrap;
+    }
+    .version span:first-child {
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-right: 10px;
+    }
+    .version span:last-child { color: var(--fg1); font-weight: 500; }
+
+    .divider {
+      height: 0.5px;
+      background: var(--line);
+      margin: 0 48px;
+    }
+
+    /* ---------- Body: TOC + artikelen ---------- */
+    .pvm-av__body {
+      display: grid;
+      grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+      gap: 72px;
+      padding: 56px 48px 64px;
+      align-items: start;
+    }
+
+    .pvm-av__toc { position: sticky; top: 32px; }
+    .toc__label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--fg3);
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+    .toc__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .toc__list li { display: flex; align-items: baseline; gap: 10px; }
+    .toc__nr {
+      font-size: 12px;
+      color: var(--accent-3);
+      font-variant-numeric: tabular-nums;
+      min-width: 18px;
+    }
+    .toc__list a {
+      font-size: 13px;
+      color: var(--fg2);
+      text-decoration: none;
+      line-height: 1.5;
+    }
+    .toc__list a:hover { color: var(--accent); }
+
+    .pvm-av__articles { max-width: 720px; }
+
+    .pvm-av__article {
+      padding: 48px 0;
+      border-top: 0.5px solid var(--line);
+      scroll-margin-top: 32px;
+    }
+    .pvm-av__article:first-child { padding-top: 0; border-top: none; }
+
+    .article__head {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .article__nr {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--accent-3);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+    .pvm-av__article-rule {
+      height: 1px;
+      flex: 0 0 32px;
+      background: var(--accent-3);
+      align-self: center;
+      margin-top: 2px;
+    }
+    .article__label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--fg3);
+      white-space: nowrap;
+    }
+    h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--fg1);
+      line-height: 1.35;
+      margin: 0 0 22px;
+      text-wrap: balance;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--fg2);
+      line-height: 1.75;
+      margin: 0 0 14px;
+    }
+    strong { color: var(--fg1); font-weight: 600; }
+
+    ul.def-list {
+      list-style: none;
+      margin: 0 0 14px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    ul.def-list li {
+      display: flex;
+      gap: 10px;
+      font-size: 15px;
+      color: var(--fg2);
+      line-height: 1.75;
+    }
+    .def-letter {
+      color: var(--accent-3);
+      font-weight: 600;
+      min-width: 16px;
+    }
+
+    a.inline {
+      color: var(--fg1);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--line-strong);
+    }
+    a.inline:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* ---------- Contact-box ---------- */
+    .pvm-av__contact {
+      margin-top: 56px;
+      padding: 32px;
+      background: var(--surface-dark);
+      color: var(--fg-on-dark);
+      border-radius: 6px;
+      border-left: 3px solid var(--accent);
+    }
+    .contact__label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-3);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    .pvm-av__contact h3 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--fg-on-dark);
+      line-height: 1.4;
+      margin: 0 0 14px;
+    }
+    .pvm-av__contact p {
+      font-size: 15px;
+      color: var(--fg-on-dark);
+      opacity: 0.85;
+      margin: 0;
+    }
+    .pvm-av__contact a {
+      color: var(--accent-3);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--accent-3);
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      border-top: 0.5px solid var(--line);
+      padding: 24px 48px 40px;
+      font-size: 13px;
+      color: var(--fg3);
+    }
+    .site-footer a { color: var(--fg2); text-decoration: none; margin-right: 20px; }
+    .site-footer a:hover { color: var(--accent); }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 960px) {
+      .pvm-av__body {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 40px 32px 56px;
+      }
+      .pvm-av__toc {
+        position: relative;
+        top: 0;
+        background: var(--bg-sunken);
+        border: 0.5px solid var(--line);
+        border-radius: 6px;
+        padding: 20px 22px;
+      }
+    }
+    @media (max-width: 720px) {
+      .topbar { padding: 16px 24px; }
+      .pvm-av__hero { padding: 48px 24px 32px; }
+      .divider { margin: 0 24px; }
+      .pvm-av__body { padding: 32px 24px 48px; }
+      .pvm-av__article { padding: 36px 0; }
+      .pvm-av__contact { padding: 24px 22px; }
+      .site-footer { padding: 24px; }
+    }
+    @media (max-width: 480px) {
+      .pvm-av__hero { padding: 40px 20px 28px; }
+      .pvm-av__body { padding: 28px 20px 40px; }
+      .pvm-av__article-rule { display: none; }
+      h1 { font-size: 28px; }
+    }
+
+    /* ---------- Print ---------- */
+    @media print {
+      @page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+      html, body { background: #fff !important; color: #2E1F0E !important; }
+      .topbar, .site-footer, .pvm-av__meta, .pvm-av__toc { display: none !important; }
+      .pvm-av__hero {
+        padding: 0 0 24px;
+        max-width: none;
+        border-bottom: 0.5px solid #C8BDA9;
+        margin-bottom: 24px;
+      }
+      .divider { display: none; }
+      .pvm-av__body { display: block; padding: 0; gap: 0; }
+      .pvm-av__articles { max-width: none; }
+      .pvm-av__article {
+        page-break-inside: avoid;
+        padding: 18px 0;
+        border-top: 0.5px solid #E0D8CC;
+      }
+      .pvm-av__article:first-child { border-top: none; }
+      .pvm-av__contact {
+        page-break-inside: avoid;
+        background: #FAF8F4;
+        color: #2E1F0E;
+        border: 0.5px solid #C8BDA9;
+        border-left: 3px solid #89221D;
+        margin-top: 28px;
+      }
+      .pvm-av__contact * { color: #2E1F0E !important; opacity: 1 !important; }
+      .pvm-av__contact a { color: #89221D !important; border-bottom: 0.5px solid #89221D; }
+      a { color: inherit !important; text-decoration: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="topbar__brand" href="https://praktijkvanmarijk.nl">Praktijk van Marijk</a>
+    <a href="/#voorwaarden">Algemene voorwaarden B2B</a>
+  </header>
+
+  <main class="pvm-av">
+    <!-- ============ HERO ============ -->
+    <div class="pvm-av__hero">
+      <div class="eyebrow">Juridisch</div>
+      <h1>Aanvullende voorwaarden B2C.</h1>
+      <p class="hero__lead">
+        Van toepassing wanneer de deelnemer als consument een training, consult of andere dienst boekt bij Marijke Koomen. Deze voorwaarden vormen een aanvulling op de <a class="inline" href="/#voorwaarden">algemene voorwaarden</a>. Bij strijdigheid gaan deze aanvullende voorwaarden voor.
+      </p>
+      <div class="pvm-av__meta">
+        <button class="btn" type="button" onclick="window.print()" aria-label="Download deze voorwaarden als PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download als PDF
+        </button>
+        <div class="version"><span>Versie</span><span>Oktober 2026</span></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ============ BODY: TOC + ARTIKELEN ============ -->
+    <div class="pvm-av__body">
+
+      <nav class="pvm-av__toc" aria-label="Inhoudsopgave">
+        <div class="toc__label">Inhoud</div>
+        <ol class="toc__list">
+          <li><span class="toc__nr">01</span><a href="#definities">Definities</a></li>
+          <li><span class="toc__nr">02</span><a href="#totstandkoming">Totstandkoming overeenkomst</a></li>
+          <li><span class="toc__nr">03</span><a href="#bedenktijd">Bedenktijd en herroepingsrecht</a></li>
+          <li><span class="toc__nr">04</span><a href="#annulering-deelnemer">Annulering door deelnemer na bedenktijd</a></li>
+          <li><span class="toc__nr">05</span><a href="#verplaatsing-opleider">Verplaatsing of annulering door opleider</a></li>
+          <li><span class="toc__nr">06</span><a href="#betaling">Betaling</a></li>
+          <li><span class="toc__nr">07</span><a href="#aansprakelijkheid">Aansprakelijkheid</a></li>
+          <li><span class="toc__nr">08</span><a href="#klachten">Klachten</a></li>
+          <li><span class="toc__nr">09</span><a href="#privacy">Privacy en vertrouwelijkheid</a></li>
+          <li><span class="toc__nr">10</span><a href="#toepasselijk-recht">Toepasselijk recht en bevoegde rechter</a></li>
+        </ol>
+      </nav>
+
+      <div class="pvm-av__articles">
+
+        <article class="pvm-av__article" id="definities">
+          <div class="article__head"><div class="article__nr">01</div><div class="pvm-av__article-rule"></div><div class="article__label">Artikel 1</div></div>
+          <h2>Definities</h2>
+          <ul class="def-list">
+            <li><span class="def-letter">a.</span><span><strong>Consument:</strong> een natuurlijke persoon die handelt voor doeleinden buiten zijn bedrijfs- of beroepsactiviteit.</span></li>
+            <li><span class="def-letter">b.</span><span><strong>Deelnemer:</strong> de consument die zich inschrijft voor een training of dienst.</span></li>
+          </ul>
+        </article>
+
+        <article class="pvm-av__article" id="totstandkoming">
+          <div class="article__head"><div class="article__nr">02</div><div class="pvm-av__article-rule"></div><div class="article__label">Artikel 2</div></div>
+          <h2>Totstandkoming overeenkomst</h2>
+          <p>De overeenkomst komt tot stand op het moment dat de deelnemer de inschrijving afrondt en de inschrijving door de opleider schriftelijk is bevestigd, of op het moment dat de deelnemer schriftelijk, waaronder per e-mail, akkoord geeft op een aanbod.</p>
+        </article>
+
+        <article class="pvm-av__article" id="bedenktijd">
+          <div class="article__head"><div class="article__nr">03</div><div class="pvm-av__article-rule"></div><div class="article__label">Artikel 3</div></div>
+          <h2>Bedenktijd en herroepingsrecht</h2>
+          <p>De deelnemer heeft het recht de overeenkomst binnen 14 dagen na het sluiten van de overeenkomst zonder opgave van redenen te ontbinden. Dit herroepingsrecht geldt ook wanneer de deelnemer boekt en een werkgever of bedrijf de factuur betaalt, mits de overeenkomst met de deelnemer als consument tot stand is gekomen.</p>
+          <p>Indien de deelnemer verzoekt dat de uitvoering van de dienst start binnen de bedenktijd, stemt de deelnemer er bij inschrijving uitdrukkelijk mee in dat de uitvoering start binnen de bedenktijd. Bij herroeping na aanvang is de deelnemer een evenredig deel van de prijs verschuldigd voor het reeds geleverde deel.</p>
+          <p>Indien de dienst binnen de bedenktijd volledig wordt uitgevoerd, erkent de deelnemer dat het herroepingsrecht vervalt zodra de opleider de dienst volledig is nagekomen, mits de deelnemer voorafgaand aan de uitvoering uitdrukkelijk heeft verzocht om aanvang van de uitvoering binnen de bedenktijd.</p>
+        </article>
+
+        <article class="pvm-av__article" id="annulering-deelnemer">
+          <div class="article__head"><div class="article__nr">04</div><div class="pvm-av__article-rule"></div><div class="article__label">Artikel 4</div></div>
+          <h2>Annulering door deelnemer na bedenktijd</h2>
+          <p>Bij annulering door de deelnemer na afloop van de bedenktijd gelden de volgende annuleringskosten:</p>
+          <ul class="def-list">
+            <li><span class="def-letter">a.</span><span>tot vier weken voor aanvang, kosteloos</span></li>
+            <li><span class="def-letter">b.</span><span>binnen vier weken tot een week voor aanvang: 50% van het overeengekomen bedrag</span></li>
+            <li><span class="def-letter">c.</span><span>binnen een week voor aanvang of bij niet verschijnen: 100% van het overeengekomen bedrag</span></li>
+          </ul>
+          <p>Indien een vervangende deelnemer wordt aangedragen die aan de toelatingseisen voldoet, kan de opleider hiermee instemmen. In dat geval worden geen annuleringskosten in rekening gebracht.</p>
+        </article>
+
+        <article class="pvm-av__article" id="verplaatsing-opleider">
+          <div class="article__head"><div class="article__nr">05</div><div class="pvm-av__article-rule"></div><div class="article__label">Artikel 5</div></div>
+          <h2>Verplaatsing of annulering door opleider</h2>
+          <p>De training gaat door bij minimaal 6 deelnemers. Indien dit minimumaantal niet is bereikt, behoudt de opleider zich het recht voor de training te verplaatsen of te annuleren. De opleider informeert deelnemers uiterlijk 10 werkdagen vóór de startdatum of de training doorgaat.</p>
+          <p>Bij verplaatsing biedt de opleider een nieuwe datum aan binnen 3 maanden na de oorspronkelijke startdatum. Indien de deelnemer niet kan deelnemen op de vervangende datum, kan de deelnemer kosteloos annuleren en wordt het reeds betaalde bedrag binnen 14 dagen gerestitueerd.</p>
+          <p>Onder overmacht wordt verstaan: ziekte, ongeval of plotselinge uitval van de opleider waardoor uitvoering redelijkerwijs niet mogelijk is, overlijden of plotselinge ernstige ziekte van de opleider of een direct gezinslid, brand, ernstige storing of uitval van de trainingslocatie of essentiële voorzieningen, overheidsmaatregelen, en calamiteiten waardoor de training niet, of niet veilig, kan plaatsvinden. Tevens geldt als overmacht: andere onvoorziene omstandigheden buiten de invloedssfeer van de opleider, waardoor nakoming redelijkerwijs niet kan worden verlangd.</p>
+          <p>In geval van overmacht heeft de opleider het recht de training te verplaatsen of te annuleren. Bij annulering wordt het reeds betaalde trainingsbedrag gerestitueerd. De opleider is niet gehouden tot vergoeding van andere kosten dan het reeds betaalde trainingsbedrag, zoals reis, verblijf of verletkosten.</p>
+        </article>
+
+        <article class="pvm-av__article" id="betaling">
+          <div class="article__head"><div class="article__nr">06</div><div class="pvm-av__article-rule"></div><div class="article__label">Artikel 6</div></div>
+          <h2>Betaling</h2>
+          <p>Facturen dienen te worden voldaan binnen 14 dagen na factuurdatum, tenzij schriftelijk anders overeengekomen. Bij niet tijdige betaling kan de opleider de uitvoering van de dienst opschorten totdat betaling is ontvangen.</p>
+        </article>
+
+        <article class="pvm-av__article" id="aansprakelijkheid">
+          <div class="article__head"><div class="article__nr">07</div><div class="pvm-av__article-rule"></div><div class="article__label">Artikel 7</div></div>
+          <h2>Aansprakelijkheid</h2>
+          <p>De opleider is niet aansprakelijk voor indirecte schade, gevolgschade of gederfde winst. De aansprakelijkheid van de opleider is in alle gevallen beperkt tot het bedrag dat de deelnemer voor de betreffende dienst heeft betaald.</p>
+        </article>
+
+        <article class="pvm-av__article" id="klachten">
+          <div class="article__head"><div class="article__nr">08</div><div class="pvm-av__article-rule"></div><div class="article__label">Artikel 8</div></div>
+          <h2>Klachten</h2>
+          <p>Klachten worden schriftelijk ingediend. De opleider bevestigt de ontvangst binnen 5 werkdagen. De opleider handelt de klacht inhoudelijk af binnen 15 werkdagen na ontvangst.</p>
+          <p>Indien meer tijd nodig is voor onderzoek, dan wordt de deelnemer binnen deze termijn geïnformeerd over het uitstel met toelichting en een indicatie van de termijn waarbinnen uitsluitsel wordt gegeven. In dat geval wordt de klacht uiterlijk binnen 35 werkdagen na ontvangst afgehandeld.</p>
+        </article>
+
+        <article class="pvm-av__article" id="privacy">
+          <div class="article__head"><div class="article__nr">09</div><div class="pvm-av__article-rule"></div><div class="article__label">Artikel 9</div></div>
+          <h2>Privacy en vertrouwelijkheid</h2>
+          <p>De opleider verwerkt persoonsgegevens conform de privacyverklaring. Deelnemers gaan zorgvuldig om met vertrouwelijke informatie die tijdens de training wordt gedeeld.</p>
+          <p>Het is niet toegestaan om zonder toestemming opnames te maken. Ook het delen van verstrekte materialen met derden is niet toegestaan.</p>
+        </article>
+
+        <article class="pvm-av__article" id="toepasselijk-recht">
+          <div class="article__head"><div class="article__nr">10</div><div class="pvm-av__article-rule"></div><div class="article__label">Artikel 10</div></div>
+          <h2>Toepasselijk recht en bevoegde rechter</h2>
+          <p>Op deze overeenkomst is Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter volgens de wet.</p>
+        </article>
+
+        <!-- Contact-box -->
+        <div class="pvm-av__contact">
+          <div class="contact__label">Vragen?</div>
+          <h3>Heeft u vragen over deze voorwaarden?</h3>
+          <p>
+            Neem gerust contact op via
+            <a href="mailto:marijke@praktijkvanmarijk.nl">marijke@praktijkvanmarijk.nl</a>
+            of
+            <a href="tel:+31627376003">06 - 27 37 60 03</a>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <a href="https://praktijkvanmarijk.nl">Terug naar de website</a>
+    <a href="/#voorwaarden">Algemene voorwaarden B2B</a>
+    <span>Marijke Koomen | Praktijk van Marijk</span>
+  </footer>
+
+  <script src="/cookie-consent.js" defer></script>
+</body>
+</html>
