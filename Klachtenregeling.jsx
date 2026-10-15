@@ -254,8 +254,8 @@ function Klachtenregeling() {
               Praktijk van Marijk<br />
               <a href="mailto:marijke@praktijkvanmarijk.nl" style={st.contactLink}>
                 marijke@praktijkvanmarijk.nl
-              </a><br />
-              <a href="tel:+31627376003" style={st.contactLink}>06 27 37 60 03</a>
+              </a>
+              
             </div>
           </div>
         </div>
