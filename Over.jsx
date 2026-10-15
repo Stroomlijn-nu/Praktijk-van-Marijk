@@ -442,8 +442,11 @@ function Over() {
       <div style={{ padding: '64px 48px 48px' }}>
         <Eyebrow>Samengewerkt met</Eyebrow>
         <h2 style={{ fontFamily: 'Lora, serif', fontSize: 22, fontWeight: 500, color: 'var(--fg1)', lineHeight: 1.4, margin: '0 0 28px', whiteSpace: 'nowrap' }}>
-          Opdrachtgevers en samenwerkingspartners in de jeugdketen.
+          Eerdere opdrachtgevers en samenwerkingspartners in de jeugdketen.
         </h2>
+        <p style={{ fontFamily: 'inherit', fontSize: 14, fontWeight: 400, color: 'var(--fg2)', lineHeight: 1.5, margin: '0 0 28px' }}>
+    Organisaties waarvoor ik werkte vóór de start van Praktijk van Marijk.
+  </p>
 
         {/* Logo-slider, interactief */}
         <LogoSlider items={samenwerkingenMetLogo} />
