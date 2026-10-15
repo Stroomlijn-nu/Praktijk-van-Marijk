@@ -440,7 +440,7 @@ function Over() {
 
       {/* ============ SAMENGEWERKT MET ============ */}
       <div style={{ padding: '64px 48px 48px' }}>
-        <Eyebrow>Samengewerkt met</Eyebrow>
+        <Eyebrow>Eerder samengewerkt met</Eyebrow>
         <h2 style={{ fontFamily: 'Lora, serif', fontSize: 22, fontWeight: 500, color: 'var(--fg1)', lineHeight: 1.4, margin: '0 0 28px', whiteSpace: 'nowrap' }}>
           Eerdere opdrachtgevers en samenwerkingspartners in de jeugdketen.
         </h2>
