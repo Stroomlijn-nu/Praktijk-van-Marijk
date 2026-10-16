@@ -285,7 +285,7 @@ function Klachtenregeling() {
                 Je ontvangt binnen 15 werkdagen na ontvangst van je klacht een inhoudelijke schriftelijke reactie. 
                 Als er meer tijd nodig is voor onderzoek, dan ontvang je binnen deze termijn een bericht met toelichting en een indicatie van wanneer je uitsluitsel krijgt. 
                 In dat geval wordt de klacht uiterlijk binnen 35 werkdagen na ontvangst afgehandeld.
-
+               <br></br>
                 * Klachten en de wijze van afhandeling worden geregistreerd en 2 jaar bewaard.
               </div>
             </div>
