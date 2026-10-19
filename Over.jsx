@@ -286,7 +286,7 @@ function Over() {
     ['2020 — 2021', 'Medewerker Veilig Thuis Noord-Holland Noord.', 'Veiligheidsanalyses, risicotaxaties, zwaarwegende adviezen.'],
     ['2021 — 2022', 'Jeugdhulpverlener Wijkteam Medemblik.', null],
     ['2023 — 2024', 'Procesbegeleider Kinderopvangtoeslagenaffaire.', 'Traumasensitief werken, hersteltrajecten.'],
-    ['2024 — heden', 'Praktijk van Marijk, eigen praktijk.', 'Training en begeleiding van jeugdprofessionals op het thema intiem terreur.'],
+    ['2024 — heden', 'Praktijk van Marijk, eigen praktijk.', 'Training en begeleiding van jeugdprofessionals op het thema intieme terreur.'],
   ];
 
   const samenwerkingenMetLogo = [
@@ -338,7 +338,7 @@ function Over() {
             Twintig jaar lang stond ik zelf in de praktijk. Nu zet ik die kennis in voor jou.
           </h1>
           <p style={{ fontSize: 17, color: 'var(--fg2)', lineHeight: 1.7, margin: '0 0 28px' }}>
-            Hoe herken je intiem terreur en een machtsdisbalans in een gezin, hoe vertaal je dat naar feitelijke, onderbouwde taal en veiligheidsinterventies die standhouden in bijvoorbeeld een zitting en Raadkamer?
+            Hoe herken je intieme terreur en een machtsdisbalans in een gezin, hoe vertaal je dat naar feitelijke, onderbouwde taal en veiligheidsinterventies die standhouden in bijvoorbeeld een zitting en Raadkamer?
           </p>
           <p style={{ fontSize: 15, color: 'var(--fg2)', lineHeight: 1.75, margin: '0 0 16px' }}>
             Mijn achtergrond is in de jeugdbescherming. Ik ken het werk van binnenuit: de caseload, het taalgebruik, de druk van een multidisciplinair overleg en hoe een onderbuikgevoel in een dossier verdampt als je het niet feitelijk kunt onderbouwen.
