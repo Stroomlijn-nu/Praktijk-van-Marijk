@@ -1,6 +1,6 @@
 function Topbar({ route, setRoute }) {
   const items = [
-    ['home', 'Home', 'Praktijk van Marijk — specialist intiem terreur voor jeugdprofessionals'],
+    ['home', 'Home', 'Praktijk van Marijk — specialist intieme terreur voor jeugdprofessionals'],
     ['over', 'Over Marijke', 'Over Marijke Koomen, SKJ-geregistreerd jeugdprofessional'],
     ['professionals', 'Professionals', 'Training en coaching voor jeugdprofessionals'],
   ];
@@ -17,7 +17,7 @@ function Topbar({ route, setRoute }) {
   const RAPPORTEREN_URL = '/Rapporteren_onder_druk.html';
 
   const trainingenSubmenu = [
-    [TRAINING_URL, 'Training intiem terreur', 'Tweedaagse training intiem terreur voor jeugdprofessionals'],
+    [TRAINING_URL, 'Training intieme terreur', 'Tweedaagse training intieme terreur voor jeugdprofessionals'],
     [CASUISTIEK_URL, 'Casuïstiekcoaching', 'Individuele casuïstiekcoaching voor jeugdprofessionals'],
     [RAPPORTEREN_URL, 'Rapporteren onderdruk', 'In-company training rapporteren onder druk voor jeugdprofessionals'],
   ];
