@@ -91,6 +91,12 @@
     .prijs-sub { font-size: 13px; color: #b0a49a; }
     .prijs-toelichting { font-size: 14px; color: #c0b5ab; line-height: 1.7; max-width: 260px; }
 
+    /* ── Anker link en knop naar formulier ── */
+    .anker-link { display: inline-block; margin-top: 16px; font-size: 15px; font-weight: 500; color: var(--rood); text-decoration: none; border-bottom: 1px solid var(--rood); padding-bottom: 1px; }
+    .anker-link:hover { opacity: 0.8; }
+    .knop-formulier { display: inline-block; margin-top: 24px; background: var(--rood); color: var(--creme); border-radius: 4px; padding: 13px 24px; font-size: 15px; font-weight: 600; font-family: 'DM Sans', sans-serif; text-decoration: none; transition: opacity 180ms; }
+    .knop-formulier:hover { opacity: 0.88; }
+
     /* ── Tags ── */
     .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
     .tag-pill { background: var(--beige); border: 1px solid var(--lijn); border-radius: 3px; font-size: 12px; color: var(--mid); padding: 4px 10px; }
@@ -285,6 +291,10 @@
           <p style="margin-bottom: 0;">Voor het voorjaar van 2027 plant Marijke een nieuwe tweedaagse training in. <br>Interesse? Zet jezelf op de belangstellendenlijst en Marijke mailt je zodra de data vaststaan.</p>
         </div>
       </div>
+
+      <!-- Anker link naar formulier -->
+      <a class="anker-link" href="#aanmelden">Zet jezelf op de belangstellendenlijst</a>
+
       <p style="font-size: 13px; color: var(--zacht); margin-top: 16px; line-height: 1.75;">
         De aanmelding als belangstellende is vrijblijvend. Deelname wordt pas bevestigd nadat je data hebt ontvangen, je interesse hebt bevestigd en we een korte intake hebben gedaan.
       </p>
@@ -298,6 +308,9 @@
           De definitieve prijs voor voorjaar 2027 volgt zodra de data vaststaat.
         </div>
       </div>
+
+      <!-- Knop naar formulier -->
+      <a class="knop-formulier" href="#aanmelden">Naar het aanmeldformulier</a>
     </div>
   </section>
 
@@ -500,7 +513,7 @@
   </section>
 
   <!-- CTA + formulier -->
-  <section class="cta-section">
+  <section class="cta-section" id="aanmelden">
     <div class="cta-inner">
       <h2>Zet jezelf op de belangstellendenlijst</h2>
       <p class="cta-sub">
