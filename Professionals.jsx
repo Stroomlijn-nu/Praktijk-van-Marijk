@@ -12,7 +12,7 @@ function Professionals({ skjPlacement = 'bottom-aligned' }) {
     },
     {
       title: 'Gedragswetenschappers',
-      body: 'Die collega\u2019s op casusniveau willen meenemen in herkenning en taxatie van intiem terreur.',
+      body: 'Die collega\u2019s op casusniveau willen meenemen in herkenning en taxatie van intieme terreur.',
       accent: 'olive',
     },
     {
@@ -101,13 +101,13 @@ function Professionals({ skjPlacement = 'bottom-aligned' }) {
           </p>
 
           <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 15, color: 'var(--fg2)', lineHeight: 1.7, margin: '24px 0 0', maxWidth: '74ch' }}>
-            Je werkt in een systeem dat is ingericht op samenwerking tussen ouders. Echter bij intiem terreur is er geen samenwerking. Er is een kant die controleert en een kant die overleeft. Als je dat niet herkent, dan werk je onbewust mee aan het in stand houden van de situatie.
+            Je werkt in een systeem dat is ingericht op samenwerking tussen ouders. Echter bij intieme terreur is er geen samenwerking. Er is een kant die controleert en een kant die overleeft. Als je dat niet herkent, dan werk je onbewust mee aan het in stand houden van de situatie.
           </p>
           <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 15, color: 'var(--fg2)', lineHeight: 1.7, margin: '16px 0 0', maxWidth: '74ch' }}>
             Dat is niet jouw fout. Het is een blinde vlek die in bijna elke opleiding ontbreekt. Ik werk met professionals die die blinde vlek willen dichten, zonder dat het ten koste gaat van hun professionele positie of hun dossiervoering.
           </p>
           <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 15, color: 'var(--fg2)', lineHeight: 1.7, margin: '24px 0 0', maxWidth: '74ch' }}>
-            Intiem terreur en een machtsdisbalans in complexe gezinssystemen zijn geen randverschijnselen. Ze zitten in een groot deel van de casuïstiek waar wijkteams, gezinsvoogden en raadsonderzoekers dagelijks mee werken. Herkenning begint met preciezer kijken. Professioneler handelen begint met preciezer en meer feitelijk schrijven.
+            intieme terreur en een machtsdisbalans in complexe gezinssystemen zijn geen randverschijnselen. Ze zitten in een groot deel van de casuïstiek waar wijkteams, gezinsvoogden en raadsonderzoekers dagelijks mee werken. Herkenning begint met preciezer kijken. Professioneler handelen begint met preciezer en meer feitelijk schrijven.
           </p>
 
           {inHeroBottom && (
@@ -180,7 +180,7 @@ function Professionals({ skjPlacement = 'bottom-aligned' }) {
               Je voelt in een gesprek dat er iets niet klopt. De ene ouder praat voor de ander. De kinderen kijken anders als vader in de buurt is. Wat schrijf je in je dossier? Ouders hebben een conflict. Want dat is wat je kunt benoemen.
             </p>
             <p style={{ fontSize: 16, color: 'var(--fg2)', lineHeight: 1.8, margin: '0 0 20px' }}>
-              Intiem terreur ziet er aan de buitenkant anders uit dan dat het van binnen werkt. Daders functioneren vaak goed in het contact met hulpverleners. Slachtoffers reageren veelal emotioneel. En jij, jij werkt met een methodiek die uitgaat van twee gelijkwaardige partijen. Want dat is vaak wat jij op het eerste oog als professioneel ziet.
+              intieme terreur ziet er aan de buitenkant anders uit dan dat het van binnen werkt. Daders functioneren vaak goed in het contact met hulpverleners. Slachtoffers reageren veelal emotioneel. En jij, jij werkt met een methodiek die uitgaat van twee gelijkwaardige partijen. Want dat is vaak wat jij op het eerste oog als professioneel ziet.
             </p>
             <p style={{ fontFamily: 'Lora, serif', fontSize: 18, fontStyle: 'italic', fontWeight: 500, color: 'var(--fg1)', lineHeight: 1.6, margin: 0, textWrap: 'balance' }}>
               Dat is niet jouw tekortkoming. Het is een blinde vlek in het systeem. Die blinde vlek is (gelukkig) te corrigeren.
