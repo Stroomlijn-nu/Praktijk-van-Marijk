@@ -360,52 +360,58 @@ function Footer({ setRoute }) {
           © {new Date().getFullYear()} Praktijk van Marijk · Marijke Koomen · Alle rechten voorbehouden
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: 18 }}>
-          <a
-            onClick={() => setRoute('voorwaarden')}
-            style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
-          >Algemene voorwaarden</a>
-          <a
-            onClick={() => setRoute('privacy')}
-            style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
-          >Privacybeleid</a>
-          <a
-            onClick={() => setRoute('klachtenregeling')}
-            style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
-          >Klachtenregeling</a>
-          <a
-            onClick={() => setRoute('copyright')}
-            style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
-          >Copyright</a>
-          <a
-            onClick={() => window.pvmCookies && window.pvmCookies.open()}
-            style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
-          >Cookie-instellingen</a>
-          <a
-            onClick={() => { setRoute('voorwaarden'); setTimeout(() => window.print(), 350); }}
-            style={{ color: 'var(--fg3)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6, transition: 'color 200ms', cursor: 'pointer' }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg3)'; }}
-            aria-label="Download algemene voorwaarden als PDF"
-            title="Download als PDF"
-          >
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-            PDF
-          </a>
-        </div>
+  <a
+    onClick={() => setRoute('voorwaarden')}
+    style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
+    onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
+    onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
+  >Algemene voorwaarden</a>
+  <a
+    href="https://praktijkvanmarijk.nl/Voorwaarden%20B2C.html"
+    style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
+    onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
+    onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
+  >Algemene voorwaarden B2C</a>
+  <a
+    onClick={() => setRoute('privacy')}
+    style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
+    onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
+    onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
+  >Privacybeleid</a>
+  <a
+    onClick={() => setRoute('klachtenregeling')}
+    style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
+    onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
+    onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
+  >Klachtenregeling</a>
+  <a
+    onClick={() => setRoute('copyright')}
+    style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
+    onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
+    onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
+  >Copyright</a>
+  <a
+    onClick={() => window.pvmCookies && window.pvmCookies.open()}
+    style={{ color: 'var(--fg2)', textDecoration: 'none', cursor: 'pointer', borderBottom: '0.5px solid transparent', transition: 'color 200ms, border-color 200ms' }}
+    onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; e.currentTarget.style.borderBottomColor = 'var(--accent)'; }}
+    onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg2)'; e.currentTarget.style.borderBottomColor = 'transparent'; }}
+  >Cookie-instellingen</a>
+  <a
+    onClick={() => { setRoute('voorwaarden'); setTimeout(() => window.print(), 350); }}
+    style={{ color: 'var(--fg3)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6, transition: 'color 200ms', cursor: 'pointer' }}
+    onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--accent)'; }}
+    onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--fg3)'; }}
+    aria-label="Download algemene voorwaarden als PDF"
+    title="Download als PDF"
+  >
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
+    PDF
+  </a>
+</div>
       </div>
     </div>
   );
