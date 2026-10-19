@@ -10,7 +10,7 @@ function Werkwijze() {
       nr: '02',
       title: 'Training',
       duur: '3-6 dagdelen',
-      body: 'In een serie bijeenkomsten werken we aan herkenning van intiem terreur, risicotaxatie en aan het schrijven van feitelijke verslaglegging. Altijd met eigen casuïstiek van de deelnemers.',
+      body: 'In een serie bijeenkomsten werken we aan herkenning van intieme terreur, risicotaxatie en aan het schrijven van feitelijke verslaglegging. Altijd met eigen casuïstiek van de deelnemers.',
     },
     {
       nr: '03',
@@ -49,7 +49,7 @@ function Werkwijze() {
             <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: 'var(--accent-3)', zIndex: 2 }} />
             <img
               src={(window.__resources && window.__resources.marijkeWerkwijze) || "assets/marijke-werkwijze.jpg"}
-              alt="Marijke in gesprek met een professional aan de werktafel, met flip-over over intiem terreur"
+              alt="Marijke in gesprek met een professional aan de werktafel, met flip-over over intieme terreur"
               style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '60% center', display: 'block' }}
             />
           </div>
