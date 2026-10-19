@@ -12,7 +12,7 @@ function Topbar({ route, setRoute }) {
   ];
 
   const TRAININGEN_OVERZICHT_URL = '/Trainingen.html';
-  const TRAINING_URL = '/training-intiem-terreur.html';
+  const TRAINING_URL = '/training-intieme-terreur.html';
   const CASUISTIEK_URL = '/Casuistiekcoaching.html';
   const RAPPORTEREN_URL = '/Rapporteren_onder_druk.html';
 
