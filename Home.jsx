@@ -122,7 +122,7 @@ function Home({ setRoute }) {
         <div aria-hidden="true" style={{ fontSize: 56, color: 'var(--accent-3)', lineHeight: 0.9, fontFamily: 'Lora, Georgia, serif', flexShrink: 0, marginTop: -4 }}>&ldquo;</div>
         <div style={{ maxWidth: 760 }}>
           <p style={{ fontFamily: 'Lora, serif', fontSize: 19, fontWeight: 400, color: 'var(--fg-on-dark)', lineHeight: 1.55, fontStyle: 'italic', margin: 0 }}>Eindelijk iemand die weet waar ik het over heb. Ik voelde mijn hele lijf ontspannen.</p>
-          <footer style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, color: 'var(--accent-2)', marginTop: 14, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500 }}>Gezinsvoogd, wijkteam Noord-Holland</footer>
+          <footer style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, color: 'var(--accent-2)', marginTop: 14, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500 }}>Wijkteammedewerker Noord-Holland</footer>
         </div>
       </blockquote>
 
