@@ -1,8 +1,6 @@
 User-Agent: __usage_ai-training
 Disallow: /
 
-Disallow: /index.standalone.html
-
 User-agent: *
 Allow: /
 
