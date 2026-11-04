@@ -180,6 +180,7 @@ function AlgemeneVoorwaarden() {
           <p style={pAv.body}><span style={pAv.clause}>11.3</span> Opdrachtnemer is gerechtigd de uitvoering van haar diensten op te schorten zolang opdrachtgever niet aan zijn betalingsverplichting voldoet. Opschorting laat de betalingsverplichting van opdrachtgever onverlet.</p>
           <p style={pAv.body}><span style={pAv.clause}>11.4</span> Een klacht of bezwaar over een factuur schort de betalingsverplichting niet op. Indien opdrachtgever een deel van de factuur gemotiveerd betwist, voldoet opdrachtgever het onbetwiste deel binnen de betalingstermijn. Over het betwiste deel treden partijen in overleg.</p>
           <p style={pAv.body}><span style={pAv.clause}>11.5</span> Bij opdrachten met gereserveerde capaciteit, waaronder trainingen, intervisie en overige trajecten, blijft de betalingsverplichting in stand, ook wanneer opdrachtgever of deelnemer niet verschijnt of tussentijds stopt, tenzij opdrachtnemer schriftelijk anders heeft bevestigd. Op annulering en verplaatsing is artikel 9 van toepassing.</p>
+          <p style={pAv.body}><span style={pAv.clause}>11.6</span> In geval van restitutie hanteert Praktijk van Marijk een terugbetalingstermijn van 14 dagen. Deze termijn geldt voor elke terugbetaling, ongeacht de reden.</p>
         </React.Fragment>
       ),
     },
