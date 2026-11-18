@@ -595,7 +595,7 @@ export default function TrainingPage() {
             <div>
               <div style={s.prijsBedrag}>€ 1.500</div>
               <div style={s.prijsSub}>
-                excl. btw per deelnemer, volledige tweedaagse
+                vrijgesteld van btw, per deelnemer, volledige tweedaagse
               </div>
             </div>
             <div style={{ fontSize: 14, color: "#c0b5ab", lineHeight: 1.7, maxWidth: 260 }}>

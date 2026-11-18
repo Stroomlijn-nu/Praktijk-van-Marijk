@@ -77,7 +77,7 @@ function AlgemeneVoorwaarden() {
       render: () => (
         <React.Fragment>
           <p style={pAv.body}><span style={pAv.clause}>4.1</span> Alle aanbiedingen en offertes van opdrachtnemer zijn vrijblijvend, tenzij daarin uitdrukkelijk een termijn voor aanvaarding is genoemd. Een offerte is geldig gedurende 30 dagen na dagtekening, tenzij anders vermeld.</p>
-          <p style={pAv.body}><span style={pAv.clause}>4.2</span> Alle prijzen zijn in euro en exclusief btw, tenzij uitdrukkelijk anders is aangegeven.</p>
+          <p style={pAv.body}><span style={pAv.clause}>4.2</span> Alle prijzen zijn in euro en vrijgesteld van btw, tenzij uitdrukkelijk anders is aangegeven.</p>
           <p style={pAv.body}><span style={pAv.clause}>4.3</span> Kennelijke vergissingen of verschrijvingen in een aanbod of offerte binden opdrachtnemer niet.</p>
           <p style={pAv.body}><span style={pAv.clause}>4.4</span> Een samengestelde prijsopgave verplicht opdrachtnemer niet tot het verrichten van een deel van de opdracht tegen een overeenkomstig deel van de opgegeven prijs.</p>
         </React.Fragment>
@@ -164,7 +164,7 @@ function AlgemeneVoorwaarden() {
       title: 'Tarieven en prijswijziging',
       render: () => (
         <React.Fragment>
-          <p style={pAv.body}><span style={pAv.clause}>10.1</span> De overeengekomen tarieven zijn in euro en exclusief btw en exclusief eventuele reis- en verblijfkosten, tenzij schriftelijk anders is overeengekomen.</p>
+          <p style={pAv.body}><span style={pAv.clause}>10.1</span> De overeengekomen tarieven zijn in euro, vrijgesteld van btw en exclusief eventuele reis- en verblijfkosten, tenzij schriftelijk anders is overeengekomen.</p>
           <p style={pAv.body}><span style={pAv.clause}>10.2</span> Bij langlopende trajecten kunnen tarieven jaarlijks worden aangepast. Opdrachtnemer informeert opdrachtgever ten minste vier weken voordat een aanpassing ingaat. Het bepaalde in artikel 8.3 over het opzegrecht van opdrachtgever is van overeenkomstige toepassing.</p>
         </React.Fragment>
       ),

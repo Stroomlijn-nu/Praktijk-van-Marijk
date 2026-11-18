@@ -300,6 +300,7 @@ function Footer({ setRoute }) {
             <span style={{ letterSpacing: '0.12em', textTransform: 'uppercase' }}>SKJ-registratie</span>
             <span style={{ color: 'var(--fg1)', fontWeight: 600, letterSpacing: '0.02em' }}>110005309</span>
           </div>
+          <img src="assets/logo-crkbo-geregistreerde-instelling.jpg" alt="CRKBO geregistreerde instelling" width="88" height="88" style={{ display: 'block', marginTop: 16, mixBlendMode: 'multiply' }} />
         </div>
 
         <div>
